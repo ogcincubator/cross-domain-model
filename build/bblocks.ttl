@@ -7,32 +7,32 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://raw.githubusercontent.com/ogcincubator/cross-domain-model/ogc.bbr.template.myFeature> a skos:Concept,
+<https://ogcincubator.github.io/ogc.model.cross-domain.myFeature> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "Custom Feature" ;
     dct:abstract "This examples shows a simple customisation for OGC API Feature schemas" ;
     dct:created "2023-05-19T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/cross-domain-model/master/bblock/ogc.bbr.template.myFeature" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/cross-domain-model/master/build/generateddocs/slate-build/bbr/template/myFeature/" ],
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/myFeature/index.md" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/cross-domain-model/master/build/generateddocs/json-full/bbr/template/myFeature/index.json" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/cross-domain-model/master/build/generateddocs/markdown/bbr/template/myFeature/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/myFeature/index.json" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.myFeature" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/slate-build/model/cross-domain/myFeature/" ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2024-06-26"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7> ;
-    skos:inScheme <https://raw.githubusercontent.com/ogcincubator/cross-domain-model/master/> ;
+    skos:inScheme <https://ogcincubator.github.io/cross-domain-model/> ;
     dcat:keyword "examples",
         "feature" ;
-    bblocks:dependsOn <https://raw.githubusercontent.com/ogcincubator/cross-domain-model/ogc.bbr.template.mySchema>,
-        <https://raw.githubusercontent.com/ogcincubator/cross-domain-model/ogc.geo.features.feature> ;
-    bblocks:hasJsonLdContext <https://raw.githubusercontent.com/ogcincubator/cross-domain-model/master/build/annotated/bbr/template/myFeature/context.jsonld> ;
-    bblocks:hasSchema <https://raw.githubusercontent.com/ogcincubator/cross-domain-model/master/build/annotated/bbr/template/myFeature/schema.json>,
-        <https://raw.githubusercontent.com/ogcincubator/cross-domain-model/master/build/annotated/bbr/template/myFeature/schema.yaml> ;
-    bblocks:hasShaclRule <https://raw.githubusercontent.com/ogcincubator/cross-domain-model/master/_sources/mySchema/rules.shacl> ;
+    bblocks:dependsOn <https://ogcincubator.github.io/ogc.geo.features.feature>,
+        <https://ogcincubator.github.io/ogc.model.cross-domain.mySchema> ;
+    bblocks:hasJsonLdContext <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/myFeature/context.jsonld> ;
+    bblocks:hasSchema <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/myFeature/schema.json>,
+        <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/myFeature/schema.yaml> ;
+    bblocks:hasShaclRule <https://ogcincubator.github.io/cross-domain-model/_sources/mySchema/rules.shacl> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
@@ -40,56 +40,62 @@
 
 <https://example.com/sources/1> rdfs:label "Sample source document" .
 
-<https://raw.githubusercontent.com/ogcincubator/cross-domain-model/ogc.bbr.template.mySchema> a skos:Concept,
+<https://ogcincubator.github.io/ogc.model.cross-domain.mySchema> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "My Schema" ;
     dct:abstract "An example schema defining the set of properties of any type of object." ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/cross-domain-model/master/build/generateddocs/json-full/bbr/template/mySchema/index.json" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/slate-build/model/cross-domain/mySchema/" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/cross-domain-model/master/build/generateddocs/markdown/bbr/template/mySchema/index.md" ],
+            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/mySchema/index.md" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/cross-domain-model/master/bblock/ogc.bbr.template.mySchema" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/cross-domain-model/master/build/generateddocs/slate-build/bbr/template/mySchema/" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.mySchema" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/mySchema/index.json" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2024-06-26"^^xsd:date ;
     dct:source <https://example.com/sources/1> ;
-    skos:inScheme <https://raw.githubusercontent.com/ogcincubator/cross-domain-model/master/> ;
+    skos:inScheme <https://ogcincubator.github.io/cross-domain-model/> ;
     dcat:keyword "templates" ;
-    bblocks:hasJsonLdContext <https://raw.githubusercontent.com/ogcincubator/cross-domain-model/master/build/annotated/bbr/template/mySchema/context.jsonld> ;
-    bblocks:hasSchema <https://raw.githubusercontent.com/ogcincubator/cross-domain-model/master/build/annotated/bbr/template/mySchema/schema.json>,
-        <https://raw.githubusercontent.com/ogcincubator/cross-domain-model/master/build/annotated/bbr/template/mySchema/schema.yaml> ;
-    bblocks:hasShaclRule <https://raw.githubusercontent.com/ogcincubator/cross-domain-model/master/_sources/mySchema/rules.shacl> ;
-    bblocks:hasSourceJsonLdContext <https://raw.githubusercontent.com/ogcincubator/cross-domain-model/master/_sources/mySchema/context.jsonld> ;
+    bblocks:hasJsonLdContext <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/mySchema/context.jsonld> ;
+    bblocks:hasSchema <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/mySchema/schema.json>,
+        <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/mySchema/schema.yaml> ;
+    bblocks:hasShaclRule <https://ogcincubator.github.io/cross-domain-model/_sources/mySchema/rules.shacl> ;
+    bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/cross-domain-model/_sources/mySchema/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
-<https://raw.githubusercontent.com/ogcincubator/cross-domain-model/master/> a skos:ConceptScheme,
+<https://ogcincubator.github.io/cross-domain-model/> a skos:ConceptScheme,
         dcat:Catalog ;
-    rdfs:label "Building Blocks - My OGC Building Blocks repository" ;
-    dct:abstract """This is an example text for the abstract. It should be short and to the point.
-A "Tell me more" link will appear if there is an additional description with a longer explanation.
+    rdfs:label "Building Blocks - Cross-domain model" ;
+    dct:abstract """Defines a cross-domain semantic model by articulating a series of profiles and dependencies on available standards and a minimum set of constraints for application in the spatio-temporal domain.
 """ ;
-    dct:description """The description can be longer. Both **the abstract** *and the description* support Markdown,
-including [links](https://google.es).
+    dct:description """
+Many such restrictions will relate to the way these models are combined - for example the way GeoDCAT, PROV, RDF-Datacube and SOSA may be combined to standardised the way observational data is described using available standards.
+
+The Cross-domain model underpins proposed domain models for Agriculture, Oceans and AG4DG.
+By defining these models using this common cross-domain model the interoperability between such domains is enhanced, and made transparent to applications.
+
+Defining constraints using SHACL for these building blocks allows for inheritance of validation rules. 
+This will dramatically reduce the complexity of defining and testing domain models in a consistent fashion.
 """ ;
-    skos:prefLabel "Building Blocks - My OGC Building Blocks repository" ;
-    bblocks:hasValidationReport <https://raw.githubusercontent.com/ogcincubator/cross-domain-model/master/build/tests/report.html> ;
-    bblocks:imports <https://opengeospatial.github.io/bblocks/register.json> .
+    skos:prefLabel "Building Blocks - Cross-domain model" ;
+    bblocks:hasValidationReport <https://ogcincubator.github.io/cross-domain-model/build/tests/report.html> ;
+    bblocks:imports <https://ogcincubator.github.io/geodcat-ogcapi-records/build/register.json>,
+        <https://opengeospatial.github.io/bblocks/register.json> .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2024-06-26T02:27:35.144164"^^xsd:dateTime ;
-    prov:startedAtTime "2024-06-26T02:27:35.087025"^^xsd:dateTime ;
+    prov:endedAtTime "2024-06-26T02:42:52.879569"^^xsd:dateTime ;
+    prov:startedAtTime "2024-06-26T02:42:52.818554"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
-            dct:format "application/json" ;
-            dct:hasVersion "git:c11e0ba4bb825b7dce5f99159a783f59d007fa99" ;
-            rdfs:seeAlso <https://raw.githubusercontent.com/ogcincubator/cross-domain-model/master/build/register.json> ],
-        [ a prov:Entity ;
             dct:format "application/yaml" ;
-            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
+            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
+        [ a prov:Entity ;
+            dct:format "application/json" ;
+            dct:hasVersion "git:784891278fbdf7c33739c4246068ad45ba389361" ;
+            rdfs:seeAlso <https://ogcincubator.github.io/cross-domain-model/build/register.json> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
