@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://raw.githubusercontent.com/ogcincubator/cross-domain-model/master/build/annotated/bbr/template/mySchema/context.jsonld",
+    {
+      "mynamespace": "http://example.org/ns1/"
+    }
+  ],
+  "a": "mynamespace:aThing",
+  "b": 23,
+  "c": 1
+}
