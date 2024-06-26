@@ -1,16 +1,19 @@
-# OGC Building Block template
+# name: Cross-domain model
 
-This template provides a working example of an [OGC Building Block](https:blocks.ogc.org). For more info see [the Documentation](https://ogcincubator.github.io/bblocks-docs/).
+# Short abstract for this collection (optional)
+abstract: |
+  Defines a cross-domain semantic model by articulating a series of profiles and dependencies on available standards and a minimum set of constraints for application in the spatio-temporal domain.
 
-This template is a working automation recipe to define, test and document a set of Building Blocks.
+# Description for this collection (optional)
+description: |
+  
+  Many such restrictions will relate to the way these models are combined - for example the way GeoDCAT, PROV, RDF-Datacube and SOSA may be combined to standardised the way observational data is described using available standards.
 
-The automation-generated documentation for this example is here: [https://opengeospatial.github.io/bblock-template/](https://opengeospatial.github.io/bblock-template/)
+  The Cross-domain model underpins proposed domain models for Agriculture, Oceans and AG4DG.
+  By defining these models using this common cross-domain model the interoperability between such domains is enhanced, and made transparent to applications.
 
-[Examples of using this with typical applications of OGC standards](https://github.com/ogcincubator/bblocks-examples)
-
-Please replace the contents of this README with information about your Building Block(s).
-
-# How to use this template
+  Defining constraints using SHACL for these building blocks allows for inheritance of validation rules. 
+  This will dramatically reduce the complexity of defining and testing domain models in a consistent fashion.
 
 [More information on design and usage](https://github.com/opengeospatial/bblock-template/blob/master/USAGE.md)
 
