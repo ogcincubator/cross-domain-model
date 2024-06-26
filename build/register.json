@@ -2,7 +2,7 @@
   "name": "Cross-domain model",
   "abstract": "Defines a cross-domain semantic model by articulating a series of profiles and dependencies on available standards and a minimum set of constraints for application in the spatio-temporal domain.\n",
   "description": "\nMany such restrictions will relate to the way these models are combined - for example the way GeoDCAT, PROV, RDF-Datacube and SOSA may be combined to standardised the way observational data is described using available standards.\n\nThe Cross-domain model underpins proposed domain models for Agriculture, Oceans and AG4DG.\nBy defining these models using this common cross-domain model the interoperability between such domains is enhanced, and made transparent to applications.\n\nDefining constraints using SHACL for these building blocks allows for inheritance of validation rules. \nThis will dramatically reduce the complexity of defining and testing domain models in a consistent fashion.\n",
-  "modified": "2024-06-26T02:42:50.068434",
+  "modified": "2024-06-26T07:54:17.238385",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"6badef16348eb4c240d1a1e4389d783ba62b56b9",
