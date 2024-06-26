@@ -1,22 +1,28 @@
 # A short, descriptive name of this building block collection
-name: My OGC Building Blocks repository
+name: Cross-domain model
 
 # Short abstract for this collection (optional)
 abstract: |
-  This is an example text for the abstract. It should be short and to the point.
-  A "Tell me more" link will appear if there is an additional description with a longer explanation.
+  Defines a cross-domain semantic model by articulating a series of profiles and dependencies on available standards and a minimum set of constraints for application in the spatio-temporal domain.
 
 # Description for this collection (optional)
 description: |
-  The description can be longer. Both **the abstract** *and the description* support Markdown,
-  including [links](https://google.es).
+  
+  Many such restrictions will relate to the way these models are combined - for example the way GeoDCAT, PROV, RDF-Datacube and SOSA may be combined to standardised the way observational data is described using available standards.
 
+  The Cross-domain model underpins proposed domain models for Agriculture, Oceans and AG4DG.
+  By defining these models using this common cross-domain model the interoperability between such domains is enhanced, and made transparent to applications.
+
+  Defining constraints using SHACL for these building blocks allows for inheritance of validation rules. 
+  This will dramatically reduce the complexity of defining and testing domain models in a consistent fashion.
+  
 # Customize the following prefix (will be prepended to the path of the building blocks):
-identifier-prefix: ogc.bbr.template.
+identifier-prefix: ogc.model.cross-domain.
 
 # List of imports ("default" is an alias for the main OGC Building Blocks Register)
 imports:
   - default
+  - https://ogcincubator.github.io/geodcat-api-records/build/register.json
 
 # SPARQL configuration (optional)
 #   Authentication can be set through the sparql_username and sparql_password GitHub Workflow inputs
