@@ -1,0 +1,33 @@
+
+
+{
+  "itemIdentifier": "ogc.model.cross-domain.sosa",
+  "name": "SOSA/SSN",
+  "abstract": "Sensors, Observations, Sampling and Actuation (ISO 19156 Observations and Measurements) Ontology ",
+  "status": "under-development",
+  "dateTimeAddition": "2023-09-18T00:00:00Z",
+  "itemClass": "model",
+  "register": "ogc-incubator",
+  "version": "0.1",
+  "dateOfLastChange": "2024-06-27",
+  "link": "https://github.com/opengeospatial/bblock-template",
+  "dependsOn": [],
+  "sources": [
+    {
+      "title": "SOSA/SSN Specification",
+      "link": "https://www.w3.org/TR/vocab-ssn/"
+    }
+  ],
+  "scope": "dev",
+  "tags": [
+    "DCAT",
+    "profile"
+  ],
+  "shaclRules": {},
+  "sourceFiles": "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/",
+  "validationPassed": true,
+  "description": "## SOSA\n\nTBD\n\n",
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/ogcincubator/cross-domain-model",
+  "gitPath": "_sources/sosa"
+}

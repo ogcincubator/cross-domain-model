@@ -1,0 +1,40 @@
+
+
+{
+  "itemIdentifier": "ogc.model.cross-domain.qudt",
+  "name": "QUDT",
+  "abstract": "Quantities, Units etc.",
+  "status": "under-development",
+  "dateTimeAddition": "2023-09-18T00:00:00Z",
+  "itemClass": "model",
+  "register": "ogc-incubator",
+  "version": "0.1",
+  "dateOfLastChange": "2024-06-27",
+  "dependsOn": [],
+  "shaclRules": {
+    "ogc.model.cross-domain.qudt": [
+      "http://qudt.org/2.1/schema/shacl/qudt"
+    ]
+  },
+  "sources": [
+    {
+      "title": "QUDT Website",
+      "link": "https://qudt.org/"
+    },
+    {
+      "title": "QUDT Ontology",
+      "link": "http://qudt.org/2.1/schema/qudt"
+    }
+  ],
+  "scope": "dev",
+  "tags": [
+    "QUDT"
+  ],
+  "ontology": "http://qudt.org/2.1/schema/qudt",
+  "sourceFiles": "https://ogcincubator.github.io/cross-domain-model/_sources/qudt/",
+  "validationPassed": true,
+  "description": "## QUDT Ontology \n\n\n![](https://github.com/qudt/qudt-public-repo/wiki/Quantity_Triad_Pattern.png)\n\n",
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/ogcincubator/cross-domain-model",
+  "gitPath": "_sources/qudt"
+}
