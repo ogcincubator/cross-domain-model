@@ -1,0 +1,27 @@
+{
+  "name": "PROV",
+  "abstract": "Provenance Ontology",
+  "status": "under-development",
+  "dateTimeAddition": "2023-09-18T00:00:00Z",
+  "itemClass": "model",
+  "register": "ogc-incubator",
+  "version": "0.1",
+  "dateOfLastChange": "2023-09-18",
+  "link": "https://github.com/opengeospatial/bblock-template",
+  "dependsOn": [
+  ],
+  "ontology": "http://qudt.org/2.1/schema/qudt",
+  "shaclRules": [
+    "http://qudt.org/2.1/schema/shacl/qudt"
+  ],
+  "sources": [
+    {
+      "title": "PROV-O Specification",
+      "link": "https://www.w3.org/TR/prov-o/"
+    }
+  ],
+  "scope": "dev",
+  "tags": [
+    "PROV"
+  ]
+}

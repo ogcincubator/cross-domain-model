@@ -1,0 +1,21 @@
+{
+  "name": "SOSA/SSN",
+  "abstract": "Sensors, Observations, Sampling and Actuation (ISO 19156 Observations and Measurements) Ontology ",
+  "status": "under-development",
+  "dateTimeAddition": "2023-09-18T00:00:00Z",
+  "itemClass": "model",
+  "register": "ogc-incubator",
+  "version": "0.1",
+  "dateOfLastChange": "2023-09-18",
+  "link": "https://github.com/opengeospatial/bblock-template",
+  "dependsOn": [
+      ],
+  "sources": [
+    {
+      "title": "SOSA/SSN Specification",
+      "link": "https://www.w3.org/TR/vocab-ssn/"
+    }
+  ],
+  "scope": "dev",
+  "tags": ["DCAT", "profile"]
+}

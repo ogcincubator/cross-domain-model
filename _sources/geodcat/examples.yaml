@@ -1,0 +1,8 @@
+- title: GeoDCAT minimal example
+  content: |-
+    This example is a GEODCAT example showing only defined elements
+
+  snippets:
+    - language: ttl
+      ref: examples/place-expressions.ttl
+

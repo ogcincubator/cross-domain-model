@@ -1,0 +1,26 @@
+{
+  "name": "RDF-DataCube",
+  "abstract": "Dimensional Data Model based on SDMX",
+  "status": "under-development",
+  "dateTimeAddition": "2023-09-18T00:00:00Z",
+  "itemClass": "model",
+  "register": "ogc-incubator",
+  "version": "0.1",
+  "dateOfLastChange": "2023-09-18",
+  "link": "https://github.com/opengeospatial/bblock-template",
+  "dependsOn": [
+  ],
+  "ontology": "http://purl.org/linked-data/cube#",
+  "shaclRules": [],
+  "sources": [
+    {
+      "title": "The RDF Data Cube Vocabulary",
+      "link": "https://www.w3.org/TR/vocab-data-cube/"
+    }
+  ],
+  "scope": "dev",
+  "tags": [
+    "RDF-QB",
+    "SDMX"
+  ]
+}

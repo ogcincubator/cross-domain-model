@@ -1,0 +1,27 @@
+{
+  "name": "QUDT Basic Profile",
+  "abstract": "Minimal implementation of Quantities, Units etc.",
+  "status": "under-development",
+  "dateTimeAddition": "2023-09-18T00:00:00Z",
+  "itemClass": "model",
+  "register": "ogc-incubator",
+  "version": "0.1",
+  "dateOfLastChange": "2023-09-18",
+  "dependsOn": [
+    "ogc.model.cross-domain.qudt"
+  ],
+  "sources": [
+    {
+      "title": "QUDT Website",
+      "link": "https://qudt.org/"
+    },
+    {
+      "title": "QUDT Ontology",
+      "link": "http://qudt.org/2.1/schema/qudt"
+    }
+  ],
+  "scope": "dev",
+  "tags": [
+    "QUDT"
+  ]
+}

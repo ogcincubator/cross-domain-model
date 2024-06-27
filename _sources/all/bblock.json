@@ -1,0 +1,23 @@
+{
+  "name": "Cross Domain Model - All modules",
+  "abstract": "All modules of the Cross Domain model",
+  "status": "under-development",
+  "dateTimeAddition": "2023-09-18T00:00:00Z",
+  "itemClass": "model",
+  "register": "ogc-incubator",
+  "version": "0.1",
+  "dateOfLastChange": "2023-09-18",
+  "dependsOn": [
+    "ogc.model.cross-domain.qudt-basic",
+    "ogc.model.cross-domain.sosa",
+    "ogc.model.cross-domain.prov",
+    "ogc.model.cross-domain.geodcat",
+    "ogc.model.cross-domain.datacube"
+  ],
+  "sources": [
+  ],
+  "scope": "dev",
+  "tags": [
+    "Closure"
+  ]
+}
