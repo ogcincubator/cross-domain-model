@@ -106,12 +106,12 @@
   "name": "Building Blocks - Cross-domain model",
   "abstract": "Defines a cross-domain semantic model by articulating a series of profiles and dependencies on available standards and a minimum set of constraints for application in the spatio-temporal domain.\n",
   "description": "\n\nThe Cross-domain model underpins proposed domain models for Agriculture, Oceans and AG4DG.\nBy defining these models using this common cross-domain model the interoperability between such domains is enhanced, and made transparent to applications.\n\n![](https://lucid.app/publicSegments/view/eebe9d1b-d2ae-4bb9-a929-1d4414abcd47/image.png)\n\nDefining constraints using SHACL for these building blocks allows for inheritance of validation rules. \nThis will dramatically reduce the complexity of defining and testing domain models in a consistent fashion.\n\nMany such restrictions will relate to the way these models are combined -\nfor example the way GeoDCAT, PROV, RDF-Datacube and SOSA may be combined to standardised the way observational data is described using available standards.\n",
-  "modified": "2024-06-27T07:19:38.558228",
+  "modified": "2024-06-27T07:23:49.794326",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"6badef16348eb4c240d1a1e4389d783ba62b56b9",
-      "shortCommitId": "\"6badef",
-      "date": "2024-06-18T18:19:19+00:00\""
+      "commitId": "\"8e9ae4bfc1defaf361c5ce3b65c1dc55b6b70141",
+      "shortCommitId": "\"8e9ae4",
+      "date": "2024-06-27T07:18:34+00:00\""
     }
   },
   "gitRepository": "https://github.com/ogcincubator/cross-domain-model",
@@ -130,57 +130,6 @@
   "skos:prefLabel": "Building Blocks - Cross-domain model",
   "hasConcepts": [
     {
-      "itemIdentifier": "ogc.model.cross-domain.datacube",
-      "name": "RDF-DataCube",
-      "abstract": "Dimensional Data Model based on SDMX",
-      "status": "under-development",
-      "dateTimeAddition": "2023-09-18T00:00:00Z",
-      "itemClass": "model",
-      "register": "ogc-incubator",
-      "version": "0.1",
-      "dateOfLastChange": "2024-06-27",
-      "link": "https://github.com/opengeospatial/bblock-template",
-      "dependsOn": [],
-      "shaclRules": {},
-      "sources": [
-        {
-          "title": "The RDF Data Cube Vocabulary",
-          "link": "https://www.w3.org/TR/vocab-data-cube/"
-        }
-      ],
-      "scope": "dev",
-      "tags": [
-        "RDF-QB",
-        "SDMX"
-      ],
-      "ontology": "http://purl.org/linked-data/cube#",
-      "sourceFiles": "https://ogcincubator.github.io/cross-domain-model/_sources/datacube/",
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/datacube/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/datacube/index.json"
-        },
-        "slate": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/slate-build/model/cross-domain/datacube/"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.datacube"
-        }
-      },
-      "@type": [
-        "bblocks:Model",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
       "itemIdentifier": "ogc.model.cross-domain.prov",
       "name": "PROV",
       "abstract": "Provenance Ontology",
@@ -189,7 +138,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "0.1",
-      "dateOfLastChange": "2024-06-27",
+      "dateOfLastChange": "2023-09-18",
       "link": "https://github.com/opengeospatial/bblock-template",
       "dependsOn": [],
       "shaclRules": {
@@ -235,6 +184,57 @@
       ]
     },
     {
+      "itemIdentifier": "ogc.model.cross-domain.datacube",
+      "name": "RDF-DataCube",
+      "abstract": "Dimensional Data Model based on SDMX",
+      "status": "under-development",
+      "dateTimeAddition": "2023-09-18T00:00:00Z",
+      "itemClass": "model",
+      "register": "ogc-incubator",
+      "version": "0.1",
+      "dateOfLastChange": "2023-09-18",
+      "link": "https://github.com/opengeospatial/bblock-template",
+      "dependsOn": [],
+      "shaclRules": {},
+      "sources": [
+        {
+          "title": "The RDF Data Cube Vocabulary",
+          "link": "https://www.w3.org/TR/vocab-data-cube/"
+        }
+      ],
+      "scope": "dev",
+      "tags": [
+        "RDF-QB",
+        "SDMX"
+      ],
+      "ontology": "http://purl.org/linked-data/cube#",
+      "sourceFiles": "https://ogcincubator.github.io/cross-domain-model/_sources/datacube/",
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/datacube/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/datacube/index.json"
+        },
+        "slate": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/slate-build/model/cross-domain/datacube/"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.datacube"
+        }
+      },
+      "@type": [
+        "bblocks:Model",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
       "itemIdentifier": "ogc.model.cross-domain.sosa",
       "name": "SOSA/SSN",
       "abstract": "Sensors, Observations, Sampling and Actuation (ISO 19156 Observations and Measurements) Ontology ",
@@ -243,7 +243,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "0.1",
-      "dateOfLastChange": "2024-06-27",
+      "dateOfLastChange": "2023-09-18",
       "link": "https://github.com/opengeospatial/bblock-template",
       "dependsOn": [],
       "sources": [
@@ -293,7 +293,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "0.1",
-      "dateOfLastChange": "2024-06-27",
+      "dateOfLastChange": "2023-09-18",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [],
       "scope": "dev",
@@ -337,7 +337,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "0.1",
-      "dateOfLastChange": "2024-06-27",
+      "dateOfLastChange": "2023-09-18",
       "dependsOn": [],
       "shaclRules": {
         "ogc.model.cross-domain.qudt": [
@@ -394,7 +394,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "0.1",
-      "dateOfLastChange": "2024-06-27",
+      "dateOfLastChange": "2023-09-18",
       "link": "https://github.com/opengeospatial/bblock-template",
       "dependsOn": [
         "ogc.geo.geodcat.dcat"
@@ -454,7 +454,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "0.1",
-      "dateOfLastChange": "2024-06-27",
+      "dateOfLastChange": "2023-09-18",
       "dependsOn": [
         "ogc.model.cross-domain.qudt"
       ],
@@ -512,12 +512,12 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "0.1",
-      "dateOfLastChange": "2024-06-27",
+      "dateOfLastChange": "2023-09-18",
       "dependsOn": [
-        "ogc.model.cross-domain.datacube",
         "ogc.model.cross-domain.prov",
-        "ogc.model.cross-domain.geodcat",
         "ogc.model.cross-domain.qudt-basic",
+        "ogc.model.cross-domain.geodcat",
+        "ogc.model.cross-domain.datacube",
         "ogc.model.cross-domain.sosa"
       ],
       "sources": [],

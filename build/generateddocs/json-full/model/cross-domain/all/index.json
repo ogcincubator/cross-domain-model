@@ -9,12 +9,12 @@
   "itemClass": "model",
   "register": "ogc-incubator",
   "version": "0.1",
-  "dateOfLastChange": "2024-06-27",
+  "dateOfLastChange": "2023-09-18",
   "dependsOn": [
-    "ogc.model.cross-domain.datacube",
     "ogc.model.cross-domain.prov",
-    "ogc.model.cross-domain.geodcat",
     "ogc.model.cross-domain.qudt-basic",
+    "ogc.model.cross-domain.geodcat",
+    "ogc.model.cross-domain.datacube",
     "ogc.model.cross-domain.sosa"
   ],
   "sources": [],
