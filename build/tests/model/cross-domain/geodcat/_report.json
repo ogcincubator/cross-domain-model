@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.model.cross-domain.geodcat - GeoDCAT profile",
   "bblockName": "GeoDCAT profile",
   "bblockId": "ogc.model.cross-domain.geodcat",
-  "generated": "2024-06-27T07:23:52.380176+00:00",
+  "generated": "2024-06-27T07:25:03.365903+00:00",
   "result": true,
   "items": [],
   "globalErrors": {},

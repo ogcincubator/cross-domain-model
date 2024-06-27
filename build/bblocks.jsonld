@@ -106,12 +106,12 @@
   "name": "Building Blocks - Cross-domain model",
   "abstract": "Defines a cross-domain semantic model by articulating a series of profiles and dependencies on available standards and a minimum set of constraints for application in the spatio-temporal domain.\n",
   "description": "\n\nThe Cross-domain model underpins proposed domain models for Agriculture, Oceans and AG4DG.\nBy defining these models using this common cross-domain model the interoperability between such domains is enhanced, and made transparent to applications.\n\n![](https://lucid.app/publicSegments/view/eebe9d1b-d2ae-4bb9-a929-1d4414abcd47/image.png)\n\nDefining constraints using SHACL for these building blocks allows for inheritance of validation rules. \nThis will dramatically reduce the complexity of defining and testing domain models in a consistent fashion.\n\nMany such restrictions will relate to the way these models are combined -\nfor example the way GeoDCAT, PROV, RDF-Datacube and SOSA may be combined to standardised the way observational data is described using available standards.\n",
-  "modified": "2024-06-27T07:23:49.794326",
+  "modified": "2024-06-27T07:25:00.692489",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"8e9ae4bfc1defaf361c5ce3b65c1dc55b6b70141",
-      "shortCommitId": "\"8e9ae4",
-      "date": "2024-06-27T07:18:34+00:00\""
+      "commitId": "\"0bb25359789ca0cf11558e230e8c5f39bdf8933d",
+      "shortCommitId": "\"0bb253",
+      "date": "2024-06-27T07:23:12+00:00\""
     }
   },
   "gitRepository": "https://github.com/ogcincubator/cross-domain-model",
@@ -129,6 +129,56 @@
   ],
   "skos:prefLabel": "Building Blocks - Cross-domain model",
   "hasConcepts": [
+    {
+      "itemIdentifier": "ogc.model.cross-domain.sosa",
+      "name": "SOSA/SSN",
+      "abstract": "Sensors, Observations, Sampling and Actuation (ISO 19156 Observations and Measurements) Ontology ",
+      "status": "under-development",
+      "dateTimeAddition": "2023-09-18T00:00:00Z",
+      "itemClass": "model",
+      "register": "ogc-incubator",
+      "version": "0.1",
+      "dateOfLastChange": "2023-09-18",
+      "link": "https://github.com/opengeospatial/bblock-template",
+      "dependsOn": [],
+      "sources": [
+        {
+          "title": "SOSA/SSN Specification",
+          "link": "https://www.w3.org/TR/vocab-ssn/"
+        }
+      ],
+      "scope": "dev",
+      "tags": [
+        "DCAT",
+        "profile"
+      ],
+      "shaclRules": {},
+      "sourceFiles": "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/",
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/sosa/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/sosa/index.json"
+        },
+        "slate": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/slate-build/model/cross-domain/sosa/"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.sosa"
+        }
+      },
+      "@type": [
+        "bblocks:Model",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
     {
       "itemIdentifier": "ogc.model.cross-domain.prov",
       "name": "PROV",
@@ -226,56 +276,6 @@
         "bblocks-viewer": {
           "mediatype": "text/html",
           "url": "https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.datacube"
-        }
-      },
-      "@type": [
-        "bblocks:Model",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
-      "itemIdentifier": "ogc.model.cross-domain.sosa",
-      "name": "SOSA/SSN",
-      "abstract": "Sensors, Observations, Sampling and Actuation (ISO 19156 Observations and Measurements) Ontology ",
-      "status": "under-development",
-      "dateTimeAddition": "2023-09-18T00:00:00Z",
-      "itemClass": "model",
-      "register": "ogc-incubator",
-      "version": "0.1",
-      "dateOfLastChange": "2023-09-18",
-      "link": "https://github.com/opengeospatial/bblock-template",
-      "dependsOn": [],
-      "sources": [
-        {
-          "title": "SOSA/SSN Specification",
-          "link": "https://www.w3.org/TR/vocab-ssn/"
-        }
-      ],
-      "scope": "dev",
-      "tags": [
-        "DCAT",
-        "profile"
-      ],
-      "shaclRules": {},
-      "sourceFiles": "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/",
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/sosa/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/sosa/index.json"
-        },
-        "slate": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/slate-build/model/cross-domain/sosa/"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.sosa"
         }
       },
       "@type": [
@@ -514,11 +514,11 @@
       "version": "0.1",
       "dateOfLastChange": "2023-09-18",
       "dependsOn": [
-        "ogc.model.cross-domain.prov",
         "ogc.model.cross-domain.qudt-basic",
-        "ogc.model.cross-domain.geodcat",
+        "ogc.model.cross-domain.sosa",
+        "ogc.model.cross-domain.prov",
         "ogc.model.cross-domain.datacube",
-        "ogc.model.cross-domain.sosa"
+        "ogc.model.cross-domain.geodcat"
       ],
       "sources": [],
       "scope": "dev",
@@ -526,10 +526,10 @@
         "Closure"
       ],
       "shaclRules": {
-        "ogc.model.cross-domain.prov": [
+        "ogc.model.cross-domain.qudt": [
           "http://qudt.org/2.1/schema/shacl/qudt"
         ],
-        "ogc.model.cross-domain.qudt": [
+        "ogc.model.cross-domain.prov": [
           "http://qudt.org/2.1/schema/shacl/qudt"
         ]
       },

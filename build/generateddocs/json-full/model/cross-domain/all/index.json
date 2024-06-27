@@ -11,11 +11,11 @@
   "version": "0.1",
   "dateOfLastChange": "2023-09-18",
   "dependsOn": [
-    "ogc.model.cross-domain.prov",
     "ogc.model.cross-domain.qudt-basic",
-    "ogc.model.cross-domain.geodcat",
+    "ogc.model.cross-domain.sosa",
+    "ogc.model.cross-domain.prov",
     "ogc.model.cross-domain.datacube",
-    "ogc.model.cross-domain.sosa"
+    "ogc.model.cross-domain.geodcat"
   ],
   "sources": [],
   "scope": "dev",
@@ -23,10 +23,10 @@
     "Closure"
   ],
   "shaclRules": {
-    "ogc.model.cross-domain.prov": [
+    "ogc.model.cross-domain.qudt": [
       "http://qudt.org/2.1/schema/shacl/qudt"
     ],
-    "ogc.model.cross-domain.qudt": [
+    "ogc.model.cross-domain.prov": [
       "http://qudt.org/2.1/schema/shacl/qudt"
     ]
   },
