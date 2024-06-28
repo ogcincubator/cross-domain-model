@@ -1,9 +1,9 @@
 ---
-title: Proxy placeholder for DCAT (Model)
+title: GeoSPARQL (Model)
 
 toc_footers:
   - Version 0.1
-  - <a href='#'>Proxy placeholder for DCAT</a>
+  - <a href='#'>GeoSPARQL</a>
   - <a href='https://blocks.ogc.org/register.html'>Building Blocks register</a>
 
 search: true
@@ -11,13 +11,13 @@ search: true
 code_clipboard: true
 
 meta:
-  - name: Proxy placeholder for DCAT (Model)
+  - name: GeoSPARQL (Model)
 ---
 
 
-# Proxy placeholder for DCAT `ogc.model.cross-domain.dcat`
+# GeoSPARQL `ogc.model.cross-domain.geosparql`
 
-For completeness, allows machine readable validations to be scoped to DCAT itself.
+GeoSPARQL Core (1.1). Simply wraps the published GeoSPARQL ontology with a Building Block to allow examples, default JSON-LD context, SHACL rules and transforms to be easily discovered.
 
 <p class="status">
     <span data-rainbow-uri="http://www.opengis.net/def/status">Status</span>:
@@ -41,5 +41,5 @@ The source code for this Building Block can be found in the following repository
 
 * URL: <a href="https://github.com/ogcincubator/cross-domain-model" target="_blank">https://github.com/ogcincubator/cross-domain-model</a>
 * Path:
-<code><a href="https://github.com/ogcincubator/cross-domain-model/blob/HEAD/_sources/dcat" target="_blank">_sources/dcat</a></code>
+<code><a href="https://github.com/ogcincubator/cross-domain-model/blob/HEAD/_sources/geosparql" target="_blank">_sources/geosparql</a></code>
 

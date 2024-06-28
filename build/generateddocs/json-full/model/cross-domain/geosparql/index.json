@@ -1,27 +1,27 @@
 
 
 {
-  "itemIdentifier": "ogc.model.cross-domain.dcat",
-  "name": "Proxy placeholder for DCAT",
-  "abstract": "For completeness, allows machine readable validations to be scoped to DCAT itself.",
+  "itemIdentifier": "ogc.model.cross-domain.geosparql",
+  "name": "GeoSPARQL",
+  "abstract": "GeoSPARQL Core (1.1). Simply wraps the published GeoSPARQL ontology with a Building Block to allow examples, default JSON-LD context, SHACL rules and transforms to be easily discovered.",
   "status": "under-development",
   "dateTimeAddition": "2023-09-18T00:00:00Z",
   "itemClass": "model",
   "register": "ogc-incubator",
   "version": "0.1",
-  "dateOfLastChange": "2023-09-18",
+  "dateOfLastChange": "2024-06-28",
   "link": "https://github.com/opengeospatial/bblock-template",
   "sources": [],
   "scope": "dev",
   "tags": [
-    "DCAT",
+    "GeoSPARQL",
     "Proxy"
   ],
   "shaclRules": {},
-  "sourceFiles": "https://ogcincubator.github.io/cross-domain-model/_sources/dcat/",
+  "sourceFiles": "https://ogcincubator.github.io/cross-domain-model/_sources/geosparql/",
   "validationPassed": true,
   "description": "## DCAT Proxy\n\nProxy for testing validation rules for DCAT to keep these out of specific GeoDCAT development.\n\nUsed to ensure examples are clean DCAT before applying GeoDCAT rules.",
   "annotatedSchema": null,
   "gitRepository": "https://github.com/ogcincubator/cross-domain-model",
-  "gitPath": "_sources/dcat"
+  "gitPath": "_sources/geosparql"
 }

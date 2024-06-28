@@ -1,9 +1,9 @@
 
-# Proxy placeholder for DCAT (Model)
+# GeoSPARQL (Model)
 
-`ogc.model.cross-domain.dcat` *v0.1*
+`ogc.model.cross-domain.geosparql` *v0.1*
 
-For completeness, allows machine readable validations to be scoped to DCAT itself.
+GeoSPARQL Core (1.1). Simply wraps the published GeoSPARQL ontology with a Building Block to allow examples, default JSON-LD context, SHACL rules and transforms to be easily discovered.
 
 [*Status*](http://www.opengis.net/def/status): Under development
 
@@ -20,5 +20,5 @@ Used to ensure examples are clean DCAT before applying GeoDCAT rules.
 The source code for this Building Block can be found in the following repository:
 
 * URL: [https://github.com/ogcincubator/cross-domain-model](https://github.com/ogcincubator/cross-domain-model)
-* Path: `_sources/dcat`
+* Path: `_sources/geosparql`
 
