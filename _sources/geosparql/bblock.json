@@ -1,6 +1,6 @@
 {
-  "name": "Proxy placeholder for DCAT",
-  "abstract": "For completeness, allows machine readable validations to be scoped to DCAT itself.",
+  "name": "GeoSPARQL",
+  "abstract": "GeoSPARQL Core (1.1). Simply wraps the published GeoSPARQL ontology with a Building Block to allow examples, default JSON-LD context, SHACL rules and transforms to be easily discovered.",
   "status": "under-development",
   "dateTimeAddition": "2023-09-18T00:00:00Z",
   "itemClass": "model",
@@ -12,6 +12,6 @@
   ],
   "scope": "dev",
   "tags": [
-    "DCAT", "Proxy"
+    "GeoSPARQL", "Proxy"
   ]
 }

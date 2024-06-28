@@ -10,7 +10,7 @@
   "link": "https://github.com/opengeospatial/bblock-template",
   "dependsOn": [
   ],
-  "ontology": "http://qudt.org/2.1/schema/qudt",
+  "ontology": "https://opengeospatial.github.io/ogc-geosparql/geosparql11/geo.ttl",
   "shaclRules": [
     "http://qudt.org/2.1/schema/shacl/qudt"
   ],
