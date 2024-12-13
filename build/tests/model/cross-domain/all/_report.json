@@ -1,0 +1,14 @@
+{
+  "title": "Validation report for ogc.model.cross-domain.all - Cross Domain Model (Complete)",
+  "bblockName": "Cross Domain Model (Complete)",
+  "bblockId": "ogc.model.cross-domain.all",
+  "generated": "2024-12-13T07:30:18.096845+00:00",
+  "result": true,
+  "items": [],
+  "globalErrors": {},
+  "counts": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0
+  }
+}

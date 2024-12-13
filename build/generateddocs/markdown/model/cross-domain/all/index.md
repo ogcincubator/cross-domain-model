@@ -1,5 +1,5 @@
 
-# Cross Domain Model - All modules (Model)
+# Cross Domain Model (Complete) (Model)
 
 `ogc.model.cross-domain.all` *v0.1*
 

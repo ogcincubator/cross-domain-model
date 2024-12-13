@@ -2,35 +2,44 @@
 
 {
   "itemIdentifier": "ogc.model.cross-domain.all",
-  "name": "Cross Domain Model - All modules",
+  "name": "Cross Domain Model (Complete)",
+  "highlighted": true,
   "abstract": "All modules of the Cross Domain model",
   "status": "under-development",
   "dateTimeAddition": "2023-09-18T00:00:00Z",
   "itemClass": "model",
   "register": "ogc-incubator",
   "version": "0.1",
-  "dateOfLastChange": "2024-06-28",
+  "dateOfLastChange": "2024-12-13",
   "dependsOn": [
-    "ogc.model.cross-domain.prov",
-    "ogc.model.cross-domain.qudt-basic",
     "ogc.model.cross-domain.datacube",
     "ogc.model.cross-domain.geosparql",
-    "ogc.model.cross-domain.sosa"
+    "ogc.model.cross-domain.qudt-basic",
+    "ogc.model.cross-domain.sosa",
+    "ogc.geo.geodcat.geodcat",
+    "ogc.model.cross-domain.prov"
   ],
   "sources": [],
   "scope": "dev",
   "tags": [
-    "Closure"
+    "Closure",
+    "Semantic Model"
   ],
   "shaclRules": {
-    "ogc.model.cross-domain.prov": [
+    "ogc.model.cross-domain.qudt": [
       "http://qudt.org/2.1/schema/shacl/qudt"
     ],
-    "ogc.model.cross-domain.qudt": [
+    "ogc.model.cross-domain.sosa": [
+      "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
+    ],
+    "ogc.model.cross-domain.prov": [
       "http://qudt.org/2.1/schema/shacl/qudt"
     ]
   },
   "sourceFiles": "https://ogcincubator.github.io/cross-domain-model/_sources/all/",
+  "rdfData": [
+    "https://ogcincubator.github.io/cross-domain-model/data.ttl"
+  ],
   "validationPassed": true,
   "description": "## QUDT - basic profile\n\nDefines just the basic parts of QUDT used..\n\n\n\n",
   "annotatedSchema": null,
