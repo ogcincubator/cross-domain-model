@@ -1,0 +1,16 @@
+prefixes:
+  ex: http://example.org/sosa/
+  qudt: http://qudt.org/
+  qudt-1-1: http://qudt.org/
+  qunit: http://qudt.org/vocab/unit/
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  sh: http://www.w3.org/ns/shacl#
+  owl: http://www.w3.org/2002/07/owl#
+  sosa: http://www.w3.org/ns/sosa/
+  ssn-system: http://www.w3.org/ns/ssn/systems/
+examples:
+  - title: Example ice-core.ttl
+    snippets:
+      - language: ttl
+        ref: https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/ice-core.ttl

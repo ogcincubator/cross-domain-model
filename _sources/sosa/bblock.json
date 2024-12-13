@@ -1,5 +1,6 @@
 {
   "name": "SOSA/SSN",
+  "highlighted": true,
   "abstract": "Sensors, Observations, Sampling and Actuation (ISO 19156 Observations and Measurements) Ontology ",
   "status": "under-development",
   "dateTimeAddition": "2023-09-18T00:00:00Z",
@@ -9,7 +10,7 @@
   "dateOfLastChange": "2023-09-18",
   "link": "https://github.com/opengeospatial/bblock-template",
   "dependsOn": [
-      ],
+  ],
   "sources": [
     {
       "title": "SOSA/SSN Specification",
@@ -17,5 +18,7 @@
     }
   ],
   "scope": "dev",
-  "tags": ["DCAT", "profile"]
+  "tags": [
+    "OMS"
+  ]
 }

@@ -1,5 +1,6 @@
 {
-  "name": "Cross Domain Model - All modules",
+  "name": "Cross Domain Model (Complete)",
+  "highlighted": true,
   "abstract": "All modules of the Cross Domain model",
   "status": "under-development",
   "dateTimeAddition": "2023-09-18T00:00:00Z",
@@ -12,12 +13,13 @@
     "ogc.model.cross-domain.sosa",
     "ogc.model.cross-domain.prov",
     "ogc.model.cross-domain.geosparql",
-    "ogc.model.cross-domain.datacube"
+    "ogc.model.cross-domain.datacube",
+    "ogc.geo.geodcat.geodcat"
   ],
   "sources": [
   ],
   "scope": "dev",
   "tags": [
-    "Closure"
+    "Closure", "Semantic Model"
   ]
 }

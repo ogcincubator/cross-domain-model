@@ -3,14 +3,14 @@ name: Cross-domain model
 
 # Short abstract for this collection (optional)
 abstract: |
-  Defines a cross-domain semantic model by articulating a series of profiles and dependencies on available standards and a minimum set of constraints for application in the spatio-temporal domain.
+  Defines a reusable baseline "cross-domain semantic model" by defining a series of profiles and dependencies on available standards and where appropriate a set of constraints for application of such standards in the spatio-temporal domain.
 
 # Description for this collection (optional)
 description: |
   
-  These building blocks allow for transparent reuse of a range of semantic models published by OGC and other international standards organisations that may be used to define semantics models for application domains.
+  These models are defined as ["building blocks"](https://ogcincubator.github.io/bblocks-docs/) to allow for transparent reuse of a range of semantic models published by OGC and other international standards organisations (SDO) that may be used to define semantic models for application domains in a consistent and interoperable way.
   
-  Application domains will typically define profiles of these core models to meet specific needs.  Infrastructures may define profiles to support commonality of implementation necessary to exploit infrastructure services.
+  Application domains will typically define profiles of these core models to meet specific needs. Infrastructures supporting application domains may define more general profiles to support commonality of implementation necessary to exploit infrastructure services. 
   
   The Cross-domain model underpins proposed domain models for Agriculture, Oceans and AG4DG.
   By defining these models using this common cross-domain model the interoperability between such domains is enhanced, and made transparent to applications.
@@ -25,7 +25,7 @@ description: |
   This will dramatically reduce the complexity of defining and testing domain models in a consistent fashion.
   
   Many such restrictions will relate to the way these models are combined -
-  for example the way GeoDCAT, PROV, RDF-Datacube and SOSA may be combined to standardised the way observational data is described using available standards.
+  for example the way GeoDCAT, PROV, RDF-Datacube and SOSA may be combined to standardise the way observational data is described using available standards.
 
 # Customize the following prefix (will be prepended to the path of the building blocks):
 identifier-prefix: ogc.model.cross-domain.
@@ -33,6 +33,7 @@ identifier-prefix: ogc.model.cross-domain.
 # List of imports ("default" is an alias for the main OGC Building Blocks Register)
 imports:
   - default
+  - https://ogcincubator.github.io/geodcat-ogcapi-records/
 
 
 # SPARQL configuration (optional)

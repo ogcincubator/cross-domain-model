@@ -1,0 +1,31 @@
+{
+  "name": "SOSA Examples",
+  "highlighted": true,
+  "abstract": "This Building Block identifies examples from the SOSA specification and supports validation of these examples",
+  "status": "under-development",
+  "dateTimeAddition": "2023-04-13T00:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc-building-block-register",
+  "version": "1.0",
+  "dateOfLastChange": "2023-04-13",
+  "sources": [
+    {
+      "title": "Semantic Sensor Network Ontology",
+      "link": "https://www.w3.org/TR/vocab-ssn/"
+    }
+  ],
+  "dependsOn": [
+    "ogc.model.cross-domain.sosa"
+  ],
+  "maturity": "development",
+  "scope": "development",
+  "tags": [
+    "sosa",
+    "ssn",
+    "observations",
+    "o&m",
+    "OMS"
+  ],
+  "group": "SOSA",
+  "highlighted": false
+}
