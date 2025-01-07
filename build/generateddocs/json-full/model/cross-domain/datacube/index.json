@@ -9,7 +9,7 @@
   "itemClass": "model",
   "register": "ogc-incubator",
   "version": "0.1",
-  "dateOfLastChange": "2024-06-28",
+  "dateOfLastChange": "2024-12-13",
   "link": "https://github.com/opengeospatial/bblock-template",
   "dependsOn": [],
   "shaclRules": {},
@@ -25,7 +25,11 @@
     "SDMX"
   ],
   "ontology": "http://purl.org/linked-data/cube#",
+  "remoteCacheDir": "https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/datacube/remote_cache/",
   "sourceFiles": "https://ogcincubator.github.io/cross-domain-model/_sources/datacube/",
+  "rdfData": [
+    "https://ogcincubator.github.io/cross-domain-model/data.ttl"
+  ],
   "validationPassed": true,
   "description": "## RDF-QB \n\n![](https://www.w3.org/TR/vocab-data-cube/images/qb-fig1.png)\n\n",
   "annotatedSchema": null,

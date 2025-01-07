@@ -1,0 +1,85 @@
+
+
+{
+  "itemIdentifier": "ogc.model.cross-domain.sosa-spec-examples",
+  "name": "SOSA Examples",
+  "highlighted": false,
+  "abstract": "This Building Block identifies examples from the SOSA specification and supports validation of these examples",
+  "status": "under-development",
+  "dateTimeAddition": "2023-04-13T00:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc-building-block-register",
+  "version": "1.0",
+  "dateOfLastChange": "2024-12-13",
+  "sources": [
+    {
+      "title": "Semantic Sensor Network Ontology",
+      "link": "https://www.w3.org/TR/vocab-ssn/"
+    }
+  ],
+  "dependsOn": [
+    "ogc.model.cross-domain.sosa"
+  ],
+  "maturity": "development",
+  "scope": "development",
+  "tags": [
+    "sosa",
+    "ssn",
+    "observations",
+    "o&m",
+    "OMS"
+  ],
+  "group": "SOSA",
+  "shaclRules": {
+    "ogc.model.cross-domain.sosa": [
+      "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
+    ]
+  },
+  "sourceFiles": "https://ogcincubator.github.io/cross-domain-model/_sources/sosa-spec-examples/",
+  "rdfData": [
+    "https://ogcincubator.github.io/cross-domain-model/data.ttl"
+  ],
+  "validationPassed": false,
+  "testOutputs": "https://github.com/ogcincubator/cross-domain-model/blob/master/build/tests/model/cross-domain/sosa-spec-examples/",
+  "description": "## SOSA Specification Examples\n\nThis building block runs tests against the SOSA specification examples.\n\nAs TTL files these examples are validated against the SHACL rules inherited from the building blocks for elements of the specification\n",
+  "examples": [
+    {
+      "title": "Example ice-core.ttl",
+      "snippets": [
+        {
+          "language": "ttl",
+          "ref": "https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/ice-core.ttl",
+          "code": "@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix time: <http://www.w3.org/2006/time#>.\n@prefix sosa: <http://www.w3.org/ns/sosa/> .\n@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .\n@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.\n@base <http://example.org/data/> .\n\n\n# The CO2 level observed in an ice core is 240 parts per million.\n# the ice core is a sample of the polar ice sheet of Antarctica. \n\n<http://dbpedia.org/resource/Antarctic_ice_sheet> a sosa:FeatureOfInterest ;\n  sosa:hasSample <iceCore/12>, <iceCore/13>, <iceCore/14> .\n\n<iceCore/12> rdf:type sosa:Sample ;\n  sosa:isSampleOf <http://dbpedia.org/resource/Antarctic_ice_sheet> ;\n  sosa:isResultOf <WellDrilling/4578> ;\n  sosa:madeBySampler <thermalDrill/2> .\n\n  <WellDrilling/4578> a sosa:Sampling ;\n    geo:lat -73.35 ; \n    geo:long 9.32 ;\n    sosa:hasResult <iceCore/12> ;\n    sosa:madeBySampler <thermalDrill/2> ;\n    sosa:resultTime \"2017-04-03T11:12:00Z\"^^xsd:dateTime ;\n    sosa:hasFeatureOfInterest <http://dbpedia.org/resource/Antarctic_ice_sheet> .\n\n<iceCore/12#observation> a sosa:Observation ;\n  sosa:observedProperty <iceCore/12#CO2> ;\n  sosa:hasSimpleResult 240 .\n\n# using SSN one can explicitly state that <iceCore/12#CO2> is the property of <iceCore/12> .\n\n<iceCore/12#CO2> sosa:isPropertyOf <iceCore/12> .\n  ",
+          "url": "https://ogcincubator.github.io/cross-domain-model/build/tests/model/cross-domain/sosa-spec-examples/example_1_1.ttl"
+        }
+      ],
+      "prefixes": {
+        "ex": "http://example.org/sosa/",
+        "qudt": "http://qudt.org/",
+        "qudt-1-1": "http://qudt.org/",
+        "qunit": "http://qudt.org/vocab/unit/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "sh": "http://www.w3.org/ns/shacl#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "sosa": "http://www.w3.org/ns/sosa/",
+        "ssn-system": "http://www.w3.org/ns/ssn/systems/"
+      }
+    }
+  ],
+  "examplePrefixes": {
+    "ex": "http://example.org/sosa/",
+    "qudt": "http://qudt.org/",
+    "qudt-1-1": "http://qudt.org/",
+    "qunit": "http://qudt.org/vocab/unit/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "ssn-system": "http://www.w3.org/ns/ssn/systems/"
+  },
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/ogcincubator/cross-domain-model",
+  "gitPath": "_sources/sosa-spec-examples"
+}

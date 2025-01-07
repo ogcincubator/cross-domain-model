@@ -1,0 +1,14 @@
+{
+  "title": "Validation report for ogc.model.cross-domain.qudt-basic - QUDT Basic Profile",
+  "bblockName": "QUDT Basic Profile",
+  "bblockId": "ogc.model.cross-domain.qudt-basic",
+  "generated": "2024-12-13T07:30:16.296344+00:00",
+  "result": true,
+  "items": [],
+  "globalErrors": {},
+  "counts": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0
+  }
+}

@@ -10,28 +10,55 @@
 <https://ogcincubator.github.io/ogc.model.cross-domain.all> a skos:Concept,
         dcat:Dataset,
         bblocks:Model ;
-    rdfs:label "Cross Domain Model - All modules" ;
+    rdfs:label "Cross Domain Model (Complete)" ;
     dct:abstract "All modules of the Cross Domain model" ;
     dct:created "2023-09-18T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.all" ],
+        [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/all/index.md" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/all/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.all" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/slate-build/model/cross-domain/all/" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/all/index.json" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2024-06-28"^^xsd:date ;
+    dct:modified "2024-12-13"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/cross-domain-model/> ;
-    dcat:keyword "Closure" ;
-    bblocks:dependsOn <https://ogcincubator.github.io/ogc.model.cross-domain.datacube>,
+    dcat:keyword "Closure",
+        "Semantic Model" ;
+    bblocks:dependsOn <https://ogcincubator.github.io/ogc.geo.geodcat.geodcat>,
+        <https://ogcincubator.github.io/ogc.model.cross-domain.datacube>,
         <https://ogcincubator.github.io/ogc.model.cross-domain.geosparql>,
         <https://ogcincubator.github.io/ogc.model.cross-domain.prov>,
         <https://ogcincubator.github.io/ogc.model.cross-domain.qudt-basic>,
         <https://ogcincubator.github.io/ogc.model.cross-domain.sosa> ;
-    bblocks:hasShaclRule <http://qudt.org/2.1/schema/shacl/qudt> ;
+    bblocks:hasShaclRule <http://qudt.org/2.1/schema/shacl/qudt>,
+        <https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> .
+
+<https://ogcincubator.github.io/ogc.model.cross-domain.sosa-spec-examples> a skos:Concept,
+        dcat:Dataset,
+        bblocks:Schema ;
+    rdfs:label "SOSA Examples" ;
+    dct:abstract "This Building Block identifies examples from the SOSA specification and supports validation of these examples" ;
+    dct:created "2023-04-13T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/sosa-spec-examples/index.md" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/sosa-spec-examples/index.json" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.sosa-spec-examples" ] ;
+    dct:hasVersion "1.0" ;
+    dct:modified "2024-12-13"^^xsd:date ;
+    dct:source <https://www.w3.org/TR/vocab-ssn/> ;
+    skos:inScheme <https://ogcincubator.github.io/cross-domain-model/> ;
+    dcat:keyword "OMS",
+        "o&m",
+        "observations",
+        "sosa",
+        "ssn" ;
+    bblocks:dependsOn <https://ogcincubator.github.io/ogc.model.cross-domain.sosa> ;
+    bblocks:hasShaclRule <https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/development> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
 <https://ogcincubator.github.io/ogc.model.cross-domain.datacube> a skos:Concept,
@@ -40,16 +67,14 @@
     rdfs:label "RDF-DataCube" ;
     dct:abstract "Dimensional Data Model based on SDMX" ;
     dct:created "2023-09-18T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/slate-build/model/cross-domain/datacube/" ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/datacube/index.json" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.datacube" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/datacube/index.md" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/datacube/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/datacube/index.md" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2024-06-28"^^xsd:date ;
+    dct:modified "2024-12-13"^^xsd:date ;
     dct:source <https://www.w3.org/TR/vocab-data-cube/> ;
     skos:inScheme <https://ogcincubator.github.io/cross-domain-model/> ;
     dcat:keyword "RDF-QB",
@@ -63,16 +88,14 @@
     rdfs:label "GeoSPARQL" ;
     dct:abstract "GeoSPARQL Core (1.1). Simply wraps the published GeoSPARQL ontology with a Building Block to allow examples, default JSON-LD context, SHACL rules and transforms to be easily discovered." ;
     dct:created "2023-09-18T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/geosparql/index.md" ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/geosparql/index.json" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.geosparql" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/slate-build/model/cross-domain/geosparql/" ] ;
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/geosparql/index.md" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2024-06-28"^^xsd:date ;
+    dct:modified "2024-12-13"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/cross-domain-model/> ;
     dcat:keyword "GeoSPARQL",
         "Proxy" ;
@@ -85,16 +108,14 @@
     rdfs:label "PROV" ;
     dct:abstract "Provenance Ontology" ;
     dct:created "2023-09-18T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/prov/index.json" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/prov/index.md" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/prov/index.json" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.prov" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/slate-build/model/cross-domain/prov/" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.prov" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2024-06-28"^^xsd:date ;
+    dct:modified "2024-12-13"^^xsd:date ;
     dct:source <https://www.w3.org/TR/prov-o/> ;
     skos:inScheme <https://ogcincubator.github.io/cross-domain-model/> ;
     dcat:keyword "PROV" ;
@@ -110,14 +131,12 @@
     dct:created "2023-09-18T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/qudt/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.qudt" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/qudt/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/slate-build/model/cross-domain/qudt/" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.qudt" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/qudt/index.json" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2024-06-28"^^xsd:date ;
+    dct:modified "2024-12-13"^^xsd:date ;
     dct:source <http://qudt.org/2.1/schema/qudt>,
         <https://qudt.org/> ;
     skos:inScheme <https://ogcincubator.github.io/cross-domain-model/> ;
@@ -132,16 +151,14 @@
     rdfs:label "QUDT Basic Profile" ;
     dct:abstract "Minimal implementation of Quantities, Units etc." ;
     dct:created "2023-09-18T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/slate-build/model/cross-domain/qudt-basic/" ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/qudt-basic/index.json" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.qudt-basic" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/qudt-basic/index.json" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/qudt-basic/index.md" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2024-06-28"^^xsd:date ;
+    dct:modified "2024-12-13"^^xsd:date ;
     dct:source <http://qudt.org/2.1/schema/qudt>,
         <https://qudt.org/> ;
     skos:inScheme <https://ogcincubator.github.io/cross-domain-model/> ;
@@ -151,48 +168,47 @@
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
+<https://www.w3.org/TR/prov-o/> rdfs:label "PROV-O Specification" .
+
+<https://www.w3.org/TR/vocab-data-cube/> rdfs:label "The RDF Data Cube Vocabulary" .
+
+<http://qudt.org/2.1/schema/qudt> rdfs:label "QUDT Ontology" .
+
 <https://ogcincubator.github.io/ogc.model.cross-domain.sosa> a skos:Concept,
         dcat:Dataset,
         bblocks:Model ;
     rdfs:label "SOSA/SSN" ;
     dct:abstract "Sensors, Observations, Sampling and Actuation (ISO 19156 Observations and Measurements) Ontology " ;
     dct:created "2023-09-18T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/sosa/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/slate-build/model/cross-domain/sosa/" ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/sosa/index.json" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.sosa" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/sosa/index.json" ] ;
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/sosa/index.md" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2024-06-28"^^xsd:date ;
+    dct:modified "2024-12-13"^^xsd:date ;
     dct:source <https://www.w3.org/TR/vocab-ssn/> ;
     skos:inScheme <https://ogcincubator.github.io/cross-domain-model/> ;
-    dcat:keyword "DCAT",
-        "profile" ;
+    dcat:keyword "OMS" ;
+    bblocks:hasShaclRule <https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
-<https://www.w3.org/TR/prov-o/> rdfs:label "PROV-O Specification" .
-
-<https://www.w3.org/TR/vocab-data-cube/> rdfs:label "The RDF Data Cube Vocabulary" .
-
-<https://www.w3.org/TR/vocab-ssn/> rdfs:label "SOSA/SSN Specification" .
-
-<http://qudt.org/2.1/schema/qudt> rdfs:label "QUDT Ontology" .
-
 <https://qudt.org/> rdfs:label "QUDT Website" .
+
+<https://www.w3.org/TR/vocab-ssn/> rdfs:label "SOSA/SSN Specification",
+        "Semantic Sensor Network Ontology" .
 
 <https://ogcincubator.github.io/cross-domain-model/> a skos:ConceptScheme,
         dcat:Catalog ;
     rdfs:label "Building Blocks - Cross-domain model" ;
-    dct:abstract """Defines a cross-domain semantic model by articulating a series of profiles and dependencies on available standards and a minimum set of constraints for application in the spatio-temporal domain.
+    dct:abstract """Defines a reusable baseline "cross-domain semantic model" by defining a series of profiles and dependencies on available standards and where appropriate a set of constraints for application of such standards in the spatio-temporal domain.
 """ ;
     dct:description """
-These building blocks allow for transparent reuse of a range of semantic models published by OGC and other international standards organisations that may be used to define semantics models for application domains.
+These models are defined as ["building blocks"](https://ogcincubator.github.io/bblocks-docs/) to allow for transparent reuse of a range of semantic models published by OGC and other international standards organisations (SDO) that may be used to define semantic models for application domains in a consistent and interoperable way.
 
-Application domains will typically define profiles of these core models to meet specific needs.  Infrastructures may define profiles to support commonality of implementation necessary to exploit infrastructure services.
+Application domains will typically define profiles of these core models to meet specific needs. Infrastructures supporting application domains may define more general profiles to support commonality of implementation necessary to exploit infrastructure services. 
 
 The Cross-domain model underpins proposed domain models for Agriculture, Oceans and AG4DG.
 By defining these models using this common cross-domain model the interoperability between such domains is enhanced, and made transparent to applications.
@@ -207,18 +223,19 @@ Defining constraints using SHACL for these building blocks allows for inheritanc
 This will dramatically reduce the complexity of defining and testing domain models in a consistent fashion.
 
 Many such restrictions will relate to the way these models are combined -
-for example the way GeoDCAT, PROV, RDF-Datacube and SOSA may be combined to standardised the way observational data is described using available standards.
+for example the way GeoDCAT, PROV, RDF-Datacube and SOSA may be combined to standardise the way observational data is described using available standards.
 """ ;
     skos:prefLabel "Building Blocks - Cross-domain model" ;
     bblocks:hasValidationReport <https://ogcincubator.github.io/cross-domain-model/build/tests/report.html> ;
-    bblocks:imports <https://opengeospatial.github.io/bblocks/register.json> .
+    bblocks:imports <https://ogcincubator.github.io/geodcat-ogcapi-records/build/register.json>,
+        <https://opengeospatial.github.io/bblocks/register.json> .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2024-06-28T02:08:25.542211"^^xsd:dateTime ;
-    prov:startedAtTime "2024-06-28T02:08:25.476521"^^xsd:dateTime ;
+    prov:endedAtTime "2024-12-13T07:30:18.191282"^^xsd:dateTime ;
+    prov:startedAtTime "2024-12-13T07:30:18.113164"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
             dct:format "application/json" ;
-            dct:hasVersion "git:7e84f2849dbc998accbd114ec27e0eac3d3e0514" ;
+            dct:hasVersion "git:b12ef31e4f5b5e161d369cea8199727df31f8e97" ;
             rdfs:seeAlso <https://ogcincubator.github.io/cross-domain-model/build/register.json> ],
         [ a prov:Entity ;
             dct:format "application/yaml" ;
@@ -226,6 +243,6 @@ for example the way GeoDCAT, PROV, RDF-Datacube and SOSA may be combined to stan
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
-            dct:hasVersion "0.3.47" ;
+            dct:hasVersion "0.3.55" ;
             rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] .
 
