@@ -11,10 +11,15 @@
   "link": "https://github.com/opengeospatial/bblock-template",
   "dependsOn": [
   ],
+  "ontology": "https://www.w3.org/ns/sosa/sosa.ttl",
   "sources": [
     {
       "title": "SOSA/SSN Specification",
       "link": "https://www.w3.org/TR/vocab-ssn/"
+    },
+    {
+      "title": "SOSA V2",
+      "link":  "https://raw.githubusercontent.com/w3c/sdw-sosa-ssn/refs/heads/gh-pages/ssn/rdf/ontology/core/sosa.ttl"
     }
   ],
   "scope": "dev",

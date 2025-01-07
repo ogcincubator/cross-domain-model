@@ -11,6 +11,7 @@
   "dependsOn": [
     "ogc.model.cross-domain.qudt-basic",
     "ogc.model.cross-domain.sosa",
+    "ogc.model.cross-domain.sosa-profiles.sosa-sta",
     "ogc.model.cross-domain.prov",
     "ogc.model.cross-domain.geosparql",
     "ogc.model.cross-domain.datacube",

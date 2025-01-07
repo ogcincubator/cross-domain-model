@@ -1,0 +1,23 @@
+{
+  "name": "SOSA Profile for STA data model",
+  "abstract": "Defines a profile of SOSA with constraints to fit the Sensor Things API object types. .....",
+  "status": "under-development",
+  "dateTimeAddition": "2023-09-18T00:00:00Z",
+  "itemClass": "model",
+  "register": "ogc-incubator",
+  "version": "0.1",
+  "dateOfLastChange": "2023-09-18",
+  "dependsOn": [
+    "ogc.model.cross-domain.sosa"
+  ],
+  "sources": [
+    {
+      "title": "STA",
+      "link": "https://www.ogc.org/publications/standard/sensorthings/"
+    }
+  ],
+  "scope": "dev",
+  "tags": [
+    "SOSA"
+  ]
+}
