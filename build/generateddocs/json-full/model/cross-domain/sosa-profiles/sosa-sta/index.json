@@ -1,0 +1,40 @@
+
+
+{
+  "itemIdentifier": "ogc.model.cross-domain.sosa-profiles.sosa-sta",
+  "name": "SOSA Profile for STA data model",
+  "abstract": "Defines a profile of SOSA with constraints to fit the Sensor Things API object types. .....",
+  "status": "under-development",
+  "dateTimeAddition": "2023-09-18T00:00:00Z",
+  "itemClass": "model",
+  "register": "ogc-incubator",
+  "version": "0.1",
+  "dateOfLastChange": "2025-01-07",
+  "dependsOn": [
+    "ogc.model.cross-domain.sosa"
+  ],
+  "sources": [
+    {
+      "title": "STA",
+      "link": "https://www.ogc.org/publications/standard/sensorthings/"
+    }
+  ],
+  "scope": "dev",
+  "tags": [
+    "SOSA"
+  ],
+  "shaclRules": {
+    "ogc.model.cross-domain.sosa": [
+      "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
+    ]
+  },
+  "sourceFiles": "https://ogcincubator.github.io/cross-domain-model/_sources/sosa-profiles/sosa-sta/",
+  "rdfData": [
+    "https://ogcincubator.github.io/cross-domain-model/data.ttl"
+  ],
+  "validationPassed": true,
+  "description": "## Constraints for STA\n\nDescribe like your life depends on it... with liunks to even better descriptions :-)\n\n\n\n",
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/ogcincubator/cross-domain-model",
+  "gitPath": "_sources/sosa-profiles/sosa-sta"
+}

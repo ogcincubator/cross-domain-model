@@ -17,6 +17,7 @@ TBD
 ## Sources
 
 * [SOSA/SSN Specification](https://www.w3.org/TR/vocab-ssn/)
+* [SOSA V2](https://raw.githubusercontent.com/w3c/sdw-sosa-ssn/refs/heads/gh-pages/ssn/rdf/ontology/core/sosa.ttl)
 
 # For developers
 

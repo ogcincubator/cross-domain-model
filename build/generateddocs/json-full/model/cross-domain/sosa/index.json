@@ -10,13 +10,17 @@
   "itemClass": "model",
   "register": "ogc-incubator",
   "version": "0.1",
-  "dateOfLastChange": "2024-12-13",
+  "dateOfLastChange": "2025-01-07",
   "link": "https://github.com/opengeospatial/bblock-template",
   "dependsOn": [],
   "sources": [
     {
       "title": "SOSA/SSN Specification",
       "link": "https://www.w3.org/TR/vocab-ssn/"
+    },
+    {
+      "title": "SOSA V2",
+      "link": "https://raw.githubusercontent.com/w3c/sdw-sosa-ssn/refs/heads/gh-pages/ssn/rdf/ontology/core/sosa.ttl"
     }
   ],
   "scope": "dev",
@@ -28,6 +32,8 @@
       "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
     ]
   },
+  "ontology": "https://www.w3.org/ns/sosa/sosa.ttl",
+  "remoteCacheDir": "https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/sosa/remote_cache/",
   "sourceFiles": "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/",
   "rdfData": [
     "https://ogcincubator.github.io/cross-domain-model/data.ttl"
