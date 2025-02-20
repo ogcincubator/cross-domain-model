@@ -33,7 +33,8 @@ identifier-prefix: ogc.model.cross-domain.
 # List of imports ("default" is an alias for the main OGC Building Blocks Register)
 imports:
   - default
-  - https://ogcincubator.github.io/geodcat-ogcapi-records/
+  - https://ogcincubator.github.io/geodcat-ogcapi-records
+  - https://ogcincubator.github.io/bblocks-skos
 
 
 # SPARQL configuration (optional)

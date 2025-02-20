@@ -10,7 +10,7 @@ prefixes:
   sosa: http://www.w3.org/ns/sosa/
   ssn-system: http://www.w3.org/ns/ssn/systems/
 examples:
-  - title: Example ice-core.ttl
+  - title: Example bubble-provenance.ttl
     snippets:
       - language: ttl
-        ref: https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/ice-core.ttl
+        ref: https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/bubble-provenance.ttl

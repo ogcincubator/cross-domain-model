@@ -15,7 +15,9 @@
     "ogc.model.cross-domain.prov",
     "ogc.model.cross-domain.geosparql",
     "ogc.model.cross-domain.datacube",
-    "ogc.geo.geodcat.geodcat"
+    "ogc.geo.geodcat.geodcat",
+    "ogc.skos.concept",
+    "ogc.skos.conceptScheme"
   ],
   "sources": [
   ],
