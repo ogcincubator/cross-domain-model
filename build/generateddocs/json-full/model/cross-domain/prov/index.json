@@ -9,7 +9,7 @@
   "itemClass": "model",
   "register": "ogc-incubator",
   "version": "0.1",
-  "dateOfLastChange": "2025-01-07",
+  "dateOfLastChange": "2025-02-20",
   "link": "https://github.com/opengeospatial/bblock-template",
   "dependsOn": [],
   "shaclRules": {
@@ -30,9 +30,7 @@
   "ontology": "https://opengeospatial.github.io/ogc-geosparql/geosparql11/geo.ttl",
   "remoteCacheDir": "https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/prov/remote_cache/",
   "sourceFiles": "https://ogcincubator.github.io/cross-domain-model/_sources/prov/",
-  "rdfData": [
-    "https://ogcincubator.github.io/cross-domain-model/data.ttl"
-  ],
+  "rdfData": [],
   "validationPassed": true,
   "description": "## PROV-O ontology \n\n![](https://www.w3.org/TR/prov-o/diagrams/starting-points.svg)\n\n",
   "annotatedSchema": null,

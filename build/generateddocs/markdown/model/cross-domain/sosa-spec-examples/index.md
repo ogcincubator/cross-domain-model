@@ -17,44 +17,54 @@ As TTL files these examples are validated against the SHACL rules inherited from
 
 ## Examples
 
-### Example ice-core.ttl
+### Example bubble-provenance.ttl
 #### ttl
 ```ttl
+@prefix ex: <https://example.org/data/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix time: <http://www.w3.org/2006/time#>.
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
-@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
-@base <http://example.org/data/> .
 
+ex:IceCore12 a sosa:Sample , sosa:MaterialSample ;
+  sosa:isSampleOf ex:Antarctic_ice_sheet ;
+  sosa:isResultOf ex:WellDrilling4578 ;
+.
+ex:Bubble873 a sosa:Sample , sosa:MaterialSample ;
+  sosa:isSampleOf ex:IceCore12 , ex:EarthAtmosphere;
+  sosa:hasSampledFeature ex:Antarctic_ice_sheet ;
+  sosa:isResultOf ex:CoreEx1923 ;
+.
+ex:WellDrilling4578 a sosa:Sampling ;
+  geo:hasGeometry [ 
+    a geo:Point ;
+    geo:asWKT "POINT (9.32 -73.35)"^^geo:WktLiteral ;
+  ] ;
+  sosa:hasResult ex:IceCore12 ;
+  sosa:madeBySampler ex:ThermalDrill2 ;
+  sosa:resultTime "2017-04-03T11:12:00Z"^^xsd:dateTime ;
+  sosa:hasFeatureOfInterest ex:Antarctic_ice_sheet ;
+.
+ex:CoreEx1923 a sosa:Sampling ;
+  sosa:hasInputValue [
+      ex:offset "15.202"^^unit:M ;
+  ] ;
+  sosa:hasResult ex:Bubble873 ;
+  sosa:madeBySampler orcid:0000-0002-3884-3420 ;
+  sosa:resultTime "2018-01-09T14:12:00Z"^^xsd:dateTime ;
+  sosa:hasFeatureOfInterest ex:IceCore12 ;
+  sosa:hasUltimateFeatureOfInterest ex:Antarctic_ice_sheet ;
+.
+ex:Antarctic_ice_sheet a sosa:FeatureOfInterest ;
+  owl:sameAs <https://www.wikidata.org/wiki/Q571430> ;
+. 
+ex:EarthAtmosphere a sosa:FeatureOfInterest ;
+  owl:sameAs <https://www.wikidata.org/wiki/Q3230> ;
+. 
 
-# The CO2 level observed in an ice core is 240 parts per million.
-# the ice core is a sample of the polar ice sheet of Antarctica. 
-
-<http://dbpedia.org/resource/Antarctic_ice_sheet> a sosa:FeatureOfInterest ;
-  sosa:hasSample <iceCore/12>, <iceCore/13>, <iceCore/14> .
-
-<iceCore/12> rdf:type sosa:Sample ;
-  sosa:isSampleOf <http://dbpedia.org/resource/Antarctic_ice_sheet> ;
-  sosa:isResultOf <WellDrilling/4578> ;
-  sosa:madeBySampler <thermalDrill/2> .
-
-  <WellDrilling/4578> a sosa:Sampling ;
-    geo:lat -73.35 ; 
-    geo:long 9.32 ;
-    sosa:hasResult <iceCore/12> ;
-    sosa:madeBySampler <thermalDrill/2> ;
-    sosa:resultTime "2017-04-03T11:12:00Z"^^xsd:dateTime ;
-    sosa:hasFeatureOfInterest <http://dbpedia.org/resource/Antarctic_ice_sheet> .
-
-<iceCore/12#observation> a sosa:Observation ;
-  sosa:observedProperty <iceCore/12#CO2> ;
-  sosa:hasSimpleResult 240 .
-
-# using SSN one can explicitly state that <iceCore/12#CO2> is the property of <iceCore/12> .
-
-<iceCore/12#CO2> sosa:isPropertyOf <iceCore/12> .
-  
 ```
 
 ## Sources
