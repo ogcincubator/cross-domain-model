@@ -1,9 +1,9 @@
+@prefix cdt: <http://w3id.org/lindt/custom_datatypes#> .
 @prefix ex: <https://example.org/data/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix orcid: <https://orcid.org/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
-@prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ex:Bubble873 a sosa:MaterialSample,
@@ -15,14 +15,14 @@ ex:Bubble873 a sosa:MaterialSample,
 
 ex:CoreEx1923 a sosa:Sampling ;
     sosa:hasFeatureOfInterest ex:IceCore12 ;
-    sosa:hasInputValue [ ex:offset "15.202"^^unit:M ] ;
+    sosa:hasInputValue [ ex:offset "15.202 m"^^cdt:ucum ] ;
     sosa:hasResult ex:Bubble873 ;
     sosa:hasUltimateFeatureOfInterest ex:Antarctic_ice_sheet ;
     sosa:madeBySampler orcid:0000-0002-3884-3420 ;
     sosa:resultTime "2018-01-09T14:12:00+00:00"^^xsd:dateTime .
 
 ex:EarthAtmosphere a sosa:FeatureOfInterest ;
-    owl:sameAs <https://www.wikidata.org/wiki/Q3230> .
+    skos:exactMatch <https://www.wikidata.org/wiki/Q3230> .
 
 ex:WellDrilling4578 a sosa:Sampling ;
     geo:hasGeometry [ a geo:Point ;
@@ -38,5 +38,5 @@ ex:IceCore12 a sosa:MaterialSample,
     sosa:isSampleOf ex:Antarctic_ice_sheet .
 
 ex:Antarctic_ice_sheet a sosa:FeatureOfInterest ;
-    owl:sameAs <https://www.wikidata.org/wiki/Q571430> .
+    skos:exactMatch <https://www.wikidata.org/wiki/Q571430> .
 

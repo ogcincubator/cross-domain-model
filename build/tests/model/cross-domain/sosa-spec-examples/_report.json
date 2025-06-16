@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.model.cross-domain.sosa-spec-examples - SOSA Examples",
   "bblockName": "SOSA Examples",
   "bblockId": "ogc.model.cross-domain.sosa-spec-examples",
-  "generated": "2025-02-20T15:20:30.165764+00:00",
+  "generated": "2025-06-16T23:53:54.575823+00:00",
   "result": false,
   "items": [
     {
@@ -53,23 +53,29 @@
             {
               "op": "shacl-report",
               "shaclFile": "_sources/sosa/rules.shacl",
-              "graph": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix sosa: <http://www.w3.org/ns/sosa/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode <https://example.org/data/WellDrilling4578> ;\n            sh:resultMessage \"Less than 1 values on ex:WellDrilling4578->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] sosa:observedProperty )\" ;\n            sh:resultPath _:n362889f265804ac2ac2cce23cb776e31b37 ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n362889f265804ac2ac2cce23cb776e31b29 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <https://example.org/data/CoreEx1923> ;\n            sh:resultMessage \"Less than 1 values on ex:CoreEx1923->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] sosa:observedProperty )\" ;\n            sh:resultPath _:n362889f265804ac2ac2cce23cb776e31b37 ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n362889f265804ac2ac2cce23cb776e31b29 ] .\n\n_:N1c26cb1bdfd143788d7e7350cb42c2a6 sh:oneOrMorePath [ sh:alternativePath ( [ ] [ ] ) ] .\n\n_:N4048eebc55ff4851a987c5ed9fcc083d rdf:first [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath [ ] ] ] ] ;\n    rdf:rest ( sosa:observedProperty ) .\n\n_:N719e297154504f66bdf226ae0fb8436a rdf:first sosa:observedProperty ;\n    rdf:rest () .\n\n_:Nccf724f1133b498895aeb32fed3ec2e4 sh:zeroOrMorePath _:N1c26cb1bdfd143788d7e7350cb42c2a6 .\n\n_:n362889f265804ac2ac2cce23cb776e31b29 sh:maxCount 1 ;\n    sh:minCount 1 ;\n    sh:path _:N4048eebc55ff4851a987c5ed9fcc083d .\n\n_:n362889f265804ac2ac2cce23cb776e31b37 rdf:first _:Nccf724f1133b498895aeb32fed3ec2e4 ;\n    rdf:rest _:N719e297154504f66bdf226ae0fb8436a .\n\n",
+              "graph": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix sosa: <http://www.w3.org/ns/sosa/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode <https://example.org/data/WellDrilling4578> ;\n            sh:resultMessage \"Less than 1 values on ex:WellDrilling4578->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] sosa:observedProperty )\" ;\n            sh:resultPath _:n79bd2caab73c41b6ae39ebbdfaec32b2b37 ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n79bd2caab73c41b6ae39ebbdfaec32b2b29 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <https://example.org/data/CoreEx1923> ;\n            sh:resultMessage \"Less than 1 values on ex:CoreEx1923->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] sosa:observedProperty )\" ;\n            sh:resultPath _:n79bd2caab73c41b6ae39ebbdfaec32b2b37 ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n79bd2caab73c41b6ae39ebbdfaec32b2b29 ] .\n\n_:N34687495eacc464095f857985a5d2eaf sh:oneOrMorePath [ sh:alternativePath ( [ ] [ ] ) ] .\n\n_:N3b0dc99084a94939b47955ab93bf9358 sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath [ ] ] ] .\n\n_:N5feebb9ccb83495bb8e4ed88b04b006f rdf:first sosa:observedProperty ;\n    rdf:rest () .\n\n_:Nb095b8f79e62425cb8b92af9c8f87084 rdf:first sosa:observedProperty ;\n    rdf:rest () .\n\n_:Nc3cb8cb997e749cfaececa8c701df083 rdf:first _:N3b0dc99084a94939b47955ab93bf9358 ;\n    rdf:rest _:Nb095b8f79e62425cb8b92af9c8f87084 .\n\n_:Nddd39ec8559749a887f4fbbe57e7c285 sh:zeroOrMorePath _:N34687495eacc464095f857985a5d2eaf .\n\n_:n79bd2caab73c41b6ae39ebbdfaec32b2b29 sh:maxCount 1 ;\n    sh:minCount 1 ;\n    sh:path _:Nc3cb8cb997e749cfaececa8c701df083 .\n\n_:n79bd2caab73c41b6ae39ebbdfaec32b2b37 rdf:first _:Nddd39ec8559749a887f4fbbe57e7c285 ;\n    rdf:rest _:N5feebb9ccb83495bb8e4ed88b04b006f .\n\n",
               "isError": true,
               "message": "Validation result for _sources/sosa/rules.shacl:\n  Validation Report\n  Conforms: False\n  Results (2):\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: [ sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] sosa:observedProperty ) ]\n  \tFocus Node: ex:WellDrilling4578\n  \tResult Path: ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] sosa:observedProperty )\n  \tMessage: Less than 1 values on ex:WellDrilling4578->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] sosa:observedProperty )\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: [ sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] sosa:observedProperty ) ]\n  \tFocus Node: ex:CoreEx1923\n  \tResult Path: ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] sosa:observedProperty )\n  \tMessage: Less than 1 values on ex:CoreEx1923->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] sosa:observedProperty )\n  "
             },
             {
               "shaclFile": "_sources/sosa/rules.shacl",
               "focusNodes": {
+                "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
+                  "nodes": []
+                },
                 "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
                   "nodes": [
                     "ex:WellDrilling4578",
                     "ex:CoreEx1923"
                   ]
                 },
-                "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
-                  "nodes": []
-                },
                 "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
+                  "nodes": [
+                    "ex:WellDrilling4578",
+                    "ex:CoreEx1923"
+                  ]
+                },
+                "<https://www.ogc.org/rules/sosa/#testResult>": {
                   "nodes": [
                     "ex:WellDrilling4578",
                     "ex:CoreEx1923"
@@ -83,16 +89,10 @@
                 },
                 "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
                   "nodes": []
-                },
-                "<https://www.ogc.org/rules/sosa/#testResult>": {
-                  "nodes": [
-                    "ex:WellDrilling4578",
-                    "ex:CoreEx1923"
-                  ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/sosa/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: ex:WellDrilling4578,ex:CoreEx1923\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: ex:WellDrilling4578,ex:CoreEx1923\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: ex:WellDrilling4578,ex:CoreEx1923\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: ex:WellDrilling4578,ex:CoreEx1923\n"
+              "message": "Focus nodes for _sources/sosa/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: ex:WellDrilling4578,ex:CoreEx1923\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: ex:WellDrilling4578,ex:CoreEx1923\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: ex:WellDrilling4578,ex:CoreEx1923\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: ex:WellDrilling4578,ex:CoreEx1923\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n"
             }
           ]
         }
