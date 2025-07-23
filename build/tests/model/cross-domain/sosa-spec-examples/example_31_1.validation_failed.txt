@@ -1,0 +1,35 @@
+Validation report for ogc.model.cross-domain.sosa-spec-examples - SOSA Examples
+Generated 2025-07-23T23:36:19.865637+00:00
+=== Files ===
+Using example_31_1.ttl from examples
+Output Turtle example_31_1.ttl created
+=== End Files ===
+
+=== Turtle ===
+Prefixes are defined for ex, qudt, qudt-1-1, unit, rdfs, xsd, sh, owl, sosa, ssn-system, skos, time
+=== End Turtle ===
+
+=== SHACL ===
+
+** Validation error **
+Validation result for _sources/sosa/rules.shacl:
+  Validation Report
+  Conforms: False
+  Results (1):
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/sosa/#testRequiredTime>
+  	Focus Node: ex:Ob873c4
+  	Value Node: ex:Ob873c4
+  	Message: sosa:resultTime or sosa:phenomenonTime is required, and no more than 1 of each is allowed
+  
+Focus nodes for _sources/sosa/rules.shacl:
+ - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: ex:Ob873c4
+ - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: ex:Ob873c4/sosa:hasSimpleResult
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: ex:Ob873c4
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: ex:Ob873c4
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: ex:Ob873c4
+
+=== End SHACL ===
+

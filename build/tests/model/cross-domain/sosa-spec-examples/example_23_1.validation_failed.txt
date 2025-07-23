@@ -1,12 +1,12 @@
 Validation report for ogc.model.cross-domain.sosa-spec-examples - SOSA Examples
-Generated 2025-06-16T23:53:54.575771+00:00
+Generated 2025-07-23T23:36:19.734961+00:00
 === Files ===
-Using example_1_1.ttl from examples
-Output Turtle example_1_1.ttl created
+Using example_23_1.ttl from examples
+Output Turtle example_23_1.ttl created
 === End Files ===
 
 === Turtle ===
-Prefixes are defined for ex, qudt, qudt-1-1, qunit, rdfs, xsd, sh, owl, sosa, ssn-system
+Prefixes are defined for ex, qudt, qudt-1-1, unit, rdfs, xsd, sh, owl, sosa, ssn-system, skos, time
 === End Turtle ===
 
 === SHACL ===
@@ -32,10 +32,10 @@ Validation result for _sources/sosa/rules.shacl:
 Focus nodes for _sources/sosa/rules.shacl:
  - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
  - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: ex:WellDrilling4578,ex:CoreEx1923
+ - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
  - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: ex:WellDrilling4578,ex:CoreEx1923
  - Shape <https://www.ogc.org/rules/sosa/#testResult>: ex:WellDrilling4578,ex:CoreEx1923
  - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: ex:WellDrilling4578,ex:CoreEx1923
- - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
 
 === End SHACL ===
 
