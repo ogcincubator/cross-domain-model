@@ -1,0 +1,6 @@
+
+examples:
+  - title: Examples from CDT shapes
+    snippets:
+      - language: ttl
+        ref: https://raw.githubusercontent.com/Cyber-Domain-Ontology/CDO-Shapes-PROV-O/refs/heads/main/tests/exemplars.ttl
