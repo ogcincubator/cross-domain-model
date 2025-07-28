@@ -18,3 +18,8 @@ description: |
 [More information on design and usage](https://github.com/opengeospatial/bblock-template/blob/master/USAGE.md)
 
 
+## Acknowledgements
+
+The work has been co-funded by the European Union, Switzerland and the United Kingdom under the Horizon Europe:
+* [Iliad project](https://www.ogc.org/initiatives/iliad/) (GA 101037643)
+* [AD4GD project](https://www.ogc.org/initiatives/ad4gd/)(GA 101061001)
