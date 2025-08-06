@@ -1,0 +1,11 @@
+Validation report for ogc.model.cross-domain.sosa-spec-examples - SOSA Examples
+Generated 2025-07-23T23:36:19.935087+00:00
+=== Turtle ===
+Prefixes are defined for ex, qudt, qudt-1-1, unit, rdfs, xsd, sh, owl, sosa, ssn-system, skos, time
+
+** Validation error **
+at line 41 of <>:
+Bad syntax (objectList expected) at ^ in:
+"...b'ch <https://www.wikidata.org/wiki/Q525> .\n  rdfs:label "Sun"'^b' ;\n.'"
+=== End Turtle ===
+

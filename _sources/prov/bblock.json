@@ -7,11 +7,12 @@
   "register": "ogc-incubator",
   "version": "1.0",
   "dateOfLastChange": "2023-09-18",
+  "link": "https://github.com/ogcincubator/cross-domain-model",
   "dependsOn": [
   ],
-  "ontology": "https://www.w3.org/ns/prov.ttl",
+  "ontology": "https://www.w3.org/ns/prov-o",
   "shaclRules": [
-    "http://qudt.org/2.1/schema/shacl/qudt"
+    "https://raw.githubusercontent.com/Cyber-Domain-Ontology/CDO-Shapes-PROV-O/refs/heads/main/shapes/sh-prov-o.ttl"
   ],
   "sources": [
     {

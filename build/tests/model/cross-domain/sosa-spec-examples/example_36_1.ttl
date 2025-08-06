@@ -1,0 +1,53 @@
+@prefix ex: <https://example.org/data/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:Observation-Smiley-Color a sosa:Observation ;
+    sosa:hasFeatureOfInterest ex:SmileySticker ;
+    sosa:hasSimpleResult "Yellow"^^xsd:string ;
+    sosa:madeBySensor ex:ColorDeterminer ;
+    sosa:observedProperty ex:StickerColor ;
+    sosa:phenomenonTime [ a time:Instant ;
+            time:inXSDDateTimeStamp "2017-04-15T00:00:00+00:00"^^xsd:dateTime ] ;
+    sosa:resultTime "2017-04-16T00:00:12+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure ex:ColorDetermination .
+
+ex:SmileySampling a sosa:Sampling ;
+    rdfs:label "Sampling of a representative Smiley Sticker from a Collection of Smiley Stickers"@en ;
+    sosa:hasFeatureOfInterest ex:SmileyPopulation ;
+    sosa:hasResult ex:SmileySticker ;
+    sosa:madeBySampler ex:SmileySampler ;
+    sosa:usedProcedure ex:SmileySamplingProcedure .
+
+ex:StickerAssayOffice a sosa:Platform ;
+    rdfs:label "Assay office for determining the color of a sticker"@en ;
+    sosa:hosts ex:ColorDeterminer .
+
+ex:ColorDetermination a sosa:ObservingProcedure ;
+    rdfs:label "Procedure for determining the color of a sticker"@en ;
+    sosa:forProperty ex:StickerColor .
+
+ex:SmileyPopulation a sosa:FeatureOfInterest ;
+    rdfs:label "A population of smiley face stickers"@en ;
+    sosa:hasProperty ex:stickerColor .
+
+ex:SmileySampler a sosa:Sampler ;
+    rdfs:label "Smiley sticker sampler"@en ;
+    sosa:implements ex:SmileySamplingProcedure .
+
+ex:ColorDeterminer a sosa:Sensor ;
+    rdfs:label "Sensor for determining the color of a sticker"@en ;
+    sosa:observes ex:StickerColor .
+
+ex:SmileySamplingProcedure a sosa:SamplingProcedure ;
+    rdfs:label "Procedure for sampling smiley stickers"@en .
+
+ex:SmileySticker a sosa:FeatureOfInterest ;
+    rdfs:label "Smiley face sticker"@en ;
+    sosa:hasProperty ex:stickerColor .
+
+ex:StickerColor a sosa:Property ;
+    rdfs:label "The color of a sticker"@en .
+

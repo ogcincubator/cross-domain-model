@@ -9,7 +9,7 @@
   "itemClass": "model",
   "register": "ogc-incubator",
   "version": "0.1",
-  "dateOfLastChange": "2025-01-07",
+  "dateOfLastChange": "2025-07-23",
   "dependsOn": [
     "ogc.model.cross-domain.qudt"
   ],
@@ -33,9 +33,7 @@
     ]
   },
   "sourceFiles": "https://ogcincubator.github.io/cross-domain-model/_sources/qudt-basic/",
-  "rdfData": [
-    "https://ogcincubator.github.io/cross-domain-model/data.ttl"
-  ],
+  "rdfData": [],
   "validationPassed": true,
   "description": "## QUDT - basic profile\n\nDefines just the basic parts of QUDT used..\n\n\n\n",
   "annotatedSchema": null,

@@ -1,0 +1,67 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ex: <https://example.org/data/> .
+@prefix orcid: <http://orcid.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:SC1 a sosa:SampleCollection ;
+    skos:note """member samples have a common isSampleOf
+  `isResultOfMadeBySampler` is repeated to enumerate the samplers used for the member samples
+  `isResultOfUsedProcedure` is repeated to enumerate the procedures used for the member samples""" ;
+    sosa:hasMember ex:SC2,
+        ex:SC3 ;
+    sosa:isResultOfMadeBySampler orcid:0000-0002-3884-3420,
+        orcid:0000-0002-7815-2472 ;
+    sosa:isResultOfUsedProcedure ex:p5,
+        ex:p6 ;
+    sosa:isSampleOf ex:foia .
+
+ex:examples-collection-sam a owl:Ontology ;
+    dcterms:created "2023-11-04"^^xsd:date ;
+    dcterms:creator orcid:0000-0002-3884-3420 ;
+    dcterms:modified "2024-01-22"^^xsd:date ;
+    rdfs:comment "Small dataset to test rules in SOSA Collections" ;
+    owl:imports dc:,
+        <http://www.w3.org/2006/time>,
+        sosa: .
+
+ex:S2 a sosa:Sample ;
+    sosa:isResultOfUsedProcedure ex:p5 .
+
+ex:S3 a sosa:Sample ;
+    sosa:isResultOfUsedProcedure ex:p6 .
+
+ex:S4 a sosa:Sample ;
+    sosa:isResultOfUsedProcedure ex:p5 .
+
+ex:S5 a sosa:Sample ;
+    sosa:isResultOfUsedProcedure ex:p6 .
+
+ex:SC2 a sosa:SampleCollection ;
+    skos:note "member samples have a common Sampler" ;
+    sosa:hasMember ex:S2,
+        ex:S3 ;
+    sosa:isResultOfMadeBySampler orcid:0000-0002-3884-3420 .
+
+ex:SC3 a sosa:SampleCollection ;
+    skos:note "member samples have a common Sampler" ;
+    sosa:hasMember ex:S4,
+        ex:S5 ;
+    sosa:isResultOfMadeBySampler orcid:0000-0002-7815-2472 .
+
+ex:foia a sosa:FeatureOfInterest .
+
+orcid:0000-0002-7815-2472 a dcterms:Agent,
+        sosa:Sampler .
+
+orcid:0000-0002-3884-3420 a dcterms:Agent,
+        sosa:Sampler .
+
+ex:p5 a sosa:SamplingProcedure .
+
+ex:p6 a sosa:SamplingProcedure .
+

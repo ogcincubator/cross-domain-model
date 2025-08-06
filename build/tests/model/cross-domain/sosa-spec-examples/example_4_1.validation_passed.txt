@@ -1,0 +1,26 @@
+Validation report for ogc.model.cross-domain.sosa-spec-examples - SOSA Examples
+Generated 2025-07-23T23:36:19.576928+00:00
+=== Files ===
+Using example_4_1.ttl from examples
+Output Turtle example_4_1.ttl created
+=== End Files ===
+
+=== Turtle ===
+Prefixes are defined for ex, qudt, qudt-1-1, unit, rdfs, xsd, sh, owl, sosa, ssn-system, skos, time
+=== End Turtle ===
+
+=== SHACL ===
+Validation result for _sources/sosa/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/sosa/rules.shacl:
+ - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: *none*
+
+=== End SHACL ===
+

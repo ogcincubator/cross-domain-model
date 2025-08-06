@@ -1,28 +1,24 @@
-@prefix geo1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix ex: <https://example.org/data/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://example.org/data/iceCore/12#observation> a sosa:Observation ;
-    sosa:hasSimpleResult 240 ;
-    sosa:observedProperty <http://example.org/data/iceCore/12#CO2> .
+ex:ObsGeo1 a sosa:Observation ;
+    sosa:hasFeatureOfInterest ex:AbbysCar ;
+    sosa:hasResult [ a geo:Geometry ;
+            geo:asWKT "Point (145.042316 -37.919134)"^^geo:wktLiteral ] ;
+    sosa:madeBySensor ex:MyGPS736 ;
+    sosa:observedProperty <https://vocab.nerc.ac.uk/collection/S06/current/S0600255/> ;
+    sosa:phenomenonTime [ a time:Instant ;
+            time:inXSDDateTimeStamp "2023-06-20T21:49:18+00:00"^^xsd:dateTime ] ;
+    sosa:resultTime "2023-06-20T21:49:18+00:00"^^xsd:dateTime .
 
-<http://example.org/data/WellDrilling/4578> a sosa:Sampling ;
-    geo1:lat -73.35 ;
-    geo1:long 9.32 ;
-    sosa:hasFeatureOfInterest <http://dbpedia.org/resource/Antarctic_ice_sheet> ;
-    sosa:hasResult <http://example.org/data/iceCore/12> ;
-    sosa:madeBySampler <http://example.org/data/thermalDrill/2> ;
-    sosa:resultTime "2017-04-03T11:12:00+00:00"^^xsd:dateTime .
+ex:AbbysCar a sosa:FeatureOfInterest .
 
-<http://example.org/data/iceCore/12#CO2> sosa:isPropertyOf <http://example.org/data/iceCore/12> .
+ex:MyGPS736 a sosa:Sensor .
 
-<http://dbpedia.org/resource/Antarctic_ice_sheet> a sosa:FeatureOfInterest ;
-    sosa:hasSample <http://example.org/data/iceCore/12>,
-        <http://example.org/data/iceCore/13>,
-        <http://example.org/data/iceCore/14> .
-
-<http://example.org/data/iceCore/12> a sosa:Sample ;
-    sosa:isResultOf <http://example.org/data/WellDrilling/4578> ;
-    sosa:isSampleOf <http://dbpedia.org/resource/Antarctic_ice_sheet> ;
-    sosa:madeBySampler <http://example.org/data/thermalDrill/2> .
+<https://vocab.nerc.ac.uk/collection/S06/current/S0600255/> a sosa:Property ;
+    rdfs:label "Location (geographic coordinates)"@en .
 
