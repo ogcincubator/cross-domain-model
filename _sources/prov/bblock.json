@@ -1,16 +1,15 @@
 {
   "name": "PROV",
   "abstract": "Provenance Ontology",
-  "status": "under-development",
+  "status": "mature",
   "dateTimeAddition": "2023-09-18T00:00:00Z",
   "itemClass": "model",
   "register": "ogc-incubator",
-  "version": "0.1",
+  "version": "1.0",
   "dateOfLastChange": "2023-09-18",
-  "link": "https://github.com/opengeospatial/bblock-template",
   "dependsOn": [
   ],
-  "ontology": "https://opengeospatial.github.io/ogc-geosparql/geosparql11/geo.ttl",
+  "ontology": "https://www.w3.org/ns/prov.ttl",
   "shaclRules": [
     "http://qudt.org/2.1/schema/shacl/qudt"
   ],
