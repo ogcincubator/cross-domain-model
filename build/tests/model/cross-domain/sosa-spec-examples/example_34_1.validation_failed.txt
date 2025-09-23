@@ -1,8 +1,8 @@
 Validation report for ogc.model.cross-domain.sosa-spec-examples - SOSA Examples
-Generated 2025-07-23T23:36:19.918551+00:00
+Generated 2025-09-23T07:23:42.798171+00:00
 === Files ===
-Using example_36_1.ttl from examples
-Output Turtle example_36_1.ttl created
+Using example_34_1.ttl from examples
+Output Turtle example_34_1.ttl created
 === End Files ===
 
 === Turtle ===
@@ -30,12 +30,12 @@ Validation result for _sources/sosa/rules.shacl:
   	Message: Less than 1 values on ex:SmileySampling->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] sosa:observedProperty )
   
 Focus nodes for _sources/sosa/rules.shacl:
- - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
  - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: ex:SmileySampling,ex:Observation-Smiley-Color
- - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: ex:Observation-Smiley-Color/sosa:hasSimpleResult
  - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: ex:SmileySampling,ex:Observation-Smiley-Color
  - Shape <https://www.ogc.org/rules/sosa/#testResult>: ex:SmileySampling,ex:Observation-Smiley-Color
  - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: ex:SmileySampling,ex:Observation-Smiley-Color
+ - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: ex:Observation-Smiley-Color/sosa:hasSimpleResult
 
 === End SHACL ===
 

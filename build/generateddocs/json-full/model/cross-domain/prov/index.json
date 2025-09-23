@@ -4,19 +4,18 @@
   "itemIdentifier": "ogc.model.cross-domain.prov",
   "name": "PROV",
   "abstract": "Provenance Ontology",
-  "status": "under-development",
+  "highlighted": true,
+  "status": "stable",
   "dateTimeAddition": "2023-09-18T00:00:00Z",
   "itemClass": "model",
   "register": "ogc-incubator",
-  "version": "0.1",
-  "dateOfLastChange": "2025-07-23",
+  "version": "1.0",
+  "dateOfLastChange": "2025-09-23",
   "link": "https://github.com/ogcincubator/cross-domain-model",
   "dependsOn": [],
-  "shaclRules": {
-    "ogc.model.cross-domain.prov": [
-      "https://raw.githubusercontent.com/Cyber-Domain-Ontology/CDO-Shapes-PROV-O/refs/heads/main/shapes/sh-prov-o.ttl"
-    ]
-  },
+  "x-shaclRules": [
+    "https://raw.githubusercontent.com/Cyber-Domain-Ontology/CDO-Shapes-PROV-O/refs/heads/main/shapes/sh-prov-o.ttl"
+  ],
   "sources": [
     {
       "title": "PROV-O Specification",
@@ -27,11 +26,12 @@
   "tags": [
     "PROV"
   ],
+  "shaclShapes": {},
   "ontology": "https://www.w3.org/ns/prov-o",
   "remoteCacheDir": "https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/prov/remote_cache/",
   "sourceFiles": "https://ogcincubator.github.io/cross-domain-model/_sources/prov/",
   "rdfData": [],
-  "validationPassed": false,
+  "validationPassed": true,
   "testOutputs": "https://github.com/ogcincubator/cross-domain-model/blob/master/build/tests/model/cross-domain/prov/",
   "description": "## PROV-O ontology \n\n![](https://www.w3.org/TR/prov-o/diagrams/starting-points.svg)\n\n",
   "examples": [

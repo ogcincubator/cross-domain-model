@@ -10,7 +10,7 @@
   "itemClass": "model",
   "register": "ogc-incubator",
   "version": "0.1",
-  "dateOfLastChange": "2025-07-23",
+  "dateOfLastChange": "2025-09-23",
   "link": "https://github.com/opengeospatial/bblock-template",
   "dependsOn": [],
   "sources": [
@@ -27,7 +27,7 @@
   "tags": [
     "OMS"
   ],
-  "shaclRules": {
+  "shaclShapes": {
     "ogc.model.cross-domain.sosa": [
       "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
     ]

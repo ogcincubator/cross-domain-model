@@ -1,42 +1,47 @@
 @prefix cdt: <http://w3id.org/lindt/custom_datatypes#> .
 @prefix ex: <https://example.org/data/> .
-@prefix qk: <http://qudt.org/vocab/quantitykind/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ex:location_4687 a sosa:Platform ;
-    sosa:hosts ex:windSensor_14 .
+ex:ts159c a sosa:ObservationCollection ;
+    sosa:hasFeatureOfInterest ex:station223 ;
+    sosa:hasMember ex:t1,
+        ex:t2,
+        ex:t3,
+        ex:t4 ;
+    sosa:madeBySensor ex:fooglemeter39 ;
+    sosa:observedProperty ex:p1 ;
+    sosa:phenomenonTime [ a time:Interval ;
+            time:hasBeginning [ a time:Instant ;
+                    time:inXSDDateTime "2017-04-15T20:00:00+00:00"^^xsd:dateTime ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inXSDDateTime "2017-04-15T20:03:00+00:00"^^xsd:dateTime ] ] ;
+    sosa:resultTime "2017-04-15T20:03:30+00:00"^^xsd:dateTime .
 
-ex:observation_147 a sosa:Observation ;
-    sosa:hasSimpleResult "47 km/h"^^cdt:ucum ;
-    sosa:madeBySensor ex:windSensor_14 ;
-    sosa:observedProperty ex:windSpeed ;
-    sosa:resultTime "2017-04-12T12:00:00+00:00"^^xsd:dateTime ;
-    sosa:wasOriginatedBy ex:observation_147_spinningCupsMovement .
+ex:fooglemeter39 a sosa:Sensor .
 
-ex:observation_148 a sosa:Observation ;
-    sosa:hasSimpleResult "47 km/h"^^cdt:ucum ;
-    sosa:madeBySensor ex:windSensor_14 ;
-    sosa:observedProperty ex:windSpeed ;
-    sosa:resultTime "2017-04-12T12:01:00+00:00"^^xsd:dateTime ;
-    sosa:wasOriginatedBy ex:observation_148_spinningCupsMovement .
+ex:p1 a sosa:Property .
 
-ex:observation_147_spinningCupsMovement a sosa:Stimulus ;
-    sosa:isProxyFor ex:windSpeed .
+ex:station223 a sosa:FeatureOfInterest .
 
-ex:observation_148_spinningCupsMovement a sosa:Stimulus ;
-    sosa:isProxyFor ex:windSpeed .
+ex:t1 a sosa:Observation ;
+    sosa:hasSimpleResult "3.24 m/s"^^cdt:ucum ;
+    sosa:phenomenonTime [ a time:Instant ;
+            time:inXSDDateTime "2017-04-15T20:00:00+00:00"^^xsd:dateTime ] .
 
-ex:windSensor_14 a sosa:Sensor ;
-    sosa:detects ex:observation_147_spinningCupsMovement,
-        ex:observation_148_spinningCupsMovement ;
-    sosa:madeObservation ex:observation_147,
-        ex:observation_148 ;
-    sosa:observes ex:windSpeed .
+ex:t2 a sosa:Observation ;
+    sosa:hasSimpleResult "3.21 m/s"^^cdt:ucum ;
+    sosa:phenomenonTime [ a time:Instant ;
+            time:inXSDDateTime "2017-04-15T20:01:00+00:00"^^xsd:dateTime ] .
 
-ex:windSpeed a sosa:Property ;
-    rdfs:label "wind speed"@en ;
-    skos:broader qk:Speed .
+ex:t3 a sosa:Observation ;
+    sosa:hasSimpleResult "3.15 m/s"^^cdt:ucum ;
+    sosa:phenomenonTime [ a time:Instant ;
+            time:inXSDDateTime "2017-04-15T20:02:00+00:00"^^xsd:dateTime ] .
+
+ex:t4 a sosa:Observation ;
+    sosa:hasSimpleResult "3.15 m/s"^^cdt:ucum ;
+    sosa:phenomenonTime [ a time:Instant ;
+            time:inXSDDateTime "2017-04-15T20:03:00+00:00"^^xsd:dateTime ] .
 

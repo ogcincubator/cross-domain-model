@@ -1,5 +1,5 @@
 Validation report for ogc.model.cross-domain.sosa-spec-examples - SOSA Examples
-Generated 2025-07-23T23:36:19.889609+00:00
+Generated 2025-09-23T07:23:42.783971+00:00
 === Files ===
 Using example_33_1.ttl from examples
 Output Turtle example_33_1.ttl created
@@ -15,12 +15,12 @@ Validation result for _sources/sosa/rules.shacl:
   Conforms: True
   
 Focus nodes for _sources/sosa/rules.shacl:
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: ex:VCAB-DP1-BP-40_t2017-04-18T08%3A23%3A00-07%3A00
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: ex:VCAB-DP1-BP-40_t2017-04-18T08%3A23%3A00-07%3A00
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: ex:VCAB-DP1-BP-40_t2017-04-18T08%3A23%3A00-07%3A00
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: ex:VCAB-DP1-BP-40_t2017-04-18T08%3A23%3A00-07%3A00
  - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: ex:Ob873t2,ex:Ob873c4,ex:Oatc349
- - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: ex:Ob873c4/sosa:hasSimpleResult,ex:Ob873t2/sosa:hasSimpleResult
- - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: ex:Ob873t2,ex:Ob873c4,ex:Oatc349
- - Shape <https://www.ogc.org/rules/sosa/#testResult>: ex:Ob873t2,ex:Ob873c4,ex:Oatc349
- - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: ex:Ob873t2,ex:Ob873c4,ex:Oatc349
+ - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
 
 === End SHACL ===
 

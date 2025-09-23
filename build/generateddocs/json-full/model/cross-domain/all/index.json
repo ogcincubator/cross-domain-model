@@ -10,17 +10,17 @@
   "itemClass": "model",
   "register": "ogc-incubator",
   "version": "0.1",
-  "dateOfLastChange": "2025-07-23",
+  "dateOfLastChange": "2025-09-23",
   "dependsOn": [
-    "ogc.model.cross-domain.geosparql",
+    "ogc.model.cross-domain.prov",
     "ogc.model.cross-domain.datacube",
-    "ogc.skos.concept",
-    "ogc.skos.conceptScheme",
-    "ogc.model.cross-domain.sosa-profiles.sosa-sta",
     "ogc.model.cross-domain.sosa",
     "ogc.model.cross-domain.qudt-basic",
-    "ogc.model.cross-domain.prov",
-    "ogc.geo.geodcat.geodcat"
+    "ogc.model.cross-domain.geosparql",
+    "ogc.geo.geodcat.geodcat",
+    "ogc.model.cross-domain.sosa-profiles.sosa-sta",
+    "ogc.skos.concept",
+    "ogc.skos.conceptScheme"
   ],
   "sources": [],
   "scope": "dev",
@@ -28,27 +28,24 @@
     "Closure",
     "Semantic Model"
   ],
-  "shaclRules": {
-    "ogc.skos.concept": [
-      "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
-    ],
-    "ogc.skos.common": [
-      "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
-    ],
+  "shaclShapes": {
     "ogc.model.cross-domain.sosa": [
       "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
     ],
     "ogc.model.cross-domain.qudt": [
       "http://qudt.org/2.1/schema/shacl/qudt"
     ],
-    "ogc.model.cross-domain.prov": [
-      "https://raw.githubusercontent.com/Cyber-Domain-Ontology/CDO-Shapes-PROV-O/refs/heads/main/shapes/sh-prov-o.ttl"
+    "ogc.skos.concept": [
+      "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
+    ],
+    "ogc.skos.common": [
+      "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
     ]
   },
   "sourceFiles": "https://ogcincubator.github.io/cross-domain-model/_sources/all/",
   "rdfData": [],
   "validationPassed": true,
-  "description": "## QUDT - basic profile\n\nDefines just the basic parts of QUDT used..\n\n\n\n",
+  "description": "## OGC Cross Domain Semantic Model\n\nThis model is a \"closure\" of the set of canonical ontologies published by or recognised through usage in other OGC ontologies.\n\nIt represents the \"baseline\" for semantic interoperability within OGC and across other international standards environments.\n\nNote that profiles specific to geography may be present to constrain usage of some ontologies.\n\n\n\n",
   "annotatedSchema": null,
   "gitRepository": "https://github.com/ogcincubator/cross-domain-model",
   "gitPath": "_sources/all"

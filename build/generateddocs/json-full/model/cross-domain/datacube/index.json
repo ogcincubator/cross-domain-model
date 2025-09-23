@@ -9,10 +9,10 @@
   "itemClass": "model",
   "register": "ogc-incubator",
   "version": "0.1",
-  "dateOfLastChange": "2025-07-23",
+  "dateOfLastChange": "2025-09-23",
   "link": "https://github.com/opengeospatial/bblock-template",
   "dependsOn": [],
-  "shaclRules": {},
+  "shaclRules": [],
   "sources": [
     {
       "title": "The RDF Data Cube Vocabulary",
@@ -24,6 +24,7 @@
     "RDF-QB",
     "SDMX"
   ],
+  "shaclShapes": {},
   "ontology": "http://purl.org/linked-data/cube#",
   "remoteCacheDir": "https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/datacube/remote_cache/",
   "sourceFiles": "https://ogcincubator.github.io/cross-domain-model/_sources/datacube/",

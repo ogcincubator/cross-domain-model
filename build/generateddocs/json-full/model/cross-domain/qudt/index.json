@@ -9,13 +9,8 @@
   "itemClass": "model",
   "register": "ogc-incubator",
   "version": "0.1",
-  "dateOfLastChange": "2025-07-23",
+  "dateOfLastChange": "2025-09-23",
   "dependsOn": [],
-  "shaclRules": {
-    "ogc.model.cross-domain.qudt": [
-      "http://qudt.org/2.1/schema/shacl/qudt"
-    ]
-  },
   "sources": [
     {
       "title": "QUDT Website",
@@ -30,6 +25,11 @@
   "tags": [
     "QUDT"
   ],
+  "shaclShapes": {
+    "ogc.model.cross-domain.qudt": [
+      "http://qudt.org/2.1/schema/shacl/qudt"
+    ]
+  },
   "ontology": "http://qudt.org/2.1/schema/qudt",
   "remoteCacheDir": "https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/qudt/remote_cache/",
   "sourceFiles": "https://ogcincubator.github.io/cross-domain-model/_sources/qudt/",

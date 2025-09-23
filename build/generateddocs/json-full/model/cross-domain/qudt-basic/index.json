@@ -9,7 +9,7 @@
   "itemClass": "model",
   "register": "ogc-incubator",
   "version": "0.1",
-  "dateOfLastChange": "2025-07-23",
+  "dateOfLastChange": "2025-09-23",
   "dependsOn": [
     "ogc.model.cross-domain.qudt"
   ],
@@ -27,7 +27,7 @@
   "tags": [
     "QUDT"
   ],
-  "shaclRules": {
+  "shaclShapes": {
     "ogc.model.cross-domain.qudt": [
       "http://qudt.org/2.1/schema/shacl/qudt"
     ]

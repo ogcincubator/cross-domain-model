@@ -1,11 +1,11 @@
 
 # PROV (Model)
 
-`ogc.model.cross-domain.prov` *v0.1*
+`ogc.model.cross-domain.prov` *v1.0*
 
 Provenance Ontology
 
-[*Status*](http://www.opengis.net/def/status): Under development
+[*Status*](http://www.opengis.net/def/status): Stable
 
 ## Description
 

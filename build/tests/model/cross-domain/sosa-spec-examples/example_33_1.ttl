@@ -1,64 +1,38 @@
-@prefix cdt: <http://w3id.org/lindt/custom_datatypes#> .
 @prefix ex: <https://example.org/data/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix qk: <http://qudt.org/vocab/quantitykind/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
-@prefix time: <http://www.w3.org/2006/time#> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-unit:PPM a rdfs:Datatype ;
-    rdfs:comment "pun of a QUDT Unit instance" .
+ex:VCAB-DP1-BP-40_t2017-04-18T08%3A23%3A00-07%3A00 a sosa:Observation ;
+    sosa:hasFeatureOfInterest ex:VCAB-DP1-BP-40_location ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:hasUnit unit:CentiM-PER-SEC ;
+            qudt:value 5e-04 ] ;
+    sosa:madeBySensor ex:VCAB-DP1-BP-40 ;
+    sosa:observedProperty ex:groundDisplacementSpeed ;
+    sosa:resultTime "2017-04-18T08:23:00-07:00"^^xsd:dateTime .
 
-unit:YR a rdfs:Datatype ;
-    rdfs:comment "pun of a QUDT Unit instance" .
+ex:Earth a sosa:FeatureOfInterest ;
+    rdfs:label "Earth" ;
+    skos:exactMatch <https://www.wikidata.org/wiki/Q2> .
 
-ex:Oatc349 a sosa:Observation ;
-    sosa:hasFeatureOfInterest ex:EarthAtmosphere ;
-    sosa:hasInputValue ex:Ob873c4,
-        ex:Ob873t2 ;
-    sosa:hasSimpleResult "240 [ppm]"^^cdt:ucum ;
-    sosa:observedProperty ex:CO2-Concentration ;
-    sosa:phenomenonTime [ time:inTimePosition [ time:hasTRS ex:BP ;
-                    time:numericPosition 7530 ] ] ;
-    sosa:resultTime "2018-01-09T14:16:00+00:00"^^xsd:dateTime .
+ex:VCAB-DP1-BP-40 a sosa:Sensor ;
+    rdfs:label "seismograph VCAB DP1 BP 40 (Vineyard Canyon, Parkfield, Ca)"@en ;
+    rdfs:seeAlso <https://earthquake.usgs.gov/monitoring/seismograms/153> ;
+    sosa:observes ex:groundDisplacementSpeed .
 
-ex:Antarctic_ice_sheet a sosa:FeatureOfInterest ;
-    skos:exactMatch <https://www.wikidata.org/wiki/Q571430> .
+ex:VCAB-DP1-BP-40_location a sosa:Sample ;
+    rdfs:label "location of VCAB-DP1-BP-40"@en ;
+    geo:hasGeometry [ a geo:Point ;
+            geo:asWKT "POINT (-120.6195831 35.8648067)"^^geo:WktLiteral ] ;
+    sosa:isSampleOf ex:Earth .
 
-ex:BP a time:TRS ;
-    skos:definition "Years before 1950, positive backwards" .
-
-ex:C14-Age a sosa:Property ;
-    skos:definition "The age of an object, determined by radiocarbon dating, expressed relative to a datum of AD 1950." ;
-    skos:exactMatch <http://vocab.nerc.ac.uk/collection/S06/current/S0600001/> ;
-    skos:prefLabel "14C age" .
-
-ex:Ob873c4 a sosa:Observation ;
-    sosa:hasFeatureOfInterest ex:Bubble873 ;
-    sosa:hasSimpleResult "240 [ppm]"^^cdt:ucum ;
-    sosa:hasUltimateFeatureOfInterest ex:EarthAtmosphere ;
-    sosa:observedProperty ex:CO2-Concentration ;
-    sosa:resultTime "2018-01-09T14:16:00+00:00"^^xsd:dateTime .
-
-ex:Ob873t2 a sosa:Observation ;
-    sosa:hasFeatureOfInterest ex:Bubble873 ;
-    sosa:hasSimpleResult "7530 a"^^cdt:ucum ;
-    sosa:hasUltimateFeatureOfInterest ex:EarthAtmosphere ;
-    sosa:observedProperty ex:C14-Age ;
-    sosa:resultTime "2018-01-09T14:15:00+00:00"^^xsd:dateTime .
-
-ex:Bubble873 a sosa:MaterialSample,
-        sosa:Sample ;
-    sosa:isResultOf ex:CoreEx1923 ;
-    sosa:isSampleOf ex:EarthAtmosphere,
-        ex:IceCore12 ;
-    sosa:isSampleOfUltimateFOI ex:Antarctic_ice_sheet .
-
-ex:CO2-Concentration a sosa:Property ;
-    skos:exactMatch <http://purl.obolibrary.org/obo/ENVO_04000004> ;
-    skos:prefLabel "concentration of carbon dioxide in air" .
-
-ex:EarthAtmosphere a sosa:FeatureOfInterest ;
-    skos:exactMatch <https://www.wikidata.org/wiki/Q3230> .
+ex:groundDisplacementSpeed a sosa:Property ;
+    rdfs:label "ground displacement speed"@en ;
+    skos:broader qk:Speed .
 

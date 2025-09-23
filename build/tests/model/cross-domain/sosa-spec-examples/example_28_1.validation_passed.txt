@@ -1,5 +1,5 @@
 Validation report for ogc.model.cross-domain.sosa-spec-examples - SOSA Examples
-Generated 2025-07-23T23:36:19.827231+00:00
+Generated 2025-09-23T07:23:42.691430+00:00
 === Files ===
 Using example_28_1.ttl from examples
 Output Turtle example_28_1.ttl created
@@ -15,12 +15,12 @@ Validation result for _sources/sosa/rules.shacl:
   Conforms: True
   
 Focus nodes for _sources/sosa/rules.shacl:
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <https://example.org/data/iphone_barometer/Observation/346345>,ex:Observation_346344
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <https://example.org/data/iphone_barometer/Observation/346345>,ex:Observation_346344
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: <https://example.org/data/iphone_barometer/Observation/346345>,ex:Observation_346344
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: <https://example.org/data/iphone_barometer/Observation/346345>,ex:Observation_346344
  - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: ex:SHW_T_1872-04-04T15
- - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: ex:SHW_T_1872-04-04T15
- - Shape <https://www.ogc.org/rules/sosa/#testResult>: ex:SHW_T_1872-04-04T15
- - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: ex:SHW_T_1872-04-04T15
+ - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: ex:Observation_346344/sosa:hasSimpleResult
 
 === End SHACL ===
 

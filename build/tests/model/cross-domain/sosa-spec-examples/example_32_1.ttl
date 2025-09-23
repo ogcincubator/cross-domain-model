@@ -1,23 +1,23 @@
-@prefix ex: <https://example.org/data/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relex: <https://example.org/data/sample-relations#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sosa-rel: <http://www.w3.org/ns/sosa/sampling/> .
 
-ex:A188 a sosa:Actuation ;
-    sosa:actsOnProperty ex:openState ;
-    sosa:endTime "2017-04-18T17:24:00+02:00"^^xsd:dateTime ;
-    sosa:hasFeatureOfInterest ex:window98 ;
-    sosa:hasSimpleResult true ;
-    sosa:madeByActuator ex:closer-987 ;
-    sosa:startTime "2017-04-18T17:23:00+02:00"^^xsd:dateTime .
+<https://example.org/data/sample-relations> a owl:Ontology ;
+    owl:imports <http://www.w3.org/ns/sosa/sam/> .
 
-ex:WindowCloser rdfs:subClassOf sosa:Actuator .
+relex:CSRWA25569-mount7-spot1 a sosa:Sample ;
+    rdfs:label "spot 1" ;
+    sosa-rel:hasSampleRelationship [ a sosa-rel:SampleRelationship ;
+            sosa-rel:natureOfRelationship [ a sosa-rel:RelationshipNature ;
+                    rdfs:comment "probe spot on polished mount" ] ;
+            sosa-rel:relatedSample relex:CSRWA25569-mount7 ] .
 
-ex:closer-987 a sosa:Actuator,
-        ex:WindowCloser .
+relex:CSRWA25569 a sosa:Sample ;
+    rdfs:label "Specimen CSRWA25569" .
 
-ex:window98 a sosa:FeatureOfInterest ;
-    sosa:hasProperty ex:openState .
-
-ex:openState a sosa:Property .
+relex:CSRWA25569-mount7 a sosa:Sample ;
+    rdfs:label "CSRWA25569 mount 7" ;
+    sosa:isSampleOf relex:CSRWA25569 .
 
