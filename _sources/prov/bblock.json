@@ -1,7 +1,8 @@
 {
   "name": "PROV",
   "abstract": "Provenance Ontology",
-  "status": "mature",
+  "highlighted": true,
+  "status": "stable",
   "dateTimeAddition": "2023-09-18T00:00:00Z",
   "itemClass": "model",
   "register": "ogc-incubator",
