@@ -10,7 +10,7 @@
   "itemClass": "model",
   "register": "ogc-incubator",
   "version": "1.0",
-  "dateOfLastChange": "2025-09-23",
+  "dateOfLastChange": "2026-01-13",
   "link": "https://github.com/ogcincubator/cross-domain-model",
   "dependsOn": [],
   "x-shaclRules": [

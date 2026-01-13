@@ -1,5 +1,5 @@
 Validation report for ogc.model.cross-domain.sosa-spec-examples - SOSA Examples
-Generated 2025-09-23T07:23:42.396666+00:00
+Generated 2026-01-13T22:40:10.070137+00:00
 === Files ===
 Using example_7_1.ttl from examples
 Output Turtle example_7_1.ttl created
@@ -16,24 +16,12 @@ Validation result for _sources/sosa/rules.shacl:
   Validation Report
   Conforms: False
   Results (6):
-  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
   	Severity: sh:Violation
-  	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] ) ]
-  	Focus Node: [ sosa:hasResult [ qudt:hasUnit unit:DEG_C ; qudt:value Literal("25.0", datatype=xsd:decimal) ] ; sosa:observedProperty sosa-env:AmbientTemperature ]
-  	Result Path: ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] )
-  	Message: Less than 1 values on [ sosa:hasResult [ qudt:hasUnit unit:DEG_C ; qudt:value Literal("25.0", datatype=xsd:decimal) ] ; sosa:observedProperty sosa-env:AmbientTemperature ]->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] )
-  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-  	Severity: sh:Violation
-  	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] ) ]
-  	Focus Node: [ sosa:hasResult [ qudt:hasUnit unit:PERCENT ; qudt:value Literal("20.0", datatype=xsd:decimal) ] ; sosa:observedProperty sosa-env:MinAmbientRelativeHumidity ]
-  	Result Path: ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] )
-  	Message: Less than 1 values on [ sosa:hasResult [ qudt:hasUnit unit:PERCENT ; qudt:value Literal("20.0", datatype=xsd:decimal) ] ; sosa:observedProperty sosa-env:MinAmbientRelativeHumidity ]->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] )
-  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-  	Severity: sh:Violation
-  	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] ) ]
+  	Source Shape: <https://www.ogc.org/rules/sosa/#testRequiredTime>
   	Focus Node: [ sosa:hasResult [ qudt:hasUnit unit:PERCENT ; qudt:value Literal("80.0", datatype=xsd:decimal) ] ; sosa:observedProperty sosa-env:MaxAmbientRelativeHumidity ]
-  	Result Path: ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] )
-  	Message: Less than 1 values on [ sosa:hasResult [ qudt:hasUnit unit:PERCENT ; qudt:value Literal("80.0", datatype=xsd:decimal) ] ; sosa:observedProperty sosa-env:MaxAmbientRelativeHumidity ]->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] )
+  	Value Node: [ sosa:hasResult [ qudt:hasUnit unit:PERCENT ; qudt:value Literal("80.0", datatype=xsd:decimal) ] ; sosa:observedProperty sosa-env:MaxAmbientRelativeHumidity ]
+  	Message: sosa:resultTime or sosa:phenomenonTime is required, and no more than 1 of each is allowed
   Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
   	Severity: sh:Violation
   	Source Shape: <https://www.ogc.org/rules/sosa/#testRequiredTime>
@@ -46,19 +34,31 @@ Validation result for _sources/sosa/rules.shacl:
   	Focus Node: [ sosa:hasResult [ qudt:hasUnit unit:PERCENT ; qudt:value Literal("20.0", datatype=xsd:decimal) ] ; sosa:observedProperty sosa-env:MinAmbientRelativeHumidity ]
   	Value Node: [ sosa:hasResult [ qudt:hasUnit unit:PERCENT ; qudt:value Literal("20.0", datatype=xsd:decimal) ] ; sosa:observedProperty sosa-env:MinAmbientRelativeHumidity ]
   	Message: sosa:resultTime or sosa:phenomenonTime is required, and no more than 1 of each is allowed
-  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
   	Severity: sh:Violation
-  	Source Shape: <https://www.ogc.org/rules/sosa/#testRequiredTime>
+  	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] ) ]
   	Focus Node: [ sosa:hasResult [ qudt:hasUnit unit:PERCENT ; qudt:value Literal("80.0", datatype=xsd:decimal) ] ; sosa:observedProperty sosa-env:MaxAmbientRelativeHumidity ]
-  	Value Node: [ sosa:hasResult [ qudt:hasUnit unit:PERCENT ; qudt:value Literal("80.0", datatype=xsd:decimal) ] ; sosa:observedProperty sosa-env:MaxAmbientRelativeHumidity ]
-  	Message: sosa:resultTime or sosa:phenomenonTime is required, and no more than 1 of each is allowed
+  	Result Path: ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] )
+  	Message: Less than 1 values on [ sosa:hasResult [ qudt:hasUnit unit:PERCENT ; qudt:value Literal("80.0", datatype=xsd:decimal) ] ; sosa:observedProperty sosa-env:MaxAmbientRelativeHumidity ]->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] )
+  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] ) ]
+  	Focus Node: [ sosa:hasResult [ qudt:hasUnit unit:DEG_C ; qudt:value Literal("25.0", datatype=xsd:decimal) ] ; sosa:observedProperty sosa-env:AmbientTemperature ]
+  	Result Path: ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] )
+  	Message: Less than 1 values on [ sosa:hasResult [ qudt:hasUnit unit:DEG_C ; qudt:value Literal("25.0", datatype=xsd:decimal) ] ; sosa:observedProperty sosa-env:AmbientTemperature ]->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] )
+  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] ) ]
+  	Focus Node: [ sosa:hasResult [ qudt:hasUnit unit:PERCENT ; qudt:value Literal("20.0", datatype=xsd:decimal) ] ; sosa:observedProperty sosa-env:MinAmbientRelativeHumidity ]
+  	Result Path: ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] )
+  	Message: Less than 1 values on [ sosa:hasResult [ qudt:hasUnit unit:PERCENT ; qudt:value Literal("20.0", datatype=xsd:decimal) ] ; sosa:observedProperty sosa-env:MinAmbientRelativeHumidity ]->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] )
   
 Focus nodes for _sources/sosa/rules.shacl:
- - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember,ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember,ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember
- - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember,ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember,ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember
- - Shape <https://www.ogc.org/rules/sosa/#testResult>: ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember,ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember,ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember
- - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember,ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember,ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember
  - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember,ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember,ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember,ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember,ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember,ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember,ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember,ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember,ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember
  - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
 
 === End SHACL ===

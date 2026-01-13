@@ -1,5 +1,5 @@
 Validation report for ogc.model.cross-domain.sosa-spec-examples - SOSA Examples
-Generated 2025-09-23T07:23:42.691430+00:00
+Generated 2026-01-13T22:40:10.364413+00:00
 === Files ===
 Using example_28_1.ttl from examples
 Output Turtle example_28_1.ttl created
@@ -15,11 +15,11 @@ Validation result for _sources/sosa/rules.shacl:
   Conforms: True
   
 Focus nodes for _sources/sosa/rules.shacl:
- - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <https://example.org/data/iphone_barometer/Observation/346345>,ex:Observation_346344
- - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <https://example.org/data/iphone_barometer/Observation/346345>,ex:Observation_346344
- - Shape <https://www.ogc.org/rules/sosa/#testResult>: <https://example.org/data/iphone_barometer/Observation/346345>,ex:Observation_346344
- - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: <https://example.org/data/iphone_barometer/Observation/346345>,ex:Observation_346344
  - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: <https://example.org/data/iphone_barometer/Observation/346345>,ex:Observation_346344
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: <https://example.org/data/iphone_barometer/Observation/346345>,ex:Observation_346344
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <https://example.org/data/iphone_barometer/Observation/346345>,ex:Observation_346344
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <https://example.org/data/iphone_barometer/Observation/346345>,ex:Observation_346344
  - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: ex:Observation_346344/sosa:hasSimpleResult
 
 === End SHACL ===

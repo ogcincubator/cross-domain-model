@@ -1,5 +1,5 @@
 Validation report for ogc.model.cross-domain.sosa-spec-examples - SOSA Examples
-Generated 2025-09-23T07:23:42.768639+00:00
+Generated 2026-01-13T22:40:10.393840+00:00
 === Files ===
 Using example_31_1.ttl from examples
 Output Turtle example_31_1.ttl created
@@ -15,12 +15,12 @@ Validation result for _sources/sosa/rules.shacl:
   Conforms: True
   
 Focus nodes for _sources/sosa/rules.shacl:
- - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: ex:Ob873c4,ex:Oatc349,ex:Ob873t2
- - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: ex:Ob873c4,ex:Oatc349,ex:Ob873t2
- - Shape <https://www.ogc.org/rules/sosa/#testResult>: ex:Ob873c4,ex:Oatc349,ex:Ob873t2
- - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: ex:Ob873c4,ex:Oatc349,ex:Ob873t2
  - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: ex:Ob873t2/sosa:hasSimpleResult,ex:Ob873c4/sosa:hasSimpleResult
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: ex:Oatc349,ex:Ob873t2,ex:Ob873c4
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: ex:Oatc349,ex:Ob873t2,ex:Ob873c4
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: ex:Oatc349,ex:Ob873t2,ex:Ob873c4
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: ex:Oatc349,ex:Ob873t2,ex:Ob873c4
+ - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: ex:Ob873c4/sosa:hasSimpleResult,ex:Ob873t2/sosa:hasSimpleResult
 
 === End SHACL ===
 

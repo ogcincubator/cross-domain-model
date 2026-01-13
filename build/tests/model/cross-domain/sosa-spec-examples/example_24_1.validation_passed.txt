@@ -1,5 +1,5 @@
 Validation report for ogc.model.cross-domain.sosa-spec-examples - SOSA Examples
-Generated 2025-09-23T07:23:42.622778+00:00
+Generated 2026-01-13T22:40:10.268196+00:00
 === Files ===
 Using example_24_1.ttl from examples
 Output Turtle example_24_1.ttl created
@@ -15,11 +15,11 @@ Validation result for _sources/sosa/rules.shacl:
   Conforms: True
   
 Focus nodes for _sources/sosa/rules.shacl:
- - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: ex:O299877
- - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: ex:O299877
- - Shape <https://www.ogc.org/rules/sosa/#testResult>: ex:O299877
- - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: ex:O299877
  - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: ex:O299877
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: ex:O299877
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: ex:O299877
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: ex:O299877
  - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
 
 === End SHACL ===
