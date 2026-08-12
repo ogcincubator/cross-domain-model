@@ -8,7 +8,7 @@
   "version": "1.0.0",
   "dateOfLastChange": "2026-08-12",
   "link": "https://github.com/ogcincubator/cross-domain-model",
-  "ontology": "http://purl.org/dc/terms/",
+  "ontology": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl",
   "sources": [
     {
       "title": "DCMI Metadata Terms",

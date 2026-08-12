@@ -9,7 +9,7 @@
   "version": "0.1",
   "dateOfLastChange": "2026-08-12",
   "link": "https://github.com/ogcincubator/cross-domain-model",
-  "ontology": "http://www.opengis.net/ont/geosparql",
+  "ontology": "https://defs.opengis.net/prez-backend/object?uri=http://www.opengis.net/ont/geosparql&_mediatype=text/turtle",
   "sources": [
     {
       "title": "OGC GeoSPARQL",
