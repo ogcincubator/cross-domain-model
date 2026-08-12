@@ -9,7 +9,7 @@
   "itemClass": "model",
   "register": "ogc-incubator",
   "version": "0.1",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-08-12",
   "dependsOn": [
     "ogc.model.cross-domain.sosa"
   ],
@@ -29,7 +29,6 @@
     ]
   },
   "sourceFiles": "https://ogcincubator.github.io/cross-domain-model/_sources/sosa-profiles/sosa-sta/",
-  "rdfData": [],
   "validationPassed": true,
   "description": "## Constraints for STA\n\nDescribe like your life depends on it... with liunks to even better descriptions :-)\n\n\n\n",
   "annotatedSchema": null,

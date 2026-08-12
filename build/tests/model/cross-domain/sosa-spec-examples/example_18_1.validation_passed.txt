@@ -1,7 +1,7 @@
 Validation report for ogc.model.cross-domain.sosa-spec-examples - SOSA Examples
-Generated 2026-01-13T22:40:10.145054+00:00
+Generated 2026-08-12T13:18:55.741402+00:00
 === Files ===
-Using example_18_1.ttl from examples
+Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/UOM-qudt-collection.ttl from examples
 Output Turtle example_18_1.ttl created
 === End Files ===
 
@@ -15,12 +15,12 @@ Validation result for _sources/sosa/rules.shacl:
   Conforms: True
   
 Focus nodes for _sources/sosa/rules.shacl:
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: ex:OCa134t1,ex:OCa134t3,ex:OCa134t2
  - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: ex:OCa134t3,ex:OCa134t1,ex:OCa134t2
- - Shape <https://www.ogc.org/rules/sosa/#testResult>: ex:OCa134t3,ex:OCa134t1,ex:OCa134t2
- - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: ex:OCa134t3,ex:OCa134t1,ex:OCa134t2
- - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: ex:OCa134t3,ex:OCa134t1,ex:OCa134t2
- - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: ex:OCa134t1/sosa:hasSimpleResult,ex:OCa134t2/sosa:hasSimpleResult,ex:OCa134t3/sosa:hasSimpleResult
+ - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: ex:OCa134t3/sosa:hasSimpleResult,ex:OCa134t2/sosa:hasSimpleResult,ex:OCa134t1/sosa:hasSimpleResult
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: ex:OCa134t1,ex:OCa134t3,ex:OCa134t2
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: ex:OCa134t1,ex:OCa134t3,ex:OCa134t2
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: ex:OCa134t1,ex:OCa134t3,ex:OCa134t2
 
 === End SHACL ===
 

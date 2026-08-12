@@ -1,0 +1,14 @@
+{
+  "title": "Validation report for ogc.model.cross-domain.dcterms - Dublin Core Terms vocabulary",
+  "bblockName": "Dublin Core Terms vocabulary",
+  "bblockId": "ogc.model.cross-domain.dcterms",
+  "generated": "2026-08-12T13:18:55.106216+00:00",
+  "result": true,
+  "items": [],
+  "globalErrors": {},
+  "counts": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0
+  }
+}

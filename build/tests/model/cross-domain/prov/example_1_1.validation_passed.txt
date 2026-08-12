@@ -1,7 +1,7 @@
 Validation report for ogc.model.cross-domain.prov - PROV
-Generated 2026-01-13T22:40:09.464412+00:00
+Generated 2026-08-12T13:18:55.078827+00:00
 === Files ===
-Using example_1_1.ttl from examples
+Using https://raw.githubusercontent.com/Cyber-Domain-Ontology/CDO-Shapes-PROV-O/refs/heads/main/tests/exemplars.ttl from examples
 Output Turtle example_1_1.ttl created
 === End Files ===
 

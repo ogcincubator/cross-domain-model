@@ -1,0 +1,39 @@
+
+
+{
+  "itemIdentifier": "ogc.model.cross-domain.codemeta",
+  "name": "CodeMeta vocabulary",
+  "abstract": "CodeMeta 3.0 terms for describing software (`buildInstructions`, `developmentStatus`, `continuousIntegration`, `embargoEndDate`, `hasSourceCode`, `isSourceCodeOf`, `issueTracker`, `readme`, `referencePublication`, `softwareSuggestions`).",
+  "status": "under-development",
+  "dateTimeAddition": "2026-08-12T00:00:00Z",
+  "itemClass": "model",
+  "register": "ogc-incubator",
+  "version": "1.0.0",
+  "dateOfLastChange": "2026-08-12",
+  "link": "https://github.com/ogcincubator/cross-domain-model",
+  "sources": [
+    {
+      "title": "CodeMeta 3.0",
+      "link": "https://w3id.org/codemeta/3.0"
+    }
+  ],
+  "scope": "dev",
+  "tags": [
+    "codemeta",
+    "vocabulary",
+    "software"
+  ],
+  "shaclShapes": {},
+  "ldContext": "https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/codemeta/context.jsonld",
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/codemeta/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/codemeta/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/cross-domain-model/_sources/codemeta/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/cross-domain-model/_sources/codemeta/context.jsonld",
+  "sourceFiles": "https://ogcincubator.github.io/cross-domain-model/_sources/codemeta/",
+  "validationPassed": true,
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: CodeMeta vocabulary\ndescription: 'Unconstrained carrier schema: this block''s content is its JSON-LD context,\n  not a data shape. The schema exists only so other blocks can `$ref` it via `bblocks://`\n  and inherit the context.'\ntype: object\nx-jsonld-extra-terms:\n  softwareSuggestions: https://codemeta.github.io/terms/softwareSuggestions\n  continuousIntegration: https://codemeta.github.io/terms/continuousIntegration\n  buildInstructions: https://codemeta.github.io/terms/buildInstructions\n  developmentStatus: https://codemeta.github.io/terms/developmentStatus\n  embargoEndDate: https://codemeta.github.io/terms/embargoEndDate\n  readme: https://codemeta.github.io/terms/readme\n  issueTracker: https://codemeta.github.io/terms/issueTracker\n  referencePublication: https://codemeta.github.io/terms/referencePublication\n  hasSourceCode: https://codemeta.github.io/terms/hasSourceCode\n  isSourceCodeOf: https://codemeta.github.io/terms/isSourceCodeOf\n",
+  "gitRepository": "https://github.com/ogcincubator/cross-domain-model",
+  "gitPath": "_sources/codemeta"
+}

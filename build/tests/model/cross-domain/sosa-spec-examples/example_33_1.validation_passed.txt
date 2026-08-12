@@ -1,7 +1,7 @@
 Validation report for ogc.model.cross-domain.sosa-spec-examples - SOSA Examples
-Generated 2026-01-13T22:40:10.408719+00:00
+Generated 2026-08-12T13:18:56.016885+00:00
 === Files ===
-Using example_33_1.ttl from examples
+Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/seismograph.ttl from examples
 Output Turtle example_33_1.ttl created
 === End Files ===
 
@@ -15,12 +15,12 @@ Validation result for _sources/sosa/rules.shacl:
   Conforms: True
   
 Focus nodes for _sources/sosa/rules.shacl:
- - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: ex:VCAB-DP1-BP-40_t2017-04-18T08%3A23%3A00-07%3A00
  - Shape <https://www.ogc.org/rules/sosa/#testResult>: ex:VCAB-DP1-BP-40_t2017-04-18T08%3A23%3A00-07%3A00
- - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: ex:VCAB-DP1-BP-40_t2017-04-18T08%3A23%3A00-07%3A00
- - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: ex:VCAB-DP1-BP-40_t2017-04-18T08%3A23%3A00-07%3A00
+ - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
  - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: ex:VCAB-DP1-BP-40_t2017-04-18T08%3A23%3A00-07%3A00
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: ex:VCAB-DP1-BP-40_t2017-04-18T08%3A23%3A00-07%3A00
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: ex:VCAB-DP1-BP-40_t2017-04-18T08%3A23%3A00-07%3A00
 
 === End SHACL ===
 

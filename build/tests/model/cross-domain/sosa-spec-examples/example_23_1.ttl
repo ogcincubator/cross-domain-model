@@ -1,10 +1,12 @@
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix et: <http://vocabs.lter-europe.net/EnvThes/> .
 @prefix ex: <https://example.org/data/> .
 @prefix iop: <https://w3id.org/iadopt/ont/1.1.0> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix qk: <http://qudt.org/vocab/quantitykind/> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
-@prefix rdfp: <https://w3id.org/rdfp/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix role: <http://www.w3.org/ns/dx/prof/role/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
@@ -108,10 +110,9 @@ ex:DHT22_4578_minimumMeasureableTemperatureLimit a sosa:Property,
     iop:hasProperty qk:Temperature ;
     iop:hasStatisticalModifier uom:minimum .
 
-ex:DHT22_output a rdfp:GraphDescription ;
-    rdfs:comment "The output is a RDF Graph that describes both the temperature and the humidity. It can be validated by a SHACL shapes graph."@en ;
-    rdfp:presentedBy [ a rdfp:GraphDescription ;
-            rdfp:validationRule ex:shacl_shapes_graph ] .
+ex:DHT22_output dct:conformsTo ex:myProfile ;
+    dct:format <https://w3id.org/mediatype/text/turtle> ;
+    rdfs:comment "The output is a RDF Graph that describes both the temperature and the humidity. It can be validated by a SHACL shapes graph."@en .
 
 ex:maxOperatingInputVoltageRestriction a sosa:Property,
         iop:Variable ;
@@ -148,6 +149,14 @@ ex:minimumSensorTemperatureLimit a sosa:Property,
     iop:hasObjectOfInterest ex:DHT22_4578 ;
     iop:hasProperty qk:Temperature ;
     iop:hasStatisticalModifier uom:minimum .
+
+ex:myProfile a prof:Profile ;
+    prof:hasResource [ a prof:ResourceDescriptor ;
+            dct:conformsTo <https://www.w3.org/TR/shacl/> ;
+            dct:format <https://w3id.org/mediatype/text/turtle> ;
+            prof:hasArtifact <http://example.org/profile/x/resource/validator.ttl> ;
+            prof:hasRole role:schema,
+                role:validation ] .
 
 ex:nominalOperatingInputVoltageRestriction a sosa:Property,
         iop:Variable ;

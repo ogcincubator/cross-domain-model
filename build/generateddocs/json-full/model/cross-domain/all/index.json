@@ -10,16 +10,16 @@
   "itemClass": "model",
   "register": "ogc-incubator",
   "version": "0.1",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-08-12",
   "dependsOn": [
     "ogc.geo.geodcat.geodcat",
-    "ogc.model.cross-domain.qudt-basic",
+    "ogc.model.cross-domain.prov",
     "ogc.model.cross-domain.sosa",
     "ogc.model.cross-domain.geosparql",
     "ogc.skos.conceptScheme",
-    "ogc.model.cross-domain.sosa-profiles.sosa-sta",
-    "ogc.model.cross-domain.prov",
     "ogc.model.cross-domain.datacube",
+    "ogc.model.cross-domain.qudt-basic",
+    "ogc.model.cross-domain.sosa-profiles.sosa-sta",
     "ogc.skos.concept"
   ],
   "sources": [],
@@ -29,21 +29,20 @@
     "Semantic Model"
   ],
   "shaclShapes": {
-    "ogc.model.cross-domain.qudt": [
-      "http://qudt.org/2.1/schema/shacl/qudt"
-    ],
     "ogc.model.cross-domain.sosa": [
       "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
+    ],
+    "ogc.skos.common": [
+      "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
     ],
     "ogc.skos.concept": [
       "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
     ],
-    "ogc.skos.common": [
-      "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
+    "ogc.model.cross-domain.qudt": [
+      "http://qudt.org/2.1/schema/shacl/qudt"
     ]
   },
   "sourceFiles": "https://ogcincubator.github.io/cross-domain-model/_sources/all/",
-  "rdfData": [],
   "validationPassed": true,
   "description": "## OGC Cross Domain Semantic Model\n\nThis model is a \"closure\" of the set of canonical ontologies published by or recognised through usage in other OGC ontologies.\n\nIt represents the \"baseline\" for semantic interoperability within OGC and across other international standards environments.\n\nNote that profiles specific to geography may be present to constrain usage of some ontologies.\n\n\n\n",
   "annotatedSchema": null,

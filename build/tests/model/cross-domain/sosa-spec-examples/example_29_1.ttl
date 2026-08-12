@@ -1,11 +1,15 @@
-@prefix cdt: <http://w3id.org/lindt/custom_datatypes#> .
 @prefix ex: <https://example.org/data/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ex:Ob873c4 a sosa:Observation ;
     sosa:hasFeatureOfInterest ex:Bubble873 ;
-    sosa:hasSimpleResult "240 [ppm]"^^cdt:ucum ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:hasUnit unit:PPM ;
+            qudt:value 240.0 ] ;
     sosa:hasUltimateFeatureOfInterest ex:EarthAtmosphere ;
     sosa:observedProperty ex:CO2-Concentration .
 

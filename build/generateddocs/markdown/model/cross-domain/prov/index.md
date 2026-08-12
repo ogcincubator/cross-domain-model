@@ -19,7 +19,7 @@ Provenance Ontology
 ### Examples from CDT shapes
 #### ttl
 ```ttl
-# imports: http://example.org/shapes/sh-prov-o
+# imports: http://example.org/ontology/cdo-prov-o
 
 @prefix drafting: <http://example.org/ontology/drafting/> .
 @prefix kb: <http://example.org/kb/> .
@@ -27,12 +27,14 @@ Provenance Ontology
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/kb>
 	a owl:Ontology ;
 	rdfs:comment "This knowledge base instantiates each of the shape-reviewed classes and properties, so SHACL shapes can be exercised for the reviewed ontology."@en ;
-	owl:imports <http://example.org/shapes/sh-prov-o> ;
+	owl:imports <http://example.org/ontology/cdo-prov-o> ;
+	sh:shapesGraph <http://example.org/shapes/sh-prov-o> ;
 	.
 
 kb:Activity-055ad0f6-ac79-426a-9ff4-916d91408abb

@@ -1,0 +1,39 @@
+
+
+{
+  "itemIdentifier": "ogc.model.cross-domain.iana-relations",
+  "name": "IANA link relations vocabulary",
+  "abstract": "IANA link relation terms (e.g. `cite-as`, RFC 8574) for marking preferred citation targets and other link semantics.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-08-12T00:00:00Z",
+  "itemClass": "model",
+  "register": "ogc-incubator",
+  "version": "1.0.0",
+  "dateOfLastChange": "2026-08-12",
+  "link": "https://github.com/ogcincubator/cross-domain-model",
+  "sources": [
+    {
+      "title": "IANA Link Relations registry",
+      "link": "http://www.iana.org/assignments/relation/"
+    }
+  ],
+  "scope": "dev",
+  "tags": [
+    "iana",
+    "vocabulary",
+    "link-relations"
+  ],
+  "shaclShapes": {},
+  "ldContext": "https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/iana-relations/context.jsonld",
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/iana-relations/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/iana-relations/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/cross-domain-model/_sources/iana-relations/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/cross-domain-model/_sources/iana-relations/context.jsonld",
+  "sourceFiles": "https://ogcincubator.github.io/cross-domain-model/_sources/iana-relations/",
+  "validationPassed": true,
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: IANA link relations vocabulary\ndescription: 'Unconstrained carrier schema: this block''s content is its JSON-LD context,\n  not a data shape. The schema exists only so other blocks can `$ref` it via `bblocks://`\n  and inherit the context.'\ntype: object\nx-jsonld-extra-terms:\n  cite-as: http://www.iana.org/assignments/relation/cite-as\n",
+  "gitRepository": "https://github.com/ogcincubator/cross-domain-model",
+  "gitPath": "_sources/iana-relations"
+}

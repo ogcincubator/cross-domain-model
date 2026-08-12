@@ -10,7 +10,7 @@
   "itemClass": "model",
   "register": "ogc-incubator",
   "version": "0.1",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-08-12",
   "link": "https://github.com/opengeospatial/bblock-template",
   "dependsOn": [],
   "sources": [
@@ -35,7 +35,6 @@
   "ontology": "https://www.w3.org/ns/sosa/sosa.ttl",
   "remoteCacheDir": "https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/sosa/remote_cache/",
   "sourceFiles": "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/",
-  "rdfData": [],
   "validationPassed": true,
   "description": "## SOSA\n\nTBD\n\n",
   "annotatedSchema": null,

@@ -1,15 +1,18 @@
-@prefix cdt: <http://w3id.org/lindt/custom_datatypes#> .
 @prefix ex: <https://example.org/data/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix time: <http://www.w3.org/2006/time#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ex:Oatc349 a sosa:Observation ;
     sosa:hasFeatureOfInterest ex:EarthAtmosphere ;
     sosa:hasInputValue ex:Ob873c4,
         ex:Ob873t2 ;
-    sosa:hasSimpleResult "240 [ppm]"^^cdt:ucum ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:hasUnit unit:PPM ;
+            qudt:value 240.0 ] ;
     sosa:observedProperty ex:CO2-Concentration ;
     sosa:phenomenonTime [ time:inTimePosition [ time:hasTRS ex:BP ;
                     time:numericPosition 7530 ] ] ;
@@ -28,14 +31,18 @@ ex:C14-Age a sosa:Property ;
 
 ex:Ob873c4 a sosa:Observation ;
     sosa:hasFeatureOfInterest ex:Bubble873 ;
-    sosa:hasSimpleResult "240 [ppm]"^^cdt:ucum ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:hasUnit unit:PPM ;
+            qudt:value 240.0 ] ;
     sosa:hasUltimateFeatureOfInterest ex:EarthAtmosphere ;
     sosa:observedProperty ex:CO2-Concentration ;
     sosa:resultTime "2018-01-09T14:16:00+00:00"^^xsd:dateTime .
 
 ex:Ob873t2 a sosa:Observation ;
     sosa:hasFeatureOfInterest ex:Bubble873 ;
-    sosa:hasSimpleResult "7530 a"^^cdt:ucum ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:hasUnit unit:YR ;
+            qudt:value 7530.0 ] ;
     sosa:hasUltimateFeatureOfInterest ex:EarthAtmosphere ;
     sosa:observedProperty ex:C14-Age ;
     sosa:resultTime "2018-01-09T14:15:00+00:00"^^xsd:dateTime .

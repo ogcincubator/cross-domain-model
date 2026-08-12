@@ -1,0 +1,39 @@
+
+
+{
+  "itemIdentifier": "ogc.model.cross-domain.dcterms",
+  "name": "Dublin Core Terms vocabulary",
+  "abstract": "DCMI Metadata Terms used across metadata models (`conformsTo`, `Standard`, etc.).",
+  "status": "under-development",
+  "dateTimeAddition": "2026-08-12T00:00:00Z",
+  "itemClass": "model",
+  "register": "ogc-incubator",
+  "version": "1.0.0",
+  "dateOfLastChange": "2026-08-12",
+  "link": "https://github.com/ogcincubator/cross-domain-model",
+  "sources": [
+    {
+      "title": "DCMI Metadata Terms",
+      "link": "http://purl.org/dc/terms/"
+    }
+  ],
+  "scope": "dev",
+  "tags": [
+    "dcterms",
+    "vocabulary",
+    "dublin-core"
+  ],
+  "shaclShapes": {},
+  "ldContext": "https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/dcterms/context.jsonld",
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/dcterms/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/dcterms/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/cross-domain-model/_sources/dcterms/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/cross-domain-model/_sources/dcterms/context.jsonld",
+  "sourceFiles": "https://ogcincubator.github.io/cross-domain-model/_sources/dcterms/",
+  "validationPassed": true,
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Dublin Core Terms vocabulary\ndescription: 'Unconstrained carrier schema: this block''s content is its JSON-LD context,\n  not a data shape. The schema exists only so other blocks can `$ref` it via `bblocks://`\n  and inherit the context.'\ntype: object\nx-jsonld-extra-terms:\n  conformsTo: http://purl.org/dc/terms/conformsTo\n  Standard: http://purl.org/dc/terms/Standard\n",
+  "gitRepository": "https://github.com/ogcincubator/cross-domain-model",
+  "gitPath": "_sources/dcterms"
+}

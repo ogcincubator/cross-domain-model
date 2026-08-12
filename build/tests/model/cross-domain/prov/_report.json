@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.model.cross-domain.prov - PROV",
   "bblockName": "PROV",
   "bblockId": "ogc.model.cross-domain.prov",
-  "generated": "2026-01-13T22:40:09.464472+00:00",
+  "generated": "2026-08-12T13:18:55.078891+00:00",
   "result": true,
   "items": [
     {
@@ -24,13 +24,13 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_1_1.ttl from examples"
+              "message": "Using https://raw.githubusercontent.com/Cyber-Domain-Ontology/CDO-Shapes-PROV-O/refs/heads/main/tests/exemplars.ttl from examples"
             },
             {
               "op": "ttl-create",
               "empty": false,
               "filename": "example_1_1.ttl",
-              "size": 194,
+              "size": 195,
               "isError": false,
               "message": "Output Turtle example_1_1.ttl created"
             }

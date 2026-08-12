@@ -1,0 +1,39 @@
+
+
+{
+  "itemIdentifier": "ogc.model.cross-domain.prof",
+  "name": "PROF vocabulary",
+  "abstract": "W3C Profiles Vocabulary (PROF) terms for describing resource profiles and their roles.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-08-12T00:00:00Z",
+  "itemClass": "model",
+  "register": "ogc-incubator",
+  "version": "1.0.0",
+  "dateOfLastChange": "2026-08-12",
+  "link": "https://github.com/ogcincubator/cross-domain-model",
+  "sources": [
+    {
+      "title": "Profiles Vocabulary (PROF)",
+      "link": "https://www.w3.org/TR/dx-prof/"
+    }
+  ],
+  "scope": "dev",
+  "tags": [
+    "prof",
+    "vocabulary",
+    "profiles"
+  ],
+  "shaclShapes": {},
+  "ldContext": "https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/prof/context.jsonld",
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/prof/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/prof/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/cross-domain-model/_sources/prof/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/cross-domain-model/_sources/prof/context.jsonld",
+  "sourceFiles": "https://ogcincubator.github.io/cross-domain-model/_sources/prof/",
+  "validationPassed": true,
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: PROF vocabulary\ndescription: 'Unconstrained carrier schema: this block''s content is its JSON-LD context,\n  not a data shape. The schema exists only so other blocks can `$ref` it via `bblocks://`\n  and inherit the context.'\ntype: object\nx-jsonld-extra-terms:\n  hasArtifact: http://www.w3.org/ns/dx/prof/hasArtifact\n  hasResource: http://www.w3.org/ns/dx/prof/hasResource\n  hasRole: http://www.w3.org/ns/dx/prof/hasRole\n  hasToken: http://www.w3.org/ns/dx/prof/hasToken\n  isProfileOf: http://www.w3.org/ns/dx/prof/isProfileOf\n  ResourceDescriptor: http://www.w3.org/ns/dx/prof/ResourceDescriptor\n  ResourceRole: http://www.w3.org/ns/dx/prof/ResourceRole\n  Profile: http://www.w3.org/ns/dx/prof/Profile\n",
+  "gitRepository": "https://github.com/ogcincubator/cross-domain-model",
+  "gitPath": "_sources/prof"
+}

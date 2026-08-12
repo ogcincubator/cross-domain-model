@@ -1,7 +1,7 @@
 Validation report for ogc.model.cross-domain.sosa-spec-examples - SOSA Examples
-Generated 2026-01-13T22:40:10.372078+00:00
+Generated 2026-08-12T13:18:55.974186+00:00
 === Files ===
-Using example_29_1.ttl from examples
+Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/obs-sample-foi.ttl from examples
 Output Turtle example_29_1.ttl created
 === End Files ===
 
@@ -24,12 +24,12 @@ Validation result for _sources/sosa/rules.shacl:
   	Message: sosa:resultTime or sosa:phenomenonTime is required, and no more than 1 of each is allowed
   
 Focus nodes for _sources/sosa/rules.shacl:
- - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: ex:Ob873c4
  - Shape <https://www.ogc.org/rules/sosa/#testResult>: ex:Ob873c4
+ - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
  - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: ex:Ob873c4
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: ex:Ob873c4
  - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: ex:Ob873c4
- - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: ex:Ob873c4/sosa:hasSimpleResult
 
 === End SHACL ===
 

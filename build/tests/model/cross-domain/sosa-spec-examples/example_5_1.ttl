@@ -1,15 +1,18 @@
-@prefix cdt: <http://w3id.org/lindt/custom_datatypes#> .
 @prefix ex: <https://example.org/data/> .
 @prefix qk: <http://qudt.org/vocab/quantitykind/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa1: <http://www.w3.org/ns/sosa#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ex:RH_avg_1_COPR_15min_201706020300PM a sosa1:Observation ;
     rdfs:label "Relative humidity, AVG, 15min, COPR, 06.02.2017, 3:00 PM"@en ;
     sosa1:hasFeatureOfInterest ex:COPR_SL ;
-    sosa1:hasSimpleResult "92.5 %"^^cdt:ucum ;
+    sosa1:hasResult [ a qudt:QuantityValue ;
+            qudt:hasUnit unit:PERCENT ;
+            qudt:value 92.5 ] ;
     sosa1:madeBySensor ex:HUMICAP-H ;
     sosa1:observedProperty ex:RelativeHumidity ;
     sosa1:resultTime "2017-06-02T15:00:00-07:00"^^xsd:dateTime ;

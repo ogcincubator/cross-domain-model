@@ -1,7 +1,7 @@
 Validation report for ogc.model.cross-domain.sosa-spec-examples - SOSA Examples
-Generated 2026-01-13T22:40:10.126489+00:00
+Generated 2026-08-12T13:18:55.719272+00:00
 === Files ===
-Using example_16_1.ttl from examples
+Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/Thermometer.ttl from examples
 Output Turtle example_16_1.ttl created
 === End Files ===
 
@@ -24,12 +24,12 @@ Validation result for _sources/sosa/rules.shacl:
   	Message: sosa:resultTime or sosa:phenomenonTime is required, and no more than 1 of each is allowed
   
 Focus nodes for _sources/sosa/rules.shacl:
- - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: ex:SickChildATempObs
  - Shape <https://www.ogc.org/rules/sosa/#testResult>: ex:SickChildATempObs
+ - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
  - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: ex:SickChildATempObs
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: ex:SickChildATempObs
  - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: ex:SickChildATempObs
- - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: ex:SickChildATempObs/sosa:hasSimpleResult
 
 === End SHACL ===
 

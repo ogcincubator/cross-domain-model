@@ -1,9 +1,10 @@
-@prefix cdt: <http://w3id.org/lindt/custom_datatypes#> .
 @prefix ex: <https://example.org/data/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ex:Bubble873 a sosa:MaterialSample,
@@ -15,7 +16,9 @@ ex:Bubble873 a sosa:MaterialSample,
 
 ex:CoreEx1923 a sosa:Sampling ;
     sosa:hasFeatureOfInterest ex:IceCore12 ;
-    sosa:hasInputValue [ ex:offset "15.202 m"^^cdt:ucum ] ;
+    sosa:hasInputValue [ ex:offset [ a qudt:QuantityValue ;
+                    qudt:hasUnit unit:M ;
+                    qudt:value 15.202 ] ] ;
     sosa:hasResult ex:Bubble873 ;
     sosa:hasUltimateFeatureOfInterest ex:Antarctic_ice_sheet ;
     sosa:madeBySampler orcid:0000-0002-3884-3420 ;

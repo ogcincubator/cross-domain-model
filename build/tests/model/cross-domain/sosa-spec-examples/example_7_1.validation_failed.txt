@@ -1,7 +1,7 @@
 Validation report for ogc.model.cross-domain.sosa-spec-examples - SOSA Examples
-Generated 2026-01-13T22:40:10.070137+00:00
+Generated 2026-08-12T13:18:55.652667+00:00
 === Files ===
-Using example_7_1.ttl from examples
+Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/InkBird-IBS-TH2-properties.ttl from examples
 Output Turtle example_7_1.ttl created
 === End Files ===
 
@@ -54,12 +54,12 @@ Validation result for _sources/sosa/rules.shacl:
   	Message: Less than 1 values on [ sosa:hasResult [ qudt:hasUnit unit:PERCENT ; qudt:value Literal("20.0", datatype=xsd:decimal) ] ; sosa:observedProperty sosa-env:MinAmbientRelativeHumidity ]->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] )
   
 Focus nodes for _sources/sosa/rules.shacl:
- - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember,ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember,ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember
  - Shape <https://www.ogc.org/rules/sosa/#testResult>: ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember,ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember,ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember
- - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember,ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember,ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember
- - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember,ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember,ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember
+ - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
  - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember,ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember,ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember,ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember,ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember,ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember,ex:IBSTH2HumidityAccuracy/sosa:hasValidityContext/sosa:hasMember
 
 === End SHACL ===
 

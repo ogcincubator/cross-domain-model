@@ -1,0 +1,39 @@
+
+
+{
+  "itemIdentifier": "ogc.model.cross-domain.pcdm",
+  "name": "PCDM vocabulary",
+  "abstract": "Portland Common Data Model terms for describing repositories and collections of digital objects (`RepositoryObject`, `RepositoryCollection`, `RepositoryFile`, `hasMember`, `hasFile`).",
+  "status": "under-development",
+  "dateTimeAddition": "2026-08-12T00:00:00Z",
+  "itemClass": "model",
+  "register": "ogc-incubator",
+  "version": "1.0.0",
+  "dateOfLastChange": "2026-08-12",
+  "link": "https://github.com/ogcincubator/cross-domain-model",
+  "sources": [
+    {
+      "title": "Portland Common Data Model (PCDM)",
+      "link": "https://pcdm.org/2016/04/18/models"
+    }
+  ],
+  "scope": "dev",
+  "tags": [
+    "pcdm",
+    "vocabulary",
+    "repository"
+  ],
+  "shaclShapes": {},
+  "ldContext": "https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/pcdm/context.jsonld",
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/pcdm/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/pcdm/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/cross-domain-model/_sources/pcdm/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/cross-domain-model/_sources/pcdm/context.jsonld",
+  "sourceFiles": "https://ogcincubator.github.io/cross-domain-model/_sources/pcdm/",
+  "validationPassed": true,
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: PCDM vocabulary\ndescription: 'Unconstrained carrier schema: this block''s content is its JSON-LD context,\n  not a data shape. The schema exists only so other blocks can `$ref` it via `bblocks://`\n  and inherit the context.'\ntype: object\nx-jsonld-extra-terms:\n  hasFile: http://pcdm.org/models#hasFile\n  hasMember: http://pcdm.org/models#hasMember\n  RepositoryCollection: http://pcdm.org/models#Collection\n  RepositoryObject: http://pcdm.org/models#Object\n  RepositoryFile: http://pcdm.org/models#File\n",
+  "gitRepository": "https://github.com/ogcincubator/cross-domain-model",
+  "gitPath": "_sources/pcdm"
+}

@@ -1,10 +1,12 @@
-@prefix cdt: <http://w3id.org/lindt/custom_datatypes#> .
 @prefix ex: <https://example.org/data/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix time: <http://www.w3.org/2006/time#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ex:ts159c a sosa:ObservationCollection ;
+    qudt:hasUnit unit:M-PER-SEC ;
     sosa:hasFeatureOfInterest ex:station223 ;
     sosa:hasMember ex:t1,
         ex:t2,
@@ -26,22 +28,22 @@ ex:p1 a sosa:Property .
 ex:station223 a sosa:FeatureOfInterest .
 
 ex:t1 a sosa:Observation ;
-    sosa:hasSimpleResult "3.24 m/s"^^cdt:ucum ;
+    sosa:hasSimpleResult 3.24 ;
     sosa:phenomenonTime [ a time:Instant ;
             time:inXSDDateTime "2017-04-15T20:00:00+00:00"^^xsd:dateTime ] .
 
 ex:t2 a sosa:Observation ;
-    sosa:hasSimpleResult "3.21 m/s"^^cdt:ucum ;
+    sosa:hasSimpleResult 3.21 ;
     sosa:phenomenonTime [ a time:Instant ;
             time:inXSDDateTime "2017-04-15T20:01:00+00:00"^^xsd:dateTime ] .
 
 ex:t3 a sosa:Observation ;
-    sosa:hasSimpleResult "3.15 m/s"^^cdt:ucum ;
+    sosa:hasSimpleResult 3.15 ;
     sosa:phenomenonTime [ a time:Instant ;
             time:inXSDDateTime "2017-04-15T20:02:00+00:00"^^xsd:dateTime ] .
 
 ex:t4 a sosa:Observation ;
-    sosa:hasSimpleResult "3.15 m/s"^^cdt:ucum ;
+    sosa:hasSimpleResult 3.15 ;
     sosa:phenomenonTime [ a time:Instant ;
             time:inXSDDateTime "2017-04-15T20:03:00+00:00"^^xsd:dateTime ] .
 
