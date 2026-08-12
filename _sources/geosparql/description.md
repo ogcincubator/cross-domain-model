@@ -1,5 +1,4 @@
-## DCAT Proxy
+## GeoSPARQL
 
-Proxy for testing validation rules for DCAT to keep these out of specific GeoDCAT development.
-
-Used to ensure examples are clean DCAT before applying GeoDCAT rules.
+Wraps the [GeoSPARQL](http://www.opengis.net/ont/geosparql) ontology, currently providing a JSON-LD
+context for `Geometry` and `asWKT`. Extend as further terms are needed by consumers.

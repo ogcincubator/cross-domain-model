@@ -1,0 +1,23 @@
+{
+  "name": "Dublin Core Terms vocabulary",
+  "abstract": "DCMI Metadata Terms used across metadata models (`conformsTo`, `Standard`, etc.).",
+  "status": "under-development",
+  "dateTimeAddition": "2026-08-12T00:00:00Z",
+  "itemClass": "model",
+  "register": "ogc-incubator",
+  "version": "1.0.0",
+  "dateOfLastChange": "2026-08-12",
+  "link": "https://github.com/ogcincubator/cross-domain-model",
+  "sources": [
+    {
+      "title": "DCMI Metadata Terms",
+      "link": "http://purl.org/dc/terms/"
+    }
+  ],
+  "scope": "dev",
+  "tags": [
+    "dcterms",
+    "vocabulary",
+    "dublin-core"
+  ]
+}

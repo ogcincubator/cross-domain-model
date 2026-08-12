@@ -1,0 +1,23 @@
+{
+  "name": "IANA link relations vocabulary",
+  "abstract": "IANA link relation terms (e.g. `cite-as`, RFC 8574) for marking preferred citation targets and other link semantics.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-08-12T00:00:00Z",
+  "itemClass": "model",
+  "register": "ogc-incubator",
+  "version": "1.0.0",
+  "dateOfLastChange": "2026-08-12",
+  "link": "https://github.com/ogcincubator/cross-domain-model",
+  "sources": [
+    {
+      "title": "IANA Link Relations registry",
+      "link": "http://www.iana.org/assignments/relation/"
+    }
+  ],
+  "scope": "dev",
+  "tags": [
+    "iana",
+    "vocabulary",
+    "link-relations"
+  ]
+}

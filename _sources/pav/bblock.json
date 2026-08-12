@@ -1,0 +1,23 @@
+{
+  "name": "PAV vocabulary",
+  "abstract": "Provenance, Authoring and Versioning (PAV) terms for import/retrieval provenance (`importedFrom`, `importedOn`, `importedBy`, `retrievedFrom`, `retrievedOn`, `retrievedBy`). Complements PROV-O, which this register already covers separately.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-08-12T00:00:00Z",
+  "itemClass": "model",
+  "register": "ogc-incubator",
+  "version": "1.0.0",
+  "dateOfLastChange": "2026-08-12",
+  "link": "https://github.com/ogcincubator/cross-domain-model",
+  "sources": [
+    {
+      "title": "Provenance, Authoring and Versioning (PAV) ontology",
+      "link": "http://purl.org/pav/"
+    }
+  ],
+  "scope": "dev",
+  "tags": [
+    "pav",
+    "vocabulary",
+    "provenance"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "PCDM vocabulary",
+  "abstract": "Portland Common Data Model terms for describing repositories and collections of digital objects (`RepositoryObject`, `RepositoryCollection`, `RepositoryFile`, `hasMember`, `hasFile`).",
+  "status": "under-development",
+  "dateTimeAddition": "2026-08-12T00:00:00Z",
+  "itemClass": "model",
+  "register": "ogc-incubator",
+  "version": "1.0.0",
+  "dateOfLastChange": "2026-08-12",
+  "link": "https://github.com/ogcincubator/cross-domain-model",
+  "sources": [
+    {
+      "title": "Portland Common Data Model (PCDM)",
+      "link": "https://pcdm.org/2016/04/18/models"
+    }
+  ],
+  "scope": "dev",
+  "tags": [
+    "pcdm",
+    "vocabulary",
+    "repository"
+  ]
+}

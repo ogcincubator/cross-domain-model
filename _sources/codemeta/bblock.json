@@ -1,0 +1,23 @@
+{
+  "name": "CodeMeta vocabulary",
+  "abstract": "CodeMeta 3.0 terms for describing software (`buildInstructions`, `developmentStatus`, `continuousIntegration`, `embargoEndDate`, `hasSourceCode`, `isSourceCodeOf`, `issueTracker`, `readme`, `referencePublication`, `softwareSuggestions`).",
+  "status": "under-development",
+  "dateTimeAddition": "2026-08-12T00:00:00Z",
+  "itemClass": "model",
+  "register": "ogc-incubator",
+  "version": "1.0.0",
+  "dateOfLastChange": "2026-08-12",
+  "link": "https://github.com/ogcincubator/cross-domain-model",
+  "sources": [
+    {
+      "title": "CodeMeta 3.0",
+      "link": "https://w3id.org/codemeta/3.0"
+    }
+  ],
+  "scope": "dev",
+  "tags": [
+    "codemeta",
+    "vocabulary",
+    "software"
+  ]
+}

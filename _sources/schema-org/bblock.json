@@ -1,0 +1,22 @@
+{
+  "name": "Schema.org vocabulary",
+  "abstract": "The full Schema.org term vocabulary: every Schema.org type and property name mapped 1:1 to its `http://schema.org/` URI.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-08-12T00:00:00Z",
+  "itemClass": "model",
+  "register": "ogc-incubator",
+  "version": "1.0.0",
+  "dateOfLastChange": "2026-08-12",
+  "link": "https://github.com/ogcincubator/cross-domain-model",
+  "sources": [
+    {
+      "title": "Schema.org",
+      "link": "https://schema.org/"
+    }
+  ],
+  "scope": "dev",
+  "tags": [
+    "schema.org",
+    "vocabulary"
+  ]
+}

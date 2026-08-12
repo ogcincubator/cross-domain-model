@@ -1,0 +1,23 @@
+{
+  "name": "PROF vocabulary",
+  "abstract": "W3C Profiles Vocabulary (PROF) terms for describing resource profiles and their roles.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-08-12T00:00:00Z",
+  "itemClass": "model",
+  "register": "ogc-incubator",
+  "version": "1.0.0",
+  "dateOfLastChange": "2026-08-12",
+  "link": "https://github.com/ogcincubator/cross-domain-model",
+  "sources": [
+    {
+      "title": "Profiles Vocabulary (PROF)",
+      "link": "https://www.w3.org/TR/dx-prof/"
+    }
+  ],
+  "scope": "dev",
+  "tags": [
+    "prof",
+    "vocabulary",
+    "profiles"
+  ]
+}

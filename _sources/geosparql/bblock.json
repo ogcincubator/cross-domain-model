@@ -7,13 +7,16 @@
   "itemClass": "model",
   "register": "ogc-incubator",
   "version": "0.1",
-  "dateOfLastChange": "2023-09-18",
-  "link": "https://github.com/opengeospatial/bblock-template",
+  "dateOfLastChange": "2026-08-12",
+  "link": "https://github.com/ogcincubator/cross-domain-model",
   "sources": [
+    {
+      "title": "OGC GeoSPARQL",
+      "link": "http://www.opengis.net/ont/geosparql"
+    }
   ],
   "scope": "dev",
   "tags": [
-    "GeoSPARQL",
-    "Proxy"
+    "GeoSPARQL"
   ]
 }
