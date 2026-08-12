@@ -8,10 +8,11 @@
   "version": "1.0.0",
   "dateOfLastChange": "2026-08-12",
   "link": "https://github.com/ogcincubator/cross-domain-model",
+  "ontology": "http://purl.org/pav/",
   "sources": [
     {
       "title": "Provenance, Authoring and Versioning (PAV) ontology",
-      "link": "http://purl.org/pav/"
+      "link": "https://pav-ontology.github.io/pav/"
     }
   ],
   "scope": "dev",

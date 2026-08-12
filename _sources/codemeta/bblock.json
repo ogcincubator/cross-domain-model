@@ -8,10 +8,11 @@
   "version": "1.0.0",
   "dateOfLastChange": "2026-08-12",
   "link": "https://github.com/ogcincubator/cross-domain-model",
+  "ontology": "https://w3id.org/codemeta/3.0",
   "sources": [
     {
       "title": "CodeMeta 3.0",
-      "link": "https://w3id.org/codemeta/3.0"
+      "link": "https://codemeta.github.io/terms/"
     }
   ],
   "scope": "dev",
