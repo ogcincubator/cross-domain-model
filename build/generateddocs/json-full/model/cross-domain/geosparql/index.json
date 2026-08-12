@@ -15,7 +15,7 @@
   "sources": [
     {
       "title": "OGC GeoSPARQL",
-      "link": "http://www.opengis.net/ont/geosparql"
+      "link": "https://www.ogc.org/standard/geosparql/"
     }
   ],
   "scope": "dev",
@@ -24,6 +24,8 @@
   ],
   "shaclShapes": {},
   "ldContext": "https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/geosparql/context.jsonld",
+  "ontology": "https://defs.opengis.net/prez-backend/object?uri=http://www.opengis.net/ont/geosparql&_mediatype=text/turtle",
+  "remoteCacheDir": "https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/geosparql/remote_cache/",
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/geosparql/schema.yaml",
     "application/json": "https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/geosparql/schema.json"

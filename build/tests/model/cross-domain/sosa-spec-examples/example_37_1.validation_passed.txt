@@ -1,5 +1,5 @@
 Validation report for ogc.model.cross-domain.sosa-spec-examples - SOSA Examples
-Generated 2026-08-12T13:18:56.072479+00:00
+Generated 2026-08-12T21:56:42.532128+00:00
 === Files ===
 Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/timeseries-oc.ttl from examples
 Output Turtle example_37_1.ttl created
@@ -15,12 +15,12 @@ Validation result for _sources/sosa/rules.shacl:
   Conforms: True
   
 Focus nodes for _sources/sosa/rules.shacl:
- - Shape <https://www.ogc.org/rules/sosa/#testResult>: ex:t3,ex:t1,ex:t2,ex:t4
  - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: ex:t3/sosa:hasSimpleResult,ex:t2/sosa:hasSimpleResult,ex:t1/sosa:hasSimpleResult
- - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: ex:t3,ex:t1,ex:t2,ex:t4
- - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: ex:t3,ex:t1,ex:t2,ex:t4
- - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: ex:t3,ex:t1,ex:t2,ex:t4
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: ex:t1,ex:t4,ex:t2,ex:t3
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: ex:t1,ex:t4,ex:t2,ex:t3
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: ex:t1,ex:t4,ex:t2,ex:t3
+ - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: ex:t2/sosa:hasSimpleResult,ex:t1/sosa:hasSimpleResult,ex:t3/sosa:hasSimpleResult
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: ex:t1,ex:t4,ex:t2,ex:t3
 
 === End SHACL ===
 

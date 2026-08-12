@@ -45,7 +45,7 @@ You can find the full JSON-LD context here:
 
 ## Sources
 
-* [DCMI Metadata Terms](http://purl.org/dc/terms/)
+* [DCMI Metadata Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/)
 
 # For developers
 

@@ -1,5 +1,5 @@
 Validation report for ogc.model.cross-domain.sosa-spec-examples - SOSA Examples
-Generated 2026-08-12T13:18:55.788671+00:00
+Generated 2026-08-12T21:56:42.359130+00:00
 === Files ===
 Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/bubble-provenance.ttl from examples
 Output Turtle example_21_1.ttl created
@@ -30,12 +30,12 @@ Validation result for _sources/sosa/rules.shacl:
   	Message: Less than 1 values on ex:CoreEx1923->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] sosa:observedProperty )
   
 Focus nodes for _sources/sosa/rules.shacl:
- - Shape <https://www.ogc.org/rules/sosa/#testResult>: ex:WellDrilling4578,ex:CoreEx1923
  - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: ex:WellDrilling4578,ex:CoreEx1923
- - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: ex:WellDrilling4578,ex:CoreEx1923
  - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: ex:WellDrilling4578,ex:CoreEx1923
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: ex:WellDrilling4578,ex:CoreEx1923
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: ex:WellDrilling4578,ex:CoreEx1923
+ - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: ex:WellDrilling4578,ex:CoreEx1923
 
 === End SHACL ===
 

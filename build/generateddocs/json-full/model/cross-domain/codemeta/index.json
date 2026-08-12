@@ -14,7 +14,7 @@
   "sources": [
     {
       "title": "CodeMeta 3.0",
-      "link": "https://w3id.org/codemeta/3.0"
+      "link": "https://codemeta.github.io/terms/"
     }
   ],
   "scope": "dev",

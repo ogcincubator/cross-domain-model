@@ -1,5 +1,5 @@
 Validation report for ogc.model.cross-domain.sosa-spec-examples - SOSA Examples
-Generated 2026-08-12T13:18:56.081243+00:00
+Generated 2026-08-12T21:56:42.538240+00:00
 === Files ===
 Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/timeseries-result-inline.ttl from examples
 Output Turtle example_38_1.ttl created
@@ -15,12 +15,12 @@ Validation result for _sources/sosa/rules.shacl:
   Conforms: True
   
 Focus nodes for _sources/sosa/rules.shacl:
- - Shape <https://www.ogc.org/rules/sosa/#testResult>: ex:ts159i
  - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: ex:ts159i/sosa:hasSimpleResult
- - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: ex:ts159i
- - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: ex:ts159i
  - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: ex:ts159i
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: ex:ts159i
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: ex:ts159i
+ - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: ex:ts159i/sosa:hasSimpleResult
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: ex:ts159i
 
 === End SHACL ===
 

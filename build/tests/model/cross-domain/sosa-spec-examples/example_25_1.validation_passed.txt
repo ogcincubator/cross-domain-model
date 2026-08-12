@@ -1,5 +1,5 @@
 Validation report for ogc.model.cross-domain.sosa-spec-examples - SOSA Examples
-Generated 2026-08-12T13:18:55.900906+00:00
+Generated 2026-08-12T21:56:42.426371+00:00
 === Files ===
 Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/forecast.ttl from examples
 Output Turtle example_25_1.ttl created
@@ -15,12 +15,12 @@ Validation result for _sources/sosa/rules.shacl:
   Conforms: True
   
 Focus nodes for _sources/sosa/rules.shacl:
- - Shape <https://www.ogc.org/rules/sosa/#testResult>: ex:Observation299876
  - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: ex:Observation299876
- - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: ex:Observation299876
  - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: ex:Observation299876
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: ex:Observation299876
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: ex:Observation299876
+ - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: ex:Observation299876
 
 === End SHACL ===
 

@@ -52,7 +52,7 @@ You can find the full JSON-LD context here:
 
 ## Sources
 
-* [OGC GeoSPARQL](http://www.opengis.net/ont/geosparql)
+* [OGC GeoSPARQL](https://www.ogc.org/standard/geosparql/)
 
 # For developers
 

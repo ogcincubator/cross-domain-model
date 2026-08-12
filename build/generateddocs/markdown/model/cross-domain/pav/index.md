@@ -53,7 +53,7 @@ You can find the full JSON-LD context here:
 
 ## Sources
 
-* [Provenance, Authoring and Versioning (PAV) ontology](http://purl.org/pav/)
+* [Provenance, Authoring and Versioning (PAV) ontology](https://pav-ontology.github.io/pav/)
 
 # For developers
 

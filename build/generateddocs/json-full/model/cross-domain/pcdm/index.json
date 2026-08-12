@@ -25,6 +25,8 @@
   ],
   "shaclShapes": {},
   "ldContext": "https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/pcdm/context.jsonld",
+  "ontology": "https://pcdm.org/models",
+  "remoteCacheDir": "https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/pcdm/remote_cache/",
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/pcdm/schema.yaml",
     "application/json": "https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/pcdm/schema.json"

@@ -61,7 +61,7 @@ You can find the full JSON-LD context here:
 
 ## Sources
 
-* [CodeMeta 3.0](https://w3id.org/codemeta/3.0)
+* [CodeMeta 3.0](https://codemeta.github.io/terms/)
 
 # For developers
 
