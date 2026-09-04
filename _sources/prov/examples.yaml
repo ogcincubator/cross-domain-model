@@ -4,3 +4,30 @@ examples:
     snippets:
       - language: ttl
         ref: https://raw.githubusercontent.com/Cyber-Domain-Ontology/CDO-Shapes-PROV-O/refs/heads/main/tests/exemplars.ttl
+
+  # The five snippets below are the actual RDF produced by JSON-LD uplift of
+  # ogc.ogc-utils.prov's (github.com/ogcincubator/bblock-prov-schema) own
+  # examples -- transferred here as Turtle so this block's SHACL shapes are
+  # exercised against real uplift output, not hand-written RDF. Regenerate by
+  # running the bblocks-postprocess `tests` step against that repo (filter
+  # ogc.ogc-utils.prov) and copying build*/tests/ogc-utils/prov/example_*.ttl.
+  - title: "bblock-prov-schema uplift: simple-rel.json"
+    snippets:
+      - language: turtle
+        ref: examples/uplift-simple-rel.ttl
+  - title: "bblock-prov-schema uplift: example-activity.json"
+    snippets:
+      - language: turtle
+        ref: examples/uplift-example-activity.ttl
+  - title: "bblock-prov-schema uplift: example.json"
+    snippets:
+      - language: turtle
+        ref: examples/uplift-example.ttl
+  - title: "bblock-prov-schema uplift: example-activityinfluence.json"
+    snippets:
+      - language: turtle
+        ref: examples/uplift-example-activityinfluence.ttl
+  - title: "bblock-prov-schema uplift: example-llm.json"
+    snippets:
+      - language: turtle
+        ref: examples/uplift-example-llm.ttl
