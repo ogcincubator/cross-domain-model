@@ -65,6 +65,18 @@ HEADER = """# SHACL shapes for the W3C PROV-O ontology (http://www.w3.org/ns/pro
 #   - the 4 owl:disjointWith class-pairs
 #   - the 1 owl:Restriction (ActivityInfluence: maxCardinality 0 on
 #     prov:hadActivity)
+#
+# Object-property values are only sh:class-checked when given as a blank
+# node (described inline). A plain-IRI value is treated as a by-reference
+# pointer to an object described elsewhere and is not locally type-checked
+# -- otherwise this would reject valid id-based-reference PROV-JSON-LD (see
+# generate-shapes.py's docstring for the full rationale). The semantically
+# correct fix -- an entailment-aware validator inferring the missing
+# rdf:type from PROV-O's own rdfs:domain/rdfs:range axioms -- is not yet
+# actionable: bblocks-postprocess's SHACL validator does not pass any
+# `inference=` option to pySHACL, and pySHACL does not itself act on a
+# shapes graph's own sh:entailment declaration (there is no such value
+# declared here for that reason).
 
 @prefix sh:   <http://www.w3.org/ns/shacl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -147,15 +159,21 @@ def main():
             for r in g.objects(prop, RDFS.range):
                 range_classes |= resolve(r)
             range_classes &= all_classes
-            if len(range_classes) == 1:
-                (rc,) = range_classes
-                lines.append(f"    sh:class prov:{local(rc)} ;")
-            elif len(range_classes) > 1:
-                or_list = " ".join(f"[ sh:class prov:{local(rc)} ]" for rc in sorted(range_classes))
-                lines.append(f"    sh:or ( {or_list} ) ;")
-            # BlankNodeOrIRI, not plain IRI: PROV-JSON-LD commonly nests anonymous
-            # Activities/Entities as blank nodes rather than always minting an @id.
-            lines.append("    sh:nodeKind sh:BlankNodeOrIRI ;")
+            if range_classes:
+                class_alts = " ".join(f"[ sh:class prov:{local(rc)} ]" for rc in sorted(range_classes))
+                # Only enforce sh:class on values given as blank nodes (i.e. fully
+                # described inline in the same document). A value given as a plain
+                # IRI is treated as a by-reference pointer to an object described
+                # elsewhere (a different document, an external registry) and is
+                # not locally type-checked -- PROV-JSON-LD's id-based object graph
+                # mode is a first-class, intentional usage pattern (see e.g.
+                # bblock-prov-schema's examples), not an omission to flag.
+                lines.append(
+                    f"    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( {class_alts} ) ] "
+                    f"[ sh:nodeKind sh:IRI ] ) ;"
+                )
+            else:
+                lines.append("    sh:nodeKind sh:BlankNodeOrIRI ;")
         else:
             for r in g.objects(prop, RDFS.range):
                 if r in XSD_TYPES:

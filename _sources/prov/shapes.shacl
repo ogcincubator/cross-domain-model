@@ -12,6 +12,18 @@
 #   - the 4 owl:disjointWith class-pairs
 #   - the 1 owl:Restriction (ActivityInfluence: maxCardinality 0 on
 #     prov:hadActivity)
+#
+# Object-property values are only sh:class-checked when given as a blank
+# node (described inline). A plain-IRI value is treated as a by-reference
+# pointer to an object described elsewhere and is not locally type-checked
+# -- otherwise this would reject valid id-based-reference PROV-JSON-LD (see
+# generate-shapes.py's docstring for the full rationale). The semantically
+# correct fix -- an entailment-aware validator inferring the missing
+# rdf:type from PROV-O's own rdfs:domain/rdfs:range axioms -- is not yet
+# actionable: bblocks-postprocess's SHACL validator does not pass any
+# `inference=` option to pySHACL, and pySHACL does not itself act on a
+# shapes graph's own sh:entailment declaration (there is no such value
+# declared here for that reason).
 
 @prefix sh:   <http://www.w3.org/ns/shacl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -163,302 +175,259 @@
     a sh:PropertyShape ;
     sh:path prov:actedOnBehalfOf ;
     rdfs:isDefinedBy prov:actedOnBehalfOf ;
-    sh:class prov:Agent ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Agent ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-activity>
     a sh:PropertyShape ;
     sh:path prov:activity ;
     rdfs:isDefinedBy prov:activity ;
-    sh:class prov:Activity ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-agent>
     a sh:PropertyShape ;
     sh:path prov:agent ;
     rdfs:isDefinedBy prov:agent ;
-    sh:class prov:Agent ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Agent ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-alternateOf>
     a sh:PropertyShape ;
     sh:path prov:alternateOf ;
     rdfs:isDefinedBy prov:alternateOf ;
-    sh:class prov:Entity ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Entity ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-atLocation>
     a sh:PropertyShape ;
     sh:path prov:atLocation ;
     rdfs:isDefinedBy prov:atLocation ;
-    sh:class prov:Location ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Location ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-entity>
     a sh:PropertyShape ;
     sh:path prov:entity ;
     rdfs:isDefinedBy prov:entity ;
-    sh:class prov:Entity ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Entity ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-generated>
     a sh:PropertyShape ;
     sh:path prov:generated ;
     rdfs:isDefinedBy prov:generated ;
-    sh:class prov:Entity ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Entity ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-hadActivity>
     a sh:PropertyShape ;
     sh:path prov:hadActivity ;
     rdfs:isDefinedBy prov:hadActivity ;
-    sh:class prov:Activity ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-hadGeneration>
     a sh:PropertyShape ;
     sh:path prov:hadGeneration ;
     rdfs:isDefinedBy prov:hadGeneration ;
-    sh:class prov:Generation ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Generation ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-hadMember>
     a sh:PropertyShape ;
     sh:path prov:hadMember ;
     rdfs:isDefinedBy prov:hadMember ;
-    sh:class prov:Entity ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Entity ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-hadPlan>
     a sh:PropertyShape ;
     sh:path prov:hadPlan ;
     rdfs:isDefinedBy prov:hadPlan ;
-    sh:class prov:Plan ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Plan ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-hadPrimarySource>
     a sh:PropertyShape ;
     sh:path prov:hadPrimarySource ;
     rdfs:isDefinedBy prov:hadPrimarySource ;
-    sh:class prov:Entity ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Entity ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-hadRole>
     a sh:PropertyShape ;
     sh:path prov:hadRole ;
     rdfs:isDefinedBy prov:hadRole ;
-    sh:class prov:Role ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Role ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-hadUsage>
     a sh:PropertyShape ;
     sh:path prov:hadUsage ;
     rdfs:isDefinedBy prov:hadUsage ;
-    sh:class prov:Usage ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Usage ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-influencer>
     a sh:PropertyShape ;
     sh:path prov:influencer ;
     rdfs:isDefinedBy prov:influencer ;
-    sh:class prov:Thing ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Thing ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-invalidated>
     a sh:PropertyShape ;
     sh:path prov:invalidated ;
     rdfs:isDefinedBy prov:invalidated ;
-    sh:class prov:Entity ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Entity ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-qualifiedAssociation>
     a sh:PropertyShape ;
     sh:path prov:qualifiedAssociation ;
     rdfs:isDefinedBy prov:qualifiedAssociation ;
-    sh:class prov:Association ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Association ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-qualifiedAttribution>
     a sh:PropertyShape ;
     sh:path prov:qualifiedAttribution ;
     rdfs:isDefinedBy prov:qualifiedAttribution ;
-    sh:class prov:Attribution ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Attribution ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-qualifiedCommunication>
     a sh:PropertyShape ;
     sh:path prov:qualifiedCommunication ;
     rdfs:isDefinedBy prov:qualifiedCommunication ;
-    sh:class prov:Communication ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Communication ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-qualifiedDelegation>
     a sh:PropertyShape ;
     sh:path prov:qualifiedDelegation ;
     rdfs:isDefinedBy prov:qualifiedDelegation ;
-    sh:class prov:Delegation ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Delegation ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-qualifiedDerivation>
     a sh:PropertyShape ;
     sh:path prov:qualifiedDerivation ;
     rdfs:isDefinedBy prov:qualifiedDerivation ;
-    sh:class prov:Derivation ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Derivation ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-qualifiedEnd>
     a sh:PropertyShape ;
     sh:path prov:qualifiedEnd ;
     rdfs:isDefinedBy prov:qualifiedEnd ;
-    sh:class prov:End ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:End ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-qualifiedGeneration>
     a sh:PropertyShape ;
     sh:path prov:qualifiedGeneration ;
     rdfs:isDefinedBy prov:qualifiedGeneration ;
-    sh:class prov:Generation ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Generation ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-qualifiedInfluence>
     a sh:PropertyShape ;
     sh:path prov:qualifiedInfluence ;
     rdfs:isDefinedBy prov:qualifiedInfluence ;
-    sh:class prov:Influence ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Influence ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-qualifiedInvalidation>
     a sh:PropertyShape ;
     sh:path prov:qualifiedInvalidation ;
     rdfs:isDefinedBy prov:qualifiedInvalidation ;
-    sh:class prov:Invalidation ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Invalidation ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-qualifiedPrimarySource>
     a sh:PropertyShape ;
     sh:path prov:qualifiedPrimarySource ;
     rdfs:isDefinedBy prov:qualifiedPrimarySource ;
-    sh:class prov:PrimarySource ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:PrimarySource ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-qualifiedQuotation>
     a sh:PropertyShape ;
     sh:path prov:qualifiedQuotation ;
     rdfs:isDefinedBy prov:qualifiedQuotation ;
-    sh:class prov:Quotation ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Quotation ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-qualifiedRevision>
     a sh:PropertyShape ;
     sh:path prov:qualifiedRevision ;
     rdfs:isDefinedBy prov:qualifiedRevision ;
-    sh:class prov:Revision ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Revision ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-qualifiedStart>
     a sh:PropertyShape ;
     sh:path prov:qualifiedStart ;
     rdfs:isDefinedBy prov:qualifiedStart ;
-    sh:class prov:Start ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Start ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-qualifiedUsage>
     a sh:PropertyShape ;
     sh:path prov:qualifiedUsage ;
     rdfs:isDefinedBy prov:qualifiedUsage ;
-    sh:class prov:Usage ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Usage ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-specializationOf>
     a sh:PropertyShape ;
     sh:path prov:specializationOf ;
     rdfs:isDefinedBy prov:specializationOf ;
-    sh:class prov:Entity ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Entity ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-used>
     a sh:PropertyShape ;
     sh:path prov:used ;
     rdfs:isDefinedBy prov:used ;
-    sh:class prov:Entity ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Entity ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-wasAssociatedWith>
     a sh:PropertyShape ;
     sh:path prov:wasAssociatedWith ;
     rdfs:isDefinedBy prov:wasAssociatedWith ;
-    sh:class prov:Agent ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Agent ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-wasAttributedTo>
     a sh:PropertyShape ;
     sh:path prov:wasAttributedTo ;
     rdfs:isDefinedBy prov:wasAttributedTo ;
-    sh:class prov:Agent ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Agent ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-wasDerivedFrom>
     a sh:PropertyShape ;
     sh:path prov:wasDerivedFrom ;
     rdfs:isDefinedBy prov:wasDerivedFrom ;
-    sh:class prov:Entity ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Entity ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-wasEndedBy>
     a sh:PropertyShape ;
     sh:path prov:wasEndedBy ;
     rdfs:isDefinedBy prov:wasEndedBy ;
-    sh:class prov:Entity ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Entity ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-wasGeneratedBy>
     a sh:PropertyShape ;
     sh:path prov:wasGeneratedBy ;
     rdfs:isDefinedBy prov:wasGeneratedBy ;
-    sh:class prov:Activity ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-wasInfluencedBy>
     a sh:PropertyShape ;
     sh:path prov:wasInfluencedBy ;
     rdfs:isDefinedBy prov:wasInfluencedBy ;
-    sh:or ( [ sh:class prov:Activity ] [ sh:class prov:Agent ] [ sh:class prov:Entity ] ) ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] [ sh:class prov:Agent ] [ sh:class prov:Entity ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-wasInformedBy>
     a sh:PropertyShape ;
     sh:path prov:wasInformedBy ;
     rdfs:isDefinedBy prov:wasInformedBy ;
-    sh:class prov:Activity ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-wasInvalidatedBy>
     a sh:PropertyShape ;
     sh:path prov:wasInvalidatedBy ;
     rdfs:isDefinedBy prov:wasInvalidatedBy ;
-    sh:class prov:Activity ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-wasQuotedFrom>
     a sh:PropertyShape ;
     sh:path prov:wasQuotedFrom ;
     rdfs:isDefinedBy prov:wasQuotedFrom ;
-    sh:class prov:Entity ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Entity ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-wasRevisionOf>
     a sh:PropertyShape ;
     sh:path prov:wasRevisionOf ;
     rdfs:isDefinedBy prov:wasRevisionOf ;
-    sh:class prov:Entity ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Entity ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-wasStartedBy>
     a sh:PropertyShape ;
     sh:path prov:wasStartedBy ;
     rdfs:isDefinedBy prov:wasStartedBy ;
-    sh:class prov:Entity ;
-    sh:nodeKind sh:BlankNodeOrIRI .
+    sh:or ( [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Entity ] ) ] [ sh:nodeKind sh:IRI ] ) .
 
 <#prop-atTime>
     a sh:PropertyShape ;
