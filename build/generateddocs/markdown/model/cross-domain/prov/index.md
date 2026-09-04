@@ -621,6 +621,124 @@ kb:Usage-dacf47cb-8db8-4b3c-9bfc-1be9492357f9
 
 ```
 
+
+### bblock-prov-schema uplift: simple-rel.json
+#### turtle
+```turtle
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<http://www.example.com/exampleEntities/Object2> prov:wasDerivedFrom <http://www.example.com/exampleEntities/Object1> .
+
+
+```
+
+
+### bblock-prov-schema uplift: example-activity.json
+#### turtle
+```turtle
+@prefix iana: <http://www.iana.org/assignments/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.example.com/exampleActivity/someActivity_1> a prov:Activity ;
+    prov:endedAtTime "2029-01-01T22:05:19+02:00"^^xsd:dateTime ;
+    prov:used <http://www.example.com/exampleActivity/Act3> ;
+    prov:wasAssociatedWith <http://www.example.com/exampleActivity/eg_agents:bc-3> .
+
+<http://www.example.com/exampleActivity/Act3> a prov:Entity ;
+    rdfs:seeAlso [ iana:relation <http://www.iana.org/assignments/relation/related> ;
+            oa:hasTarget <https://some.gov/linktoact/> ] ;
+    prov:wasAttributedTo <http://www.example.com/exampleActivity/eg_agents:Gov1> .
+
+
+```
+
+
+### bblock-prov-schema uplift: example.json
+#### turtle
+```turtle
+@prefix agents: <https://someagentregister.eg/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix iana: <http://www.iana.org/assignments/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix surveyreg: <https://example.org/surveys/> .
+@prefix thing: <https://example.org/entities/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/aThing/DP-1> a <http://example.org/myEntities/Survey> ;
+    dcterms:provenance <https://example.org/aThing/DP-2223>,
+        surveyreg:DP-1-S1 ;
+    prov:wasGeneratedBy surveyreg:DP-1-S1,
+        surveyreg:DP-1-S2 .
+
+<https://example.org/aThing/DP-2223> a <http://example.org/myEntities/Survey>,
+        prov:Entity ;
+    prov:wasGeneratedBy <https://example.org/aThing/DP-1-S1> .
+
+<https://example.org/aThing/Example-Act> rdfs:seeAlso [ iana:relation <http://www.iana.org/assignments/relation/related> ;
+            oa:hasTarget <https://nze.gov/linktoact/Example1> ] ;
+    prov:wasAttributedTo agents:nz .
+
+thing:Act3 a <https://example.org/aThing/Legislation> ;
+    rdfs:seeAlso [ iana:relation <http://www.iana.org/assignments/relation/related> ;
+            oa:hasTarget <https://some.gov/linktoact/> ] ;
+    prov:wasAttributedTo agents:nz .
+
+surveyreg:DP-1-S2 a <http://example.org/myActivityTypes/Registration> ;
+    prov:endedAtTime "2019-01-01T19:03:15+01:00"^^xsd:dateTime ;
+    prov:used <https://example.org/aThing/Example-Act> ;
+    prov:wasAssociatedWith agents:bc-3 .
+
+surveyreg:DP-1-S1 a <http://example.org/myActivityTypes/InitialSurvey>,
+        prov:Activity ;
+    prov:endedAtTime "2023-10-05T05:03:15+01:00"^^xsd:dateTime ;
+    prov:used thing:Act3 ;
+    prov:wasAssociatedWith agents:ah-2344503 .
+
+
+```
+
+
+### bblock-prov-schema uplift: example-activityinfluence.json
+#### turtle
+```turtle
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/aThing/DP-1> a <http://example.org/myEntities/Survey> ;
+    prov:qualifiedGeneration [ prov:activity <uuid:d7e8b17e-2d80-4c42-a797-bc3628f52c44> ;
+            prov:atTime "2018-10-25T15:46:38.058365"^^xsd:dateTime ;
+            prov:hadRole <wf:main/sorted/output> ] .
+
+<uuid:d7e8b17e-2d80-4c42-a797-bc3628f52c44> rdfs:label "Run of workflow/packed.cwl#main/sorted" .
+
+
+```
+
+
+### bblock-prov-schema uplift: example-llm.json
+#### turtle
+```turtle
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.example.com/exampleEntity/user_input> prov:type "Entity" .
+
+[] prov:endedAtTime "2024-11-19T05:07:34.304708+00:00"^^xsd:dateTime ;
+    prov:generated <http://www.example.com/exampleEntity/output> ;
+    prov:startedAtTime "2024-11-19T05:07:22.927913+00:00"^^xsd:dateTime ;
+    prov:type "prov:Activity" ;
+    prov:used <http://www.example.com/exampleEntity/file>,
+        <http://www.example.com/exampleEntity/user_input> .
+
+
+```
+
 ## Sources
 
 * [PROV-O Specification](https://www.w3.org/TR/prov-o/)

@@ -3,7 +3,7 @@
   "abstract": "Defines a reusable baseline \"cross-domain semantic model\" by defining a series of profiles and dependencies on available standards and where appropriate a set of constraints for application of such standards in the spatio-temporal domain.\n",
   "description": "\nThese models are defined as [\"building blocks\"](https://ogcincubator.github.io/bblocks-docs/) to allow for transparent reuse of a range of semantic models published by OGC and other international standards organisations (SDO) that may be used to define semantic models for application domains in a consistent and interoperable way.\n\nApplication domains will typically define profiles of these core models to meet specific needs. Infrastructures supporting application domains may define more general profiles to support commonality of implementation necessary to exploit infrastructure services. \n\nThe Cross-domain model underpins proposed domain models for Agriculture, Oceans and AG4DG.\nBy defining these models using this common cross-domain model the interoperability between such domains is enhanced, and made transparent to applications.\n\nNote that metadata models may be defined to exploit these semantics -\nthe cross-domain model is agnostic of the various metadata schemas or models that may be used, recognising that most \"systems of systems\" will have \nmultiple metadata formats in play due to evolution, backwards compatibility requirements and specific metadata needs of different communities and systems.\n\n![](https://lucid.app/publicSegments/view/eebe9d1b-d2ae-4bb9-a929-1d4414abcd47/image.png)\n\nDefining constraints using SHACL for these building blocks allows for inheritance of validation rules. \nThis will dramatically reduce the complexity of defining and testing domain models in a consistent fashion.\n\nMany such restrictions will relate to the way these models are combined -\nfor example the way GeoDCAT, PROV, RDF-Datacube and SOSA may be combined to standardise the way observational data is described using available standards.\n",
   "sparqlEndpoint": "https://defs-dev.opengis.net/fuseki/query",
-  "modified": "2026-09-04T06:44:45.314231",
+  "modified": "2026-09-04T07:11:01.054505",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"865a527f37dc271186cb8dd7d0386365bf1486d3",
@@ -38,13 +38,10 @@
       "dependsOn": [],
       "shaclShapes": {
         "ogc.model.cross-domain.prov": [
-          "https://raw.githubusercontent.com/Cyber-Domain-Ontology/CDO-Shapes-PROV-O/refs/heads/main/shapes/sh-prov-o.ttl",
           "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
         ]
       },
-      "shaclClosures": [
-        "closures/prov-o-self-description.ttl"
-      ],
+      "shaclClosures": [],
       "sources": [
         {
           "title": "PROV-O Specification",
@@ -715,15 +712,15 @@
       "version": "0.1",
       "dateOfLastChange": "2026-09-04",
       "dependsOn": [
-        "bblocks://ogc.skos.conceptScheme",
-        "bblocks://ogc.model.cross-domain.prov",
-        "bblocks://ogc.skos.concept",
-        "bblocks://ogc.geo.geodcat.geodcat",
-        "bblocks://ogc.model.cross-domain.qudt-basic",
         "bblocks://ogc.model.cross-domain.geosparql",
-        "bblocks://ogc.model.cross-domain.sosa-profiles.sosa-sta",
+        "bblocks://ogc.geo.geodcat.geodcat",
+        "bblocks://ogc.model.cross-domain.prov",
+        "bblocks://ogc.skos.conceptScheme",
+        "bblocks://ogc.model.cross-domain.qudt-basic",
         "bblocks://ogc.model.cross-domain.datacube",
-        "bblocks://ogc.model.cross-domain.sosa"
+        "bblocks://ogc.model.cross-domain.sosa",
+        "bblocks://ogc.model.cross-domain.sosa-profiles.sosa-sta",
+        "bblocks://ogc.skos.concept"
       ],
       "sources": [],
       "scope": "dev",
@@ -732,15 +729,14 @@
         "Semantic Model"
       ],
       "shaclShapes": {
+        "ogc.model.cross-domain.prov": [
+          "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+        ],
         "ogc.skos.common": [
           "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
         ],
         "ogc.skos.concept": [
           "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
-        ],
-        "ogc.model.cross-domain.prov": [
-          "https://raw.githubusercontent.com/Cyber-Domain-Ontology/CDO-Shapes-PROV-O/refs/heads/main/shapes/sh-prov-o.ttl",
-          "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
         ],
         "ogc.model.cross-domain.qudt": [
           "http://qudt.org/2.1/schema/shacl/qudt"

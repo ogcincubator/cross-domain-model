@@ -12,15 +12,15 @@
   "version": "0.1",
   "dateOfLastChange": "2026-09-04",
   "dependsOn": [
-    "ogc.skos.conceptScheme",
-    "ogc.model.cross-domain.prov",
-    "ogc.skos.concept",
-    "ogc.geo.geodcat.geodcat",
-    "ogc.model.cross-domain.qudt-basic",
     "ogc.model.cross-domain.geosparql",
-    "ogc.model.cross-domain.sosa-profiles.sosa-sta",
+    "ogc.geo.geodcat.geodcat",
+    "ogc.model.cross-domain.prov",
+    "ogc.skos.conceptScheme",
+    "ogc.model.cross-domain.qudt-basic",
     "ogc.model.cross-domain.datacube",
-    "ogc.model.cross-domain.sosa"
+    "ogc.model.cross-domain.sosa",
+    "ogc.model.cross-domain.sosa-profiles.sosa-sta",
+    "ogc.skos.concept"
   ],
   "sources": [],
   "scope": "dev",
@@ -29,15 +29,14 @@
     "Semantic Model"
   ],
   "shaclShapes": {
+    "ogc.model.cross-domain.prov": [
+      "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+    ],
     "ogc.skos.common": [
       "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
     ],
     "ogc.skos.concept": [
       "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
-    ],
-    "ogc.model.cross-domain.prov": [
-      "https://raw.githubusercontent.com/Cyber-Domain-Ontology/CDO-Shapes-PROV-O/refs/heads/main/shapes/sh-prov-o.ttl",
-      "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
     ],
     "ogc.model.cross-domain.qudt": [
       "http://qudt.org/2.1/schema/shacl/qudt"
