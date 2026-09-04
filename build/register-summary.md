@@ -104,12 +104,6 @@ The full Schema.org term vocabulary: every Schema.org type and property name map
 
 Defines a profile of SOSA with constraints to fit the Sensor Things API object types. .....
 
-### `ogc.model.cross-domain.sosa-spec-examples` — SOSA Examples
-
-**Type:** schema
-
-This Building Block identifies examples from the SOSA specification and supports validation of these examples
-
 ### `ogc.model.cross-domain.qudt-basic` — QUDT Basic Profile
 
 **Type:** model
