@@ -1,0 +1,30 @@
+# SHACL closure: types the PROV-O ontology's own self-description as PROV-O
+# data. The published ontology document (fetched as background/closure data
+# for this block via bblock.json's "ontology" field) describes itself with:
+#
+#   <http://www.w3.org/ns/prov-o#>
+#       a owl:Ontology ;
+#       owl:versionIRI <http://www.w3.org/ns/prov-o-20130430> ;
+#       prov:specializationOf <http://www.w3.org/ns/prov-o> ;
+#       prov:wasRevisionOf <http://www.w3.org/ns/prov-o-20130312> .
+#
+# prov:specializationOf and prov:wasRevisionOf both have domain and range
+# prov:Entity, but the ontology never asserts `a prov:Entity` for any of the
+# three IRIs it uses as subject/object of those properties (owl:Ontology is
+# not declared a subclass of prov:Entity either) -- an untyped-but-implied
+# gap in the published RDF, not a data error in any consuming example.
+#
+# These identifiers are immutable (dated/versioned W3C namespace URIs, not
+# subject to further change), so it is safe to assert their PROV typing here
+# once rather than special-case the resulting sh:class violations. Reused by
+# CDO-Shapes-PROV-O's exemplars.ttl test fixture, which triggers exactly
+# this gap; without this closure, ogc.model.cross-domain.prov's own test run
+# against that fixture fails 4 constraints that are about the ontology's
+# self-description, not about the fixture's actual example data.
+
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<http://www.w3.org/ns/prov-o>          a prov:Entity .
+<http://www.w3.org/ns/prov-o#>         a prov:Entity .
+<http://www.w3.org/ns/prov-o-20130312> a prov:Entity .
+<http://www.w3.org/ns/prov-o-20130430> a prov:Entity .

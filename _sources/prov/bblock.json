@@ -12,8 +12,12 @@
   "dependsOn": [
   ],
   "ontology": "https://www.w3.org/ns/prov-o",
-  "x-shaclRules": [
-    "https://raw.githubusercontent.com/Cyber-Domain-Ontology/CDO-Shapes-PROV-O/refs/heads/main/shapes/sh-prov-o.ttl"
+  "shaclShapes": [
+    "https://raw.githubusercontent.com/Cyber-Domain-Ontology/CDO-Shapes-PROV-O/refs/heads/main/shapes/sh-prov-o.ttl",
+    "shapes.shacl"
+  ],
+  "shaclClosures": [
+    "closures/prov-o-self-description.ttl"
   ],
   "sources": [
     {
