@@ -1,0 +1,21 @@
+transforms:
+  - id: entail
+    description: |
+      Applies RDFS entailment (PROV-O's own rdfs:domain/rdfs:range axioms) to a PROV
+      Turtle graph, materializing the rdf:type statements this block's shapes.shacl
+      does not require locally so that every object-property value -- blank node or
+      by-reference IRI alike -- ends up explicitly typed. The output is validated
+      against the strict profile, whose shapes require that typing unconditionally.
+    type: python
+    inputs:
+      mediaTypes:
+        - text/turtle
+    outputs:
+      mediaTypes:
+        - text/turtle
+      profiles:
+        - bblocks://ogc.model.cross-domain.prov-strict
+    metadata:
+      dependencies:
+        pip: pyshacl>=0.25
+    ref: transforms/entail.py

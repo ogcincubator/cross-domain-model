@@ -1,0 +1,31 @@
+examples:
+  - title: Explicitly-typed value described in the graph
+    description: |
+      The value of `prov:wasAssociatedWith` is described in this graph (it appears
+      as a subject), so this profile requires it to carry an explicit `rdf:type` --
+      as it would after running the base block's `entail` transform.
+    snippets:
+      - language: turtle
+        code: |
+          @prefix prov: <http://www.w3.org/ns/prov#> .
+          @prefix ex: <http://example.org/> .
+
+          ex:activity1 a prov:Activity ;
+              prov:wasAssociatedWith ex:agent1 .
+
+          ex:agent1 a prov:Agent .
+
+  - title: Untyped value not described in the graph
+    description: |
+      The value of `prov:wasAssociatedWith` has no outgoing triples of its own --
+      it is a pure by-reference pointer to an object described elsewhere, not
+      something this graph could type even in principle. This profile does not
+      require a type for it.
+    snippets:
+      - language: turtle
+        code: |
+          @prefix prov: <http://www.w3.org/ns/prov#> .
+          @prefix ex: <http://example.org/> .
+
+          ex:activity1 a prov:Activity ;
+              prov:wasAssociatedWith ex:agent1 .

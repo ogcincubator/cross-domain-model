@@ -1,0 +1,27 @@
+{
+  "name": "PROV (Strict Typing)",
+  "abstract": "Strict profile of PROV requiring every object-property value that is described in the graph to be explicitly typed; by-reference values with no local description are exempt.",
+  "status": "stable",
+  "dateTimeAddition": "2026-09-15T00:00:00Z",
+  "itemClass": "model",
+  "register": "ogc-incubator",
+  "version": "1.0",
+  "dateOfLastChange": "2026-09-15",
+  "link": "https://github.com/ogcincubator/cross-domain-model",
+  "dependsOn": [
+    "ogc.model.cross-domain.prov"
+  ],
+  "shaclShapes": [
+    "shapes.shacl"
+  ],
+  "sources": [
+    {
+      "title": "PROV-O Specification",
+      "link": "https://www.w3.org/TR/prov-o/"
+    }
+  ],
+  "scope": "dev",
+  "tags": [
+    "PROV"
+  ]
+}

@@ -1,0 +1,11 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+
+ex:activity1 a prov:Activity ;
+    prov:wasAssociatedWith ex:agent1 .
+
+# ex:agent1 is described here (it has an outgoing triple) but never typed as
+# prov:Agent, so it must fail -- unlike a value with no outgoing triples at all,
+# this graph could have typed it and didn't.
+ex:agent1 rdfs:label "Bob" .
