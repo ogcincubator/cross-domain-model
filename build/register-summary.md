@@ -98,6 +98,12 @@ Quantities, Units etc.
 
 The full Schema.org term vocabulary: every Schema.org type and property name mapped 1:1 to its `http://schema.org/` URI.
 
+### `ogc.model.cross-domain.prov-strict` — PROV (Strict Typing)
+
+**Type:** model
+
+Strict profile of PROV requiring every object-property value that is described in the graph to be explicitly typed; by-reference values with no local description are exempt.
+
 ### `ogc.model.cross-domain.sosa-profiles.sosa-sta` — SOSA Profile for STA data model
 
 **Type:** model

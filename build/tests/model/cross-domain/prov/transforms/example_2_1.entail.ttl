@@ -1,0 +1,7 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<http://www.example.com/exampleEntities/Object2> a prov:Entity ;
+    prov:wasDerivedFrom <http://www.example.com/exampleEntities/Object1> .
+
+<http://www.example.com/exampleEntities/Object1> a prov:Entity .
+

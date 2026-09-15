@@ -1,0 +1,6 @@
+@prefix ex: <http://example.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+ex:activity1 a prov:Activity ;
+    prov:wasAssociatedWith ex:agent1 .
+
