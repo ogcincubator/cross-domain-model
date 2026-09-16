@@ -13,11 +13,13 @@ conversion rule categories documented by
 directly against PROV-O since owl2shacl's own ruleset depends on a TopBraid-only
 SPARQL extension function). Re-run the script rather than hand-editing its output.
 
-Object-property values are only `sh:class`-checked when given as a blank node.
-A value given as a plain IRI is treated as a by-reference pointer to an object
-described elsewhere and is not locally type-checked here -- the type PROV-O's own
-axioms imply for it is real, but not something this open-world validation demands
-be asserted in the same document. See "Strict typing profile" below for where that
+A blank-node object-property value is only `sh:class`-checked when it actually
+carries an `rdf:type` -- if a type is given it must be the right one, but a blank
+node with any other content (any predicates, any number of them) is never *required*
+to be typed. A value given as a plain IRI is exempt outright, treated as a
+by-reference pointer to an object described elsewhere -- the type PROV-O's own axioms
+imply for it is real, but not something this open-world validation demands be
+asserted in the same document. See "Strict typing profile" below for where that
 implied typing is actually checked.
 
 ## Strict typing profile
