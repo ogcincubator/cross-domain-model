@@ -38,17 +38,17 @@ Provenance Ontology
 
 Sensors, Observations, Sampling and Actuation (ISO 19156 Observations and Measurements) Ontology 
 
-### `ogc.model.cross-domain.datacube` — RDF-DataCube
-
-**Type:** model
-
-Dimensional Data Model based on SDMX
-
 ### `ogc.model.cross-domain.geosparql` — GeoSPARQL
 
 **Type:** model
 
 GeoSPARQL Core (1.1). Simply wraps the published GeoSPARQL ontology with a Building Block to allow examples, default JSON-LD context, SHACL rules and transforms to be easily discovered.
+
+### `ogc.model.cross-domain.datacube` — RDF-DataCube
+
+**Type:** model
+
+Dimensional Data Model based on SDMX
 
 ### `ogc.model.cross-domain.codemeta` — CodeMeta vocabulary
 
