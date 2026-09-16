@@ -205,7 +205,7 @@
   "abstract": "Defines a reusable baseline \"cross-domain semantic model\" by defining a series of profiles and dependencies on available standards and where appropriate a set of constraints for application of such standards in the spatio-temporal domain.\n",
   "description": "\nThese models are defined as [\"building blocks\"](https://ogcincubator.github.io/bblocks-docs/) to allow for transparent reuse of a range of semantic models published by OGC and other international standards organisations (SDO) that may be used to define semantic models for application domains in a consistent and interoperable way.\n\nApplication domains will typically define profiles of these core models to meet specific needs. Infrastructures supporting application domains may define more general profiles to support commonality of implementation necessary to exploit infrastructure services. \n\nThe Cross-domain model underpins proposed domain models for Agriculture, Oceans and AG4DG.\nBy defining these models using this common cross-domain model the interoperability between such domains is enhanced, and made transparent to applications.\n\nNote that metadata models may be defined to exploit these semantics -\nthe cross-domain model is agnostic of the various metadata schemas or models that may be used, recognising that most \"systems of systems\" will have \nmultiple metadata formats in play due to evolution, backwards compatibility requirements and specific metadata needs of different communities and systems.\n\n![](https://lucid.app/publicSegments/view/eebe9d1b-d2ae-4bb9-a929-1d4414abcd47/image.png)\n\nDefining constraints using SHACL for these building blocks allows for inheritance of validation rules. \nThis will dramatically reduce the complexity of defining and testing domain models in a consistent fashion.\n\nMany such restrictions will relate to the way these models are combined -\nfor example the way GeoDCAT, PROV, RDF-Datacube and SOSA may be combined to standardise the way observational data is described using available standards.\n",
   "sparqlEndpoint": "https://defs-dev.opengis.net/fuseki/query",
-  "modified": "2026-09-15T05:59:19.729095",
+  "modified": "2026-09-16T00:05:28.528912",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"e9e9cb5c905d4e569b44b4816a663ec450322f6f",
@@ -262,7 +262,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "1.0",
-      "dateOfLastChange": "2026-09-15",
+      "dateOfLastChange": "2026-09-16",
       "link": "https://github.com/ogcincubator/cross-domain-model",
       "dependsOn": null,
       "shaclShapes": [
@@ -364,6 +364,149 @@
       }
     },
     {
+      "itemIdentifier": "ogc.model.cross-domain.sosa",
+      "name": "SOSA/SSN",
+      "highlighted": true,
+      "abstract": "Sensors, Observations, Sampling and Actuation (ISO 19156 Observations and Measurements) Ontology ",
+      "status": "under-development",
+      "dateTimeAddition": "2023-09-18T00:00:00Z",
+      "itemClass": "model",
+      "register": "ogc-incubator",
+      "version": "0.1",
+      "dateOfLastChange": "2026-09-16",
+      "link": "https://github.com/opengeospatial/bblock-template",
+      "dependsOn": null,
+      "sources": [
+        {
+          "title": "SOSA/SSN Specification",
+          "link": "https://www.w3.org/TR/vocab-ssn/"
+        },
+        {
+          "title": "SOSA V2",
+          "link": "https://raw.githubusercontent.com/w3c/sdw-sosa-ssn/refs/heads/gh-pages/ssn/rdf/ontology/core/sosa.ttl"
+        }
+      ],
+      "scope": "dev",
+      "tags": [
+        "OMS"
+      ],
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.sosa",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "ontology": {
+        "prof:hasArtifact": "https://www.w3.org/ns/sosa/sosa.ttl",
+        "prof:hasRole": "role:specification",
+        "dct:format": "text/turtle",
+        "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
+      },
+      "remoteCacheDir": "https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/sosa/remote_cache/",
+      "sourceFiles": "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/",
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/sosa/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/sosa/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.sosa"
+        }
+      },
+      "@id": "bblocks://ogc.model.cross-domain.sosa",
+      "@type": [
+        "bblocks:Model",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "SOSA/SSN",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "rdfData": [],
+      "isProfileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/cross-domain-model/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.model.cross-domain.datacube",
+      "name": "RDF-DataCube",
+      "abstract": "Dimensional Data Model based on SDMX",
+      "status": "under-development",
+      "dateTimeAddition": "2023-09-18T00:00:00Z",
+      "itemClass": "model",
+      "register": "ogc-incubator",
+      "version": "0.1",
+      "dateOfLastChange": "2026-09-16",
+      "link": "https://github.com/opengeospatial/bblock-template",
+      "dependsOn": null,
+      "shaclRules": [],
+      "sources": [
+        {
+          "title": "The RDF Data Cube Vocabulary",
+          "link": "https://www.w3.org/TR/vocab-data-cube/"
+        }
+      ],
+      "scope": "dev",
+      "tags": [
+        "RDF-QB",
+        "SDMX"
+      ],
+      "shaclShapes": null,
+      "ontology": {
+        "prof:hasArtifact": "http://purl.org/linked-data/cube#",
+        "prof:hasRole": "role:specification",
+        "dct:format": "text/turtle",
+        "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
+      },
+      "remoteCacheDir": "https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/datacube/remote_cache/",
+      "sourceFiles": "https://ogcincubator.github.io/cross-domain-model/_sources/datacube/",
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/datacube/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/datacube/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.datacube"
+        }
+      },
+      "@id": "bblocks://ogc.model.cross-domain.datacube",
+      "@type": [
+        "bblocks:Model",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "RDF-DataCube",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "rdfData": [],
+      "isProfileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/cross-domain-model/"
+      }
+    },
+    {
       "itemIdentifier": "ogc.model.cross-domain.geosparql",
       "name": "GeoSPARQL",
       "highlighted": true,
@@ -373,7 +516,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "0.1",
-      "dateOfLastChange": "2026-09-15",
+      "dateOfLastChange": "2026-09-16",
       "link": "https://github.com/ogcincubator/cross-domain-model",
       "sources": [
         {
@@ -448,149 +591,6 @@
       }
     },
     {
-      "itemIdentifier": "ogc.model.cross-domain.datacube",
-      "name": "RDF-DataCube",
-      "abstract": "Dimensional Data Model based on SDMX",
-      "status": "under-development",
-      "dateTimeAddition": "2023-09-18T00:00:00Z",
-      "itemClass": "model",
-      "register": "ogc-incubator",
-      "version": "0.1",
-      "dateOfLastChange": "2026-09-15",
-      "link": "https://github.com/opengeospatial/bblock-template",
-      "dependsOn": null,
-      "shaclRules": [],
-      "sources": [
-        {
-          "title": "The RDF Data Cube Vocabulary",
-          "link": "https://www.w3.org/TR/vocab-data-cube/"
-        }
-      ],
-      "scope": "dev",
-      "tags": [
-        "RDF-QB",
-        "SDMX"
-      ],
-      "shaclShapes": null,
-      "ontology": {
-        "prof:hasArtifact": "http://purl.org/linked-data/cube#",
-        "prof:hasRole": "role:specification",
-        "dct:format": "text/turtle",
-        "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
-      },
-      "remoteCacheDir": "https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/datacube/remote_cache/",
-      "sourceFiles": "https://ogcincubator.github.io/cross-domain-model/_sources/datacube/",
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/datacube/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/datacube/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.datacube"
-        }
-      },
-      "@id": "bblocks://ogc.model.cross-domain.datacube",
-      "@type": [
-        "bblocks:Model",
-        "skos:Concept",
-        "dcat:Dataset",
-        "bblocks:BBlock"
-      ],
-      "skos:prefLabel": "RDF-DataCube",
-      "ldContext": null,
-      "schema": null,
-      "openAPIDocument": null,
-      "rdfData": [],
-      "isProfileOf": null,
-      "skos:topConceptOf": {
-        "@id": "https://ogcincubator.github.io/cross-domain-model/"
-      }
-    },
-    {
-      "itemIdentifier": "ogc.model.cross-domain.sosa",
-      "name": "SOSA/SSN",
-      "highlighted": true,
-      "abstract": "Sensors, Observations, Sampling and Actuation (ISO 19156 Observations and Measurements) Ontology ",
-      "status": "under-development",
-      "dateTimeAddition": "2023-09-18T00:00:00Z",
-      "itemClass": "model",
-      "register": "ogc-incubator",
-      "version": "0.1",
-      "dateOfLastChange": "2026-09-15",
-      "link": "https://github.com/opengeospatial/bblock-template",
-      "dependsOn": null,
-      "sources": [
-        {
-          "title": "SOSA/SSN Specification",
-          "link": "https://www.w3.org/TR/vocab-ssn/"
-        },
-        {
-          "title": "SOSA V2",
-          "link": "https://raw.githubusercontent.com/w3c/sdw-sosa-ssn/refs/heads/gh-pages/ssn/rdf/ontology/core/sosa.ttl"
-        }
-      ],
-      "scope": "dev",
-      "tags": [
-        "OMS"
-      ],
-      "shaclShapes": [
-        {
-          "prof:hasArtifact": [
-            "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
-          ],
-          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.sosa",
-          "prof:hasRole": "role:validation",
-          "dct:format": "text/turtle",
-          "dct:conformsTo": "shacl:"
-        }
-      ],
-      "ontology": {
-        "prof:hasArtifact": "https://www.w3.org/ns/sosa/sosa.ttl",
-        "prof:hasRole": "role:specification",
-        "dct:format": "text/turtle",
-        "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
-      },
-      "remoteCacheDir": "https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/sosa/remote_cache/",
-      "sourceFiles": "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/",
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/sosa/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/sosa/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.sosa"
-        }
-      },
-      "@id": "bblocks://ogc.model.cross-domain.sosa",
-      "@type": [
-        "bblocks:Model",
-        "skos:Concept",
-        "dcat:Dataset",
-        "bblocks:BBlock"
-      ],
-      "skos:prefLabel": "SOSA/SSN",
-      "ldContext": null,
-      "schema": null,
-      "openAPIDocument": null,
-      "rdfData": [],
-      "isProfileOf": null,
-      "skos:topConceptOf": {
-        "@id": "https://ogcincubator.github.io/cross-domain-model/"
-      }
-    },
-    {
       "itemIdentifier": "ogc.model.cross-domain.codemeta",
       "name": "CodeMeta vocabulary",
       "abstract": "CodeMeta 3.0 terms for describing software (`buildInstructions`, `developmentStatus`, `continuousIntegration`, `embargoEndDate`, `hasSourceCode`, `isSourceCodeOf`, `issueTracker`, `readme`, `referencePublication`, `softwareSuggestions`).",
@@ -599,7 +599,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "1.0.0",
-      "dateOfLastChange": "2026-09-15",
+      "dateOfLastChange": "2026-09-16",
       "link": "https://github.com/ogcincubator/cross-domain-model",
       "sources": [
         {
@@ -678,7 +678,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "1.0.0",
-      "dateOfLastChange": "2026-09-15",
+      "dateOfLastChange": "2026-09-16",
       "link": "https://github.com/ogcincubator/cross-domain-model",
       "sources": [
         {
@@ -763,7 +763,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "1.0.0",
-      "dateOfLastChange": "2026-09-15",
+      "dateOfLastChange": "2026-09-16",
       "link": "https://github.com/ogcincubator/cross-domain-model",
       "sources": [
         {
@@ -842,7 +842,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "1.0.0",
-      "dateOfLastChange": "2026-09-15",
+      "dateOfLastChange": "2026-09-16",
       "link": "https://github.com/ogcincubator/cross-domain-model",
       "sources": [
         {
@@ -927,7 +927,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "1.0.0",
-      "dateOfLastChange": "2026-09-15",
+      "dateOfLastChange": "2026-09-16",
       "link": "https://github.com/ogcincubator/cross-domain-model",
       "sources": [
         {
@@ -1012,7 +1012,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "1.0.0",
-      "dateOfLastChange": "2026-09-15",
+      "dateOfLastChange": "2026-09-16",
       "link": "https://github.com/ogcincubator/cross-domain-model",
       "sources": [
         {
@@ -1091,7 +1091,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "0.1",
-      "dateOfLastChange": "2026-09-15",
+      "dateOfLastChange": "2026-09-16",
       "dependsOn": null,
       "sources": [
         {
@@ -1167,7 +1167,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "1.0.0",
-      "dateOfLastChange": "2026-09-15",
+      "dateOfLastChange": "2026-09-16",
       "link": "https://github.com/ogcincubator/cross-domain-model",
       "sources": [
         {
@@ -1245,7 +1245,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "1.0",
-      "dateOfLastChange": "2026-09-15",
+      "dateOfLastChange": "2026-09-16",
       "link": "https://github.com/ogcincubator/cross-domain-model",
       "dependsOn": [
         "bblocks://ogc.model.cross-domain.prov"
@@ -1324,7 +1324,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "0.1",
-      "dateOfLastChange": "2026-09-15",
+      "dateOfLastChange": "2026-09-16",
       "dependsOn": [
         "bblocks://ogc.model.cross-domain.sosa"
       ],
@@ -1392,7 +1392,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "0.1",
-      "dateOfLastChange": "2026-09-15",
+      "dateOfLastChange": "2026-09-16",
       "dependsOn": [
         "bblocks://ogc.model.cross-domain.qudt"
       ],
@@ -1465,17 +1465,17 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "0.1",
-      "dateOfLastChange": "2026-09-15",
+      "dateOfLastChange": "2026-09-16",
       "dependsOn": [
-        "bblocks://ogc.geo.geodcat.geodcat",
-        "bblocks://ogc.model.cross-domain.geosparql",
-        "bblocks://ogc.model.cross-domain.prov",
-        "bblocks://ogc.model.cross-domain.sosa-profiles.sosa-sta",
-        "bblocks://ogc.model.cross-domain.datacube",
-        "bblocks://ogc.skos.conceptScheme",
-        "bblocks://ogc.model.cross-domain.sosa",
         "bblocks://ogc.skos.concept",
-        "bblocks://ogc.model.cross-domain.qudt-basic"
+        "bblocks://ogc.model.cross-domain.prov",
+        "bblocks://ogc.model.cross-domain.qudt-basic",
+        "bblocks://ogc.geo.geodcat.geodcat",
+        "bblocks://ogc.model.cross-domain.sosa",
+        "bblocks://ogc.model.cross-domain.datacube",
+        "bblocks://ogc.model.cross-domain.geosparql",
+        "bblocks://ogc.skos.conceptScheme",
+        "bblocks://ogc.model.cross-domain.sosa-profiles.sosa-sta"
       ],
       "sources": [],
       "scope": "dev",
@@ -1486,18 +1486,9 @@
       "shaclShapes": [
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+            "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
           ],
-          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
-          "prof:hasRole": "role:validation",
-          "dct:format": "text/turtle",
-          "dct:conformsTo": "shacl:"
-        },
-        {
-          "prof:hasArtifact": [
-            "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
-          ],
-          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.sosa",
+          "rdfs:seeAlso": "bblocks://ogc.skos.concept",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
@@ -1513,9 +1504,9 @@
         },
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
+            "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
           ],
-          "rdfs:seeAlso": "bblocks://ogc.skos.concept",
+          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
@@ -1525,6 +1516,15 @@
             "http://qudt.org/2.1/schema/shacl/qudt"
           ],
           "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.qudt",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.sosa",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
@@ -1570,13 +1570,13 @@
       "@id": "bblocks://ogc.model.cross-domain.prov"
     },
     {
-      "@id": "bblocks://ogc.model.cross-domain.geosparql"
+      "@id": "bblocks://ogc.model.cross-domain.sosa"
     },
     {
       "@id": "bblocks://ogc.model.cross-domain.datacube"
     },
     {
-      "@id": "bblocks://ogc.model.cross-domain.sosa"
+      "@id": "bblocks://ogc.model.cross-domain.geosparql"
     },
     {
       "@id": "bblocks://ogc.model.cross-domain.codemeta"

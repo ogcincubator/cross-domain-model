@@ -32,11 +32,11 @@ for example the way GeoDCAT, PROV, RDF-Datacube and SOSA may be combined to stan
 
 Provenance Ontology
 
-### `ogc.model.cross-domain.geosparql` — GeoSPARQL
+### `ogc.model.cross-domain.sosa` — SOSA/SSN
 
 **Type:** model
 
-GeoSPARQL Core (1.1). Simply wraps the published GeoSPARQL ontology with a Building Block to allow examples, default JSON-LD context, SHACL rules and transforms to be easily discovered.
+Sensors, Observations, Sampling and Actuation (ISO 19156 Observations and Measurements) Ontology 
 
 ### `ogc.model.cross-domain.datacube` — RDF-DataCube
 
@@ -44,11 +44,11 @@ GeoSPARQL Core (1.1). Simply wraps the published GeoSPARQL ontology with a Build
 
 Dimensional Data Model based on SDMX
 
-### `ogc.model.cross-domain.sosa` — SOSA/SSN
+### `ogc.model.cross-domain.geosparql` — GeoSPARQL
 
 **Type:** model
 
-Sensors, Observations, Sampling and Actuation (ISO 19156 Observations and Measurements) Ontology 
+GeoSPARQL Core (1.1). Simply wraps the published GeoSPARQL ontology with a Building Block to allow examples, default JSON-LD context, SHACL rules and transforms to be easily discovered.
 
 ### `ogc.model.cross-domain.codemeta` — CodeMeta vocabulary
 

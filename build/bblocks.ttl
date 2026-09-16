@@ -23,14 +23,14 @@
     rdfs:label "Cross Domain Model (Complete)" ;
     dct:abstract "All modules of the Cross Domain model"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-09-18T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.all> ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/all/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.all> ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/all/index.json> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-09-15"^^xsd:date ;
+    dct:modified "2026-09-16"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/cross-domain-model/> ;
     skos:prefLabel "Cross Domain Model (Complete)" ;
     skos:topConceptOf <https://ogcincubator.github.io/cross-domain-model/> ;
@@ -38,23 +38,23 @@
         "Semantic Model" ;
     prof:hasResource [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.skos.concept> ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl> ;
-            prof:hasRole role:validation ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.model.cross-domain.prov> ;
             prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl> ;
             prof:hasRole role:validation ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.model.cross-domain.sosa> ;
-            prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl> ;
+            rdfs:seeAlso <bblocks://ogc.skos.common> ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl> ;
             prof:hasRole role:validation ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.skos.common> ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl> ;
+            rdfs:seeAlso <bblocks://ogc.skos.concept> ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.model.cross-domain.sosa> ;
+            prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl> ;
             prof:hasRole role:validation ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
@@ -81,14 +81,14 @@
     rdfs:label "CodeMeta vocabulary" ;
     dct:abstract "CodeMeta 3.0 terms for describing software (`buildInstructions`, `developmentStatus`, `continuousIntegration`, `embargoEndDate`, `hasSourceCode`, `isSourceCodeOf`, `issueTracker`, `readme`, `referencePublication`, `softwareSuggestions`)."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2026-08-12T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/codemeta/index.json> ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/codemeta/index.md> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.codemeta> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.codemeta> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/codemeta/index.json> ] ;
     dct:hasVersion "1.0.0" ;
-    dct:modified "2026-09-15"^^xsd:date ;
+    dct:modified "2026-09-16"^^xsd:date ;
     dct:source <https://codemeta.github.io/terms/> ;
     skos:inScheme <https://ogcincubator.github.io/cross-domain-model/> ;
     skos:prefLabel "CodeMeta vocabulary" ;
@@ -96,18 +96,18 @@
     dcat:keyword "codemeta",
         "software",
         "vocabulary" ;
-    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/codemeta/context.jsonld> ;
-            prof:hasRole role:mapping ],
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/codemeta/schema.json> ;
+            prof:hasRole role:schema ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/codemeta/schema.yaml> ;
             prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/codemeta/schema.json> ;
-            prof:hasRole role:schema ] ;
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/codemeta/context.jsonld> ;
+            prof:hasRole role:mapping ] ;
     bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/cross-domain-model/_sources/codemeta/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
@@ -127,7 +127,7 @@
         [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.dcterms> ] ;
     dct:hasVersion "1.0.0" ;
-    dct:modified "2026-09-15"^^xsd:date ;
+    dct:modified "2026-09-16"^^xsd:date ;
     dct:source <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/> ;
     skos:inScheme <https://ogcincubator.github.io/cross-domain-model/> ;
     skos:prefLabel "Dublin Core Terms vocabulary" ;
@@ -135,22 +135,22 @@
     dcat:keyword "dcterms",
         "dublin-core",
         "vocabulary" ;
-    prof:hasResource [ dct:conformsTo owl:Ontology ;
-            dct:format "text/turtle" ;
-            prof:hasArtifact <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl> ;
-            prof:hasRole role:specification ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/dcterms/schema.yaml> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/dcterms/schema.json> ;
             prof:hasRole role:schema ],
         [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
             prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/dcterms/context.jsonld> ;
             prof:hasRole role:mapping ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/dcterms/schema.json> ;
-            prof:hasRole role:schema ] ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/dcterms/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl> ;
+            prof:hasRole role:specification ] ;
     bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/cross-domain-model/_sources/dcterms/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
@@ -163,14 +163,14 @@
     rdfs:label "IANA link relations vocabulary" ;
     dct:abstract "IANA link relation terms (e.g. `cite-as`, RFC 8574) for marking preferred citation targets and other link semantics."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2026-08-12T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.iana-relations> ],
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/iana-relations/index.md> ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/iana-relations/index.json> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/iana-relations/index.md> ] ;
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.iana-relations> ] ;
     dct:hasVersion "1.0.0" ;
-    dct:modified "2026-09-15"^^xsd:date ;
+    dct:modified "2026-09-16"^^xsd:date ;
     dct:source <http://www.iana.org/assignments/relation/> ;
     skos:inScheme <https://ogcincubator.github.io/cross-domain-model/> ;
     skos:prefLabel "IANA link relations vocabulary" ;
@@ -202,14 +202,14 @@
     rdfs:label "PAV vocabulary" ;
     dct:abstract "Provenance, Authoring and Versioning (PAV) terms for import/retrieval provenance (`importedFrom`, `importedOn`, `importedBy`, `retrievedFrom`, `retrievedOn`, `retrievedBy`). Complements PROV-O, which this register already covers separately."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2026-08-12T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/pav/index.json> ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.pav> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/pav/index.json> ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/pav/index.md> ] ;
     dct:hasVersion "1.0.0" ;
-    dct:modified "2026-09-15"^^xsd:date ;
+    dct:modified "2026-09-16"^^xsd:date ;
     dct:source <https://pav-ontology.github.io/pav/> ;
     skos:inScheme <https://ogcincubator.github.io/cross-domain-model/> ;
     skos:prefLabel "PAV vocabulary" ;
@@ -217,22 +217,22 @@
     dcat:keyword "pav",
         "provenance",
         "vocabulary" ;
-    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/pav/context.jsonld> ;
-            prof:hasRole role:mapping ],
-        [ dct:conformsTo owl:Ontology ;
-            dct:format "text/turtle" ;
-            prof:hasArtifact <http://pav-ontology.github.io/pav/pav.rdf> ;
-            prof:hasRole role:specification ],
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/pav/schema.json> ;
+            prof:hasRole role:schema ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/pav/schema.yaml> ;
             prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/pav/schema.json> ;
-            prof:hasRole role:schema ] ;
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <http://pav-ontology.github.io/pav/pav.rdf> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/pav/context.jsonld> ;
+            prof:hasRole role:mapping ] ;
     bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/cross-domain-model/_sources/pav/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
@@ -245,14 +245,14 @@
     rdfs:label "PCDM vocabulary" ;
     dct:abstract "Portland Common Data Model terms for describing repositories and collections of digital objects (`RepositoryObject`, `RepositoryCollection`, `RepositoryFile`, `hasMember`, `hasFile`)."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2026-08-12T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/pcdm/index.json> ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.pcdm> ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/pcdm/index.md> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.pcdm> ] ;
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/pcdm/index.json> ] ;
     dct:hasVersion "1.0.0" ;
-    dct:modified "2026-09-15"^^xsd:date ;
+    dct:modified "2026-09-16"^^xsd:date ;
     dct:source <https://pcdm.org/2016/04/18/models> ;
     skos:inScheme <https://ogcincubator.github.io/cross-domain-model/> ;
     skos:prefLabel "PCDM vocabulary" ;
@@ -260,22 +260,22 @@
     dcat:keyword "pcdm",
         "repository",
         "vocabulary" ;
-    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/pcdm/context.jsonld> ;
-            prof:hasRole role:mapping ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/pcdm/schema.yaml> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/pcdm/schema.json> ;
             prof:hasRole role:schema ],
         [ dct:conformsTo owl:Ontology ;
             dct:format "text/turtle" ;
             prof:hasArtifact <https://pcdm.org/models> ;
             prof:hasRole role:specification ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/pcdm/schema.json> ;
-            prof:hasRole role:schema ] ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/pcdm/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/pcdm/context.jsonld> ;
+            prof:hasRole role:mapping ] ;
     bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/cross-domain-model/_sources/pcdm/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
@@ -288,14 +288,14 @@
     rdfs:label "PROF vocabulary" ;
     dct:abstract "W3C Profiles Vocabulary (PROF) terms for describing resource profiles and their roles."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2026-08-12T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/prof/index.json> ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.prof> ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/prof/index.md> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.prof> ] ;
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/prof/index.json> ] ;
     dct:hasVersion "1.0.0" ;
-    dct:modified "2026-09-15"^^xsd:date ;
+    dct:modified "2026-09-16"^^xsd:date ;
     dct:source <https://www.w3.org/TR/dx-prof/> ;
     skos:inScheme <https://ogcincubator.github.io/cross-domain-model/> ;
     skos:prefLabel "PROF vocabulary" ;
@@ -303,14 +303,14 @@
     dcat:keyword "prof",
         "profiles",
         "vocabulary" ;
-    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/prof/context.jsonld> ;
-            prof:hasRole role:mapping ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/prof/schema.yaml> ;
             prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/prof/context.jsonld> ;
+            prof:hasRole role:mapping ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/prof/schema.json> ;
@@ -327,32 +327,32 @@
     rdfs:label "Schema.org vocabulary" ;
     dct:abstract "The full Schema.org term vocabulary: every Schema.org type and property name mapped 1:1 to its `http://schema.org/` URI."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2026-08-12T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/schema-org/index.md> ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.schema-org> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/schema-org/index.json> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/schema-org/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/schema-org/index.md> ] ;
     dct:hasVersion "1.0.0" ;
-    dct:modified "2026-09-15"^^xsd:date ;
+    dct:modified "2026-09-16"^^xsd:date ;
     dct:source schema: ;
     skos:inScheme <https://ogcincubator.github.io/cross-domain-model/> ;
     skos:prefLabel "Schema.org vocabulary" ;
     skos:topConceptOf <https://ogcincubator.github.io/cross-domain-model/> ;
     dcat:keyword "schema.org",
         "vocabulary" ;
-    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/schema-org/context.jsonld> ;
-            prof:hasRole role:mapping ],
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/schema-org/schema.json> ;
+            prof:hasRole role:schema ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/schema-org/schema.yaml> ;
             prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/schema-org/schema.json> ;
-            prof:hasRole role:schema ] ;
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/schema-org/context.jsonld> ;
+            prof:hasRole role:mapping ] ;
     bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/cross-domain-model/_sources/schema-org/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
@@ -364,18 +364,18 @@
 
 <https://ogcincubator.github.io/cross-domain-model/build/bblocks.ttl> a prov:Entity ;
     dct:format "text/turtle" ;
-    prov:wasAttributedTo _:N3ee7161dfb394419a081942073127c05 ;
+    prov:wasAttributedTo _:N2b0cd65ce7bd4132bbc378d4b11b7350 ;
     prov:wasGeneratedBy [ a prov:Activity ;
-            prov:endedAtTime "2026-09-15T05:59:40.300626"^^xsd:dateTime ;
-            prov:startedAtTime "2026-09-15T05:59:40.084197"^^xsd:dateTime ;
+            prov:endedAtTime "2026-09-16T00:05:47.036319"^^xsd:dateTime ;
+            prov:startedAtTime "2026-09-16T00:05:46.852154"^^xsd:dateTime ;
             prov:used [ a prov:Entity ;
-                    dct:format "application/json" ;
-                    dct:hasVersion "git:a8a581a758bd8c8821c6cf3c41883b8e5855b647" ;
-                    rdfs:seeAlso <https://ogcincubator.github.io/cross-domain-model/build/register.json> ],
-                [ a prov:Entity ;
                     dct:format "application/yaml" ;
-                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
-            prov:wasAssociatedWith _:N3ee7161dfb394419a081942073127c05 ] .
+                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
+                [ a prov:Entity ;
+                    dct:format "application/json" ;
+                    dct:hasVersion "git:44cd6140176cb70b5fe6c9c27f98839ab6af637b" ;
+                    rdfs:seeAlso <https://ogcincubator.github.io/cross-domain-model/build/register.json> ] ;
+            prov:wasAssociatedWith _:N2b0cd65ce7bd4132bbc378d4b11b7350 ] .
 
 <https://pav-ontology.github.io/pav/> rdfs:label "Provenance, Authoring and Versioning (PAV) ontology" .
 
@@ -406,12 +406,12 @@ schema: rdfs:label "Schema.org" .
     dct:created "2023-09-18T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/datacube/index.md> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/datacube/index.json> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.datacube> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.datacube> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/datacube/index.json> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-09-15"^^xsd:date ;
+    dct:modified "2026-09-16"^^xsd:date ;
     dct:source <https://www.w3.org/TR/vocab-data-cube/> ;
     skos:inScheme <https://ogcincubator.github.io/cross-domain-model/> ;
     skos:prefLabel "RDF-DataCube" ;
@@ -435,18 +435,22 @@ schema: rdfs:label "Schema.org" .
     dct:created "2023-09-18T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.geosparql> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/geosparql/index.json> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/geosparql/index.md> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/geosparql/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/geosparql/index.json> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-09-15"^^xsd:date ;
+    dct:modified "2026-09-16"^^xsd:date ;
     dct:source <https://www.ogc.org/standard/geosparql/> ;
     skos:inScheme <https://ogcincubator.github.io/cross-domain-model/> ;
     skos:prefLabel "GeoSPARQL" ;
     skos:topConceptOf <https://ogcincubator.github.io/cross-domain-model/> ;
     dcat:keyword "GeoSPARQL" ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+    prof:hasResource [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://defs.opengis.net/prez-backend/object?uri=http://www.opengis.net/ont/geosparql&_mediatype=text/turtle> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/geosparql/schema.json> ;
             prof:hasRole role:schema ],
@@ -457,11 +461,7 @@ schema: rdfs:label "Schema.org" .
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/build/annotated/model/cross-domain/geosparql/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo owl:Ontology ;
-            dct:format "text/turtle" ;
-            prof:hasArtifact <https://defs.opengis.net/prez-backend/object?uri=http://www.opengis.net/ont/geosparql&_mediatype=text/turtle> ;
-            prof:hasRole role:specification ] ;
+            prof:hasRole role:schema ] ;
     bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/cross-domain-model/_sources/geosparql/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
@@ -474,14 +474,14 @@ schema: rdfs:label "Schema.org" .
     rdfs:label "PROV (Strict Typing)" ;
     dct:abstract "Strict profile of PROV requiring every object-property value that is described in the graph to be explicitly typed; by-reference values with no local description are exempt."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2026-09-15T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/prov-strict/index.json> ],
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/prov-strict/index.md> ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.prov-strict> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/prov-strict/index.md> ] ;
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/prov-strict/index.json> ] ;
     dct:hasVersion "1.0" ;
-    dct:modified "2026-09-15"^^xsd:date ;
+    dct:modified "2026-09-16"^^xsd:date ;
     dct:source <https://www.w3.org/TR/prov-o/> ;
     skos:inScheme <https://ogcincubator.github.io/cross-domain-model/> ;
     skos:prefLabel "PROV (Strict Typing)" ;
@@ -489,13 +489,13 @@ schema: rdfs:label "Schema.org" .
     dcat:keyword "PROV" ;
     prof:hasResource [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.model.cross-domain.prov> ;
-            prof:hasArtifact <https://ogcincubator.github.io/_sources/prov/shapes.shacl> ;
+            rdfs:seeAlso <bblocks://ogc.model.cross-domain.prov-strict> ;
+            prof:hasArtifact <https://ogcincubator.github.io/_sources/prov-strict/shapes.shacl> ;
             prof:hasRole role:validation ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.model.cross-domain.prov-strict> ;
-            prof:hasArtifact <https://ogcincubator.github.io/_sources/prov-strict/shapes.shacl> ;
+            rdfs:seeAlso <bblocks://ogc.model.cross-domain.prov> ;
+            prof:hasArtifact <https://ogcincubator.github.io/_sources/prov/shapes.shacl> ;
             prof:hasRole role:validation ] ;
     bblocks:dependsOn <bblocks://ogc.model.cross-domain.prov> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
@@ -509,14 +509,14 @@ schema: rdfs:label "Schema.org" .
     rdfs:label "QUDT Basic Profile" ;
     dct:abstract "Minimal implementation of Quantities, Units etc."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-09-18T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.qudt-basic> ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/qudt-basic/index.json> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/qudt-basic/index.md> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/qudt-basic/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.qudt-basic> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-09-15"^^xsd:date ;
+    dct:modified "2026-09-16"^^xsd:date ;
     dct:source <http://qudt.org/2.1/schema/qudt>,
         <https://qudt.org/> ;
     skos:inScheme <https://ogcincubator.github.io/cross-domain-model/> ;
@@ -540,14 +540,14 @@ schema: rdfs:label "Schema.org" .
     rdfs:label "SOSA Profile for STA data model" ;
     dct:abstract "Defines a profile of SOSA with constraints to fit the Sensor Things API object types. ....."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-09-18T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.sosa-profiles.sosa-sta> ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/sosa-profiles/sosa-sta/index.json> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/sosa-profiles/sosa-sta/index.md> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/sosa-profiles/sosa-sta/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.sosa-profiles.sosa-sta> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-09-15"^^xsd:date ;
+    dct:modified "2026-09-16"^^xsd:date ;
     dct:source <https://www.ogc.org/publications/standard/sensorthings/> ;
     skos:inScheme <https://ogcincubator.github.io/cross-domain-model/> ;
     skos:prefLabel "SOSA Profile for STA data model" ;
@@ -576,29 +576,29 @@ schema: rdfs:label "Schema.org" .
     rdfs:label "QUDT" ;
     dct:abstract "Quantities, Units etc."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-09-18T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.qudt> ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/qudt/index.md> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/qudt/index.json> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/qudt/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.qudt> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-09-15"^^xsd:date ;
+    dct:modified "2026-09-16"^^xsd:date ;
     dct:source <http://qudt.org/2.1/schema/qudt>,
         <https://qudt.org/> ;
     skos:inScheme <https://ogcincubator.github.io/cross-domain-model/> ;
     skos:prefLabel "QUDT" ;
     skos:topConceptOf <https://ogcincubator.github.io/cross-domain-model/> ;
     dcat:keyword "QUDT" ;
-    prof:hasResource [ dct:conformsTo owl:Ontology ;
-            dct:format "text/turtle" ;
-            prof:hasArtifact <http://qudt.org/2.1/schema/qudt> ;
-            prof:hasRole role:specification ],
-        [ dct:conformsTo shacl: ;
+    prof:hasResource [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.model.cross-domain.qudt> ;
             prof:hasArtifact <http://qudt.org/2.1/schema/shacl/qudt> ;
-            prof:hasRole role:validation ] ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <http://qudt.org/2.1/schema/qudt> ;
+            prof:hasRole role:specification ] ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
@@ -610,14 +610,14 @@ schema: rdfs:label "Schema.org" .
     rdfs:label "PROV" ;
     dct:abstract "Provenance Ontology"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-09-18T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.prov> ],
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/prov/index.md> ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/json-full/model/cross-domain/prov/index.json> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/prov/index.md> ] ;
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/bblock/ogc.model.cross-domain.prov> ] ;
     dct:hasVersion "1.0" ;
-    dct:modified "2026-09-15"^^xsd:date ;
+    dct:modified "2026-09-16"^^xsd:date ;
     dct:source <https://www.w3.org/TR/prov-o/> ;
     skos:inScheme <https://ogcincubator.github.io/cross-domain-model/> ;
     skos:prefLabel "PROV" ;
@@ -650,22 +650,22 @@ schema: rdfs:label "Schema.org" .
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/cross-domain-model/build/generateddocs/markdown/model/cross-domain/sosa/index.md> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-09-15"^^xsd:date ;
+    dct:modified "2026-09-16"^^xsd:date ;
     dct:source <https://raw.githubusercontent.com/w3c/sdw-sosa-ssn/refs/heads/gh-pages/ssn/rdf/ontology/core/sosa.ttl>,
         <https://www.w3.org/TR/vocab-ssn/> ;
     skos:inScheme <https://ogcincubator.github.io/cross-domain-model/> ;
     skos:prefLabel "SOSA/SSN" ;
     skos:topConceptOf <https://ogcincubator.github.io/cross-domain-model/> ;
     dcat:keyword "OMS" ;
-    prof:hasResource [ dct:conformsTo shacl: ;
+    prof:hasResource [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://www.w3.org/ns/sosa/sosa.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.model.cross-domain.sosa> ;
             prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl> ;
-            prof:hasRole role:validation ],
-        [ dct:conformsTo owl:Ontology ;
-            dct:format "text/turtle" ;
-            prof:hasArtifact <https://www.w3.org/ns/sosa/sosa.ttl> ;
-            prof:hasRole role:specification ] ;
+            prof:hasRole role:validation ] ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
@@ -696,7 +696,7 @@ This will dramatically reduce the complexity of defining and testing domain mode
 Many such restrictions will relate to the way these models are combined -
 for example the way GeoDCAT, PROV, RDF-Datacube and SOSA may be combined to standardise the way observational data is described using available standards.
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:modified "2026-09-15T05:59:19.729095"^^xsd:dateTime ;
+    dct:modified "2026-09-16T00:05:28.528912"^^xsd:dateTime ;
     void:sparqlEndpoint <https://defs-dev.opengis.net/fuseki/query> ;
     owl:imports <https://ogcincubator.github.io/bblocks-skos/build/register.json>,
         <https://ogcincubator.github.io/geodcat-ogcapi-records/build/register.json>,
@@ -733,7 +733,7 @@ for example the way GeoDCAT, PROV, RDF-Datacube and SOSA may be combined to stan
     foaf:homepage <https://ogcincubator.github.io/cross-domain-model/> ;
     bblocks:hasValidationReport <https://ogcincubator.github.io/cross-domain-model/build/tests/report.html> .
 
-_:N3ee7161dfb394419a081942073127c05 a prov:Agent,
+_:N2b0cd65ce7bd4132bbc378d4b11b7350 a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
     dct:hasVersion "0.5.34" ;
